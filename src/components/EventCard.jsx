@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { Calendar, MapPin, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const EventCard = ({
+  id,
   title,
   date,
   location,
@@ -36,26 +38,22 @@ const EventCard = ({
           <Calendar size={12} />
           <span className="text-white">{date}</span>
         </div>
-
         <h3 className="text-xl font-bold text-white mb-2 group-hover:underline decoration-1 underline-offset-4">
           {title}
         </h3>
-
         <div className="flex items-center gap-1 text-gray-500 text-xs mb-4">
           <MapPin size={12} />
           <span>{location}</span>
         </div>
-
         <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-grow border-b border-white/5 pb-4">
           {description}
         </p>
-
-        <a
-          href="#"
+        <Link
+          to={`/event/${id}`}
           className="inline-flex items-center gap-2 text-sm font-bold text-white group-hover:gap-3 transition-all"
         >
           Read More <ArrowRight size={14} />
-        </a>
+        </Link>
       </div>
     </motion.div>
   );

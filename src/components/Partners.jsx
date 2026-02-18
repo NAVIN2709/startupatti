@@ -32,7 +32,7 @@ const Partners = () => {
           className="text-center mb-10 md:mb-16"
         >
           <h2 className="text-2xl md:text-5xl font-bold mb-4 md:mb-6 text-white tracking-tight">
-            Our Pillars of Strength
+            Founding Partners
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             Powered by visionaries. United by a shared passion for innovation
@@ -59,7 +59,11 @@ const Partners = () => {
                 <img
                   src={partner.image}
                   alt={partner.name}
-                  className="max-w-[180px] max-h-[100px] object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 opacity-80 group-hover:opacity-100"
+                  className={`object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 opacity-80 group-hover:opacity-100 ${
+                    partner.name === "Madras Marketers"
+                      ? "max-w-[400px] max-h-[250px]"
+                      : "max-w-[180px] max-h-[100px]"
+                  }`}
                 />
               </a>
               <div className="mt-6 text-center">

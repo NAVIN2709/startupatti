@@ -47,18 +47,16 @@ const Quote = () => {
                 Swami Vivekananda
               </p>
             </div>
-
-            <div className="mt-8 md:mt-12 inline-block">
-              <div className="px-6 py-3 md:px-8 md:py-4 rounded-2xl bg-gradient-to-r from-white/5 to-white/10 border border-white/10 backdrop-blur-md shadow-2xl">
-                <p className="text-sm md:text-2xl font-bold text-white flex items-center gap-3 md:gap-4">
-                  <span className="relative flex h-3 w-3 md:h-4 md:w-4">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-3 w-3 md:h-4 md:w-4 bg-green-500"></span>
-                  </span>
-                  We Answered the Call.{" "}
-                  <span className="text-blue-400">10,000 Strong.</span>
-                </p>
-              </div>
+            {/* Donate button added here */}
+            <div className="mt-8 md:mt-12">
+              <a
+                href="https://wa.me/919940338848?text=i%20am%20here%20for%20donation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black font-bold hover:bg-gray-200 transition-colors"
+              >
+                Donate to Support
+              </a>
             </div>
           </motion.div>
         </div>

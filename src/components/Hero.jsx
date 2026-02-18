@@ -29,21 +29,8 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="space-y-4 md:space-y-6"
           >
-            <p className="text-xl md:text-2xl text-white font-bold leading-tight">
-              Your Monthly Founder's Hangout. <br />
-              <span className="text-gray-500">
-                The Launchpad for Future Unicorns.
-              </span>
-            </p>
-            <p className="text-base md:text-lg text-gray-400 max-w-lg leading-relaxed">
-              For the dreamers, the builders, and the disruptors. Whether you're
-              building your first product or seeking the latest market insights,
-              this is where you belong.
-              <br />
-              <span className="italic block mt-4 text-white/90 border-l-4 border-blue-500 pl-6 py-2 text-sm md:text-lg font-semibold bg-white/5 rounded-r-lg">
-                “We aren't just a community. We are a catalyst for meaningful
-                connections and offline collisions.”
-              </span>
+            <p className="text-xl md:text-3xl text-gray-400 font-medium leading-tight">
+              A Monthly Hangout.
             </p>
           </motion.div>
 

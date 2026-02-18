@@ -4,6 +4,7 @@ import {
   Instagram,
   Twitter,
   Facebook,
+  Youtube,
   ArrowUpRight,
 } from "lucide-react";
 
@@ -21,6 +22,7 @@ const Footer = () => {
     { name: "Instagram", icon: <Instagram size={20} />, href: "#" },
     { name: "Twitter", icon: <Twitter size={20} />, href: "#" },
     { name: "Facebook", icon: <Facebook size={20} />, href: "#" },
+    { name: "Youtube", icon: <Youtube size={20} />, href: "#" },
   ];
 
   return (
@@ -35,11 +37,27 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
           {/* Brand & Call to Action */}
           <div className="md:col-span-5 space-y-6">
-            <a href="/" className="inline-block">
-              <span className="text-3xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">
-                Startup Atti
-              </span>
-            </a>
+            <div className="flex flex-col gap-4">
+              <a href="/" className="flex items-center gap-2">
+                <img
+                  src="/logo.png"
+                  alt="Startup Atti"
+                  className="h-16 w-auto object-contain"
+                />
+                <p className="text-white text-lg font-bold">Startupatti</p>
+              </a>
+              <div className="flex flex-col gap-1">
+                <div className="flex items-center gap-3">
+                  <span className="text-gray-400 text-sm">Registered with</span>
+                  <img
+                    src="/UOY.png"
+                    alt="Unity of Youth Theory"
+                    className="h-12 w-auto object-contain bg-white/10 rounded-lg p-1"
+                  />
+                </div>
+                <p className="text-gray-500 text-xs">Reg No: 2025/100/3000</p>
+              </div>
+            </div>
             <p className="text-gray-400 text-lg leading-relaxed max-w-md">
               The gateway to the real startup ecosystem. Join us for meaningful
               connections, offline collisions, and a community that builds

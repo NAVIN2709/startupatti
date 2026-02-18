@@ -1,53 +1,23 @@
 import Hero from "../components/Hero";
 import EventCard from "../components/EventCard";
+import DonateButton from "../components/DonateButton"; // Kept if needed later, but not used currently
+import Mission from "../components/Mission";
 import StatsSection from "../components/StatsSection";
 import PastSpeakers from "../components/PastSpeakers";
 import { ArrowRight } from "lucide-react";
 import Partners from "../components/Partners";
 import Initiative from "../components/Initiative";
 import Quote from "../components/Quote";
-import Team from "../components/Team";
+
+import { events } from "../data/events";
 
 const Home = () => {
-  const events = [
-    {
-      id: 1,
-      title: "July Atti: SaaS Special",
-      date: "July 26, 2024",
-      location: "Tharamani, Chennai",
-      description:
-        "Dive deep into the world of SaaS with industry leaders. A networking event dedicated to scaling softwre products.",
-      isFeatured: false,
-      image:
-        "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1632&q=80",
-    },
-    {
-      id: 2,
-      title: "Tech Mixer",
-      date: "August 10, 2024",
-      location: "T-Hub, Hyderabad",
-      description:
-        "Connect with developers, designers, and founders in this casual mixer event.",
-      isFeatured: false,
-      image:
-        "https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
-    },
-    {
-      id: 3,
-      title: "Pitch Perfect",
-      date: "August 24, 2024",
-      location: "Koramangala, Bangalore",
-      description:
-        "Refine your pitch deck with feedback from experienced VCs and Angels.",
-      isFeatured: false,
-      image:
-        "https://images.unsplash.com/photo-1544531586-fde5298cdd40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
-    },
-  ];
-
   return (
     <>
       <Hero />
+
+      {/* New Mission/Values Section */}
+      <Mission />
 
       {/* 1. Latest Events Section (Moved to top as requested) */}
       <section id="events" className="py-24 px-6 relative">
@@ -89,7 +59,7 @@ const Home = () => {
       </section>
 
       {/* 2. Mission Statement */}
-      <section id="roots">
+      <section>
         <Quote />
       </section>
 
@@ -103,9 +73,6 @@ const Home = () => {
 
       {/* 3. Authority & Backing (Moved here) */}
       <Initiative />
-
-      {/* 4. The Team Behind It (Moved here) */}
-      <Team />
 
       {/* 7. Ecosystem Partners */}
       <Partners />
