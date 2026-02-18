@@ -1,20 +1,11 @@
 import { useState, useEffect } from "react";
-import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isAttiDropdownOpen, setIsAttiDropdownOpen] = useState(false);
-
-  const attiMonths = [
-    "August 2025",
-    "September 2025",
-    "October 2025",
-    "November 2025",
-    "December 2025",
-    "January 2026",
-  ];
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,137 +16,138 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Atti", href: "#atti" },
-    { name: "About", href: "#about" },
-    { name: "Contact Us", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/#roots" },
+    { name: "Speakers", href: "/#speakers" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black ${
-        isScrolled ? "py-3" : "py-6"
-      }`}
-    >
-      <div className="container mx-auto px-6 h-12 flex justify-between items-center relative">
-        <a href="/" className="flex items-center gap-3 group relative z-10">
-          <img src="/logo.png" alt="logo" className="w-20 h-20" />
-        </a>
+    <>
+      <nav
+        className={`fixed top-4 left-0 right-0 z-50 transition-all duration-300 px-4 md:px-0 flex justify-center`}
+      >
+        <div
+          className={`
+            w-full md:w-auto md:min-w-[700px] max-w-5xl
+            backdrop-blur-md border border-white/10 rounded-full
+            flex justify-between items-center px-6 py-3
+            transition-all duration-500
+            ${isScrolled ? "bg-black/80 shadow-lg shadow-blue-500/10" : "bg-black/50"}
+          `}
+        >
+          {/* Logo */}
+          <a
+            href="/"
+            className="flex items-center gap-2 group relative z-10 mr-8"
+          >
+            <img
+              src="/logo.png"
+              alt="logo"
+              className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+            />
+            <span className="font-bold text-white tracking-tight hidden sm:block">
+              Startup Atti
+            </span>
+          </a>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
-          <div className="flex space-x-6 mr-6 border-r border-white/20 pr-6">
-            <a
-              href="/"
-              className="text-sm font-medium text-gray-400 hover:text-white transition-colors relative group"
-            >
-              Home
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
-            </a>
-
-            {/* Atti Dropdown */}
-            <div
-              className="relative group"
-              onMouseEnter={() => setIsAttiDropdownOpen(true)}
-              onMouseLeave={() => setIsAttiDropdownOpen(false)}
-            >
-              <button className="text-sm font-medium text-gray-400 hover:text-white transition-colors flex items-center gap-1 relative">
-                Atti
-                <ChevronDown
-                  size={16}
-                  className={`transition-transform ${isAttiDropdownOpen ? "rotate-180" : ""}`}
-                />
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
-              </button>
-
-              <AnimatePresence>
-                {isAttiDropdownOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-48 bg-black border border-white/10 rounded-xl shadow-xl overflow-hidden"
-                  >
-                    <div className="py-2 flex flex-col">
-                      {attiMonths.map((month, idx) => (
-                        <a
-                          key={idx}
-                          href={`/events/${month.toLowerCase().replace(/ /g, "-")}`}
-                          className="px-4 py-2 text-sm text-gray-400 hover:text-black hover:bg-white focus:bg-white active:bg-white transition-colors text-left group flex items-center justify-between"
-                          onClick={() => setIsAttiDropdownOpen(false)}
-                        >
-                          <span className="relative">{month}</span>
-                          <ArrowRight
-                            size={16}
-                            className="text-black opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
-                          />
-                        </a>
-                      ))}
-                    </div>
-                  </motion.div>
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-1 bg-white/5 rounded-full p-1 border border-white/5 relative">
+            {navLinks.map((link, index) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="relative px-5 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors z-10"
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
+                {link.name}
+                {hoveredIndex === index && (
+                  <motion.span
+                    layoutId="navbar-hover"
+                    className="absolute inset-0 bg-white/10 rounded-full -z-0"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                  />
                 )}
-              </AnimatePresence>
-            </div>
+              </a>
+            ))}
+          </div>
 
+          {/* Donate / CTA */}
+          <div className="hidden md:flex items-center ml-8">
             <a
-              href="#about"
-              className="text-sm font-medium text-gray-400 hover:text-white transition-colors relative group"
+              href="https://wa.me/919940338848?text=i%20am%20here%20for%20donation"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                    relative overflow-hidden
+                    px-5 py-2 rounded-full 
+                    bg-white text-black 
+                    text-sm font-bold 
+                    hover:bg-gray-200 transition-colors duration-300
+                    flex items-center gap-2
+                "
             >
-              About
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a
-              href="#contact"
-              className="text-sm font-medium text-gray-400 hover:text-white transition-colors relative group"
-            >
-              Contact Us
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+              <span>Donate</span>
+              <ArrowUpRight size={14} />
             </a>
           </div>
 
-          <button className="px-5 py-2 rounded border border-white/20 text-white text-sm font-medium hover:bg-white hover:text-black hover:border-white transition-all cursor-pointer">
-            Get In Touch
+          {/* Mobile Menu Toggle */}
+          <button
+            className="md:hidden text-white focus:outline-none p-2 bg-white/10 rounded-full"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
-
-        {/* Mobile Menu Toggle */}
-        <button
-          className="md:hidden text-white focus:outline-none"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
+      </nav>
 
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass-nav border-t border-white/10 overflow-hidden bg-black"
+            initial={{ opacity: 0, y: -20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -20, scale: 0.95 }}
+            transition={{ duration: 0.2 }}
+            className="fixed top-20 left-4 right-4 z-40 bg-black/90 backdrop-blur-xl border border-white/10 rounded-2xl p-4 shadow-2xl md:hidden"
           >
-            <div className="flex flex-col p-6 space-y-4">
+            <div className="flex flex-col space-y-2">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-lg font-medium text-gray-300 hover:text-white block"
+                  className="px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/5 transition-all font-medium flex justify-between items-center"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
+                  <ArrowUpRight
+                    size={16}
+                    className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-white"
+                  />
                 </a>
               ))}
-              <button className="w-full py-3 mt-4 rounded border border-white/20 text-white font-bold hover:bg-white hover:text-black transition-colors">
-                Get In Touch
-              </button>
+              <div className="h-px bg-white/10 my-2" />
+              <a
+                href="https://wa.me/919940338848?text=i%20am%20here%20for%20donation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3 mt-2 flex items-center justify-center gap-2 rounded-xl bg-white text-black font-bold hover:bg-gray-200 transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Donate Support
+                <ArrowUpRight size={16} />
+              </a>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </>
   );
 };
 

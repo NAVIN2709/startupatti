@@ -1,100 +1,114 @@
 import { motion } from "framer-motion";
+import {
+  Linkedin,
+  Instagram,
+  Twitter,
+  Facebook,
+  ArrowUpRight,
+} from "lucide-react";
 
 const Footer = () => {
+  const links = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/#roots" },
+    { name: "Speakers", href: "/#speakers" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "Contact Us", href: "/#contact" },
+  ];
+
+  const socialLinks = [
+    { name: "LinkedIn", icon: <Linkedin size={20} />, href: "#" },
+    { name: "Instagram", icon: <Instagram size={20} />, href: "#" },
+    { name: "Twitter", icon: <Twitter size={20} />, href: "#" },
+    { name: "Facebook", icon: <Facebook size={20} />, href: "#" },
+  ];
+
   return (
-    <footer className="bg-black pt-20 pb-10 border-t border-white/10">
-      <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-start gap-12">
-          {/* Logo & Info */}
-          <div className="md:w-1/3">
-            <a href="#" className="flex items-center gap-3 mb-6 group">
-              <span className="text-2xl font-bold tracking-tighter text-white">
+    <footer
+      id="contact"
+      className="bg-[#050505] pt-24 pb-12 border-t border-white/10 relative overflow-hidden"
+    >
+      {/* Ambient Background */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+          {/* Brand & Call to Action */}
+          <div className="md:col-span-5 space-y-6">
+            <a href="/" className="inline-block">
+              <span className="text-3xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">
                 Startup Atti
               </span>
             </a>
-            <h2 className="text-xl font-bold mb-4 text-white">
-              Let’s collaborate together
-            </h2>
-            <p className="text-gray-400 mb-6">
-              Take action today and join us for an event experience like no
-              other.
+            <p className="text-gray-400 text-lg leading-relaxed max-w-md">
+              The gateway to the real startup ecosystem. Join us for meaningful
+              connections, offline collisions, and a community that builds
+              together.
             </p>
-            <button className="px-6 py-2 rounded border border-white/20 text-white text-sm font-medium hover:bg-white hover:text-black transition-all">
-              Contact Us
-            </button>
-          </div>
-
-          {/* Links */}
-          <div className="md:w-1/3 grid grid-cols-2 gap-8">
-            <div>
-              <h6 className="text-white text-sm font-bold uppercase tracking-wider mb-4 opacity-50">
-                Pages
-              </h6>
-              <ul className="space-y-3">
-                {["Home", "Events", "Speakers", "About Us", "News"].map(
-                  (item) => (
-                    <li key={item}>
-                      <a
-                        href="#"
-                        className="text-gray-400 hover:text-white transition-colors text-sm"
-                      >
-                        {item}
-                      </a>
-                    </li>
-                  ),
-                )}
-              </ul>
-            </div>
-            <div>
-              <h6 className="text-white text-sm font-bold uppercase tracking-wider mb-4 opacity-50">
-                Socials
-              </h6>
-              <ul className="space-y-3">
-                {["Instagram", "Twitter", "LinkedIn", "Facebook"].map(
-                  (item) => (
-                    <li key={item}>
-                      <a
-                        href="#"
-                        className="text-gray-400 hover:text-white transition-colors text-sm"
-                      >
-                        {item}
-                      </a>
-                    </li>
-                  ),
-                )}
-              </ul>
-            </div>
-          </div>
-
-          {/* Newsletter */}
-          <div className="md:w-1/3">
-            <h6 className="text-white text-sm font-bold uppercase tracking-wider mb-4 opacity-50">
-              Sign up to our newsletter
-            </h6>
-            <form className="flex flex-col space-y-4">
-              <input
-                type="email"
-                placeholder="Email address"
-                className="w-full bg-[#111] border border-white/10 rounded px-4 py-3 text-white focus:outline-none focus:border-white/50 transition-colors"
-              />
-              <button
-                type="submit"
-                className="w-full bg-white text-black font-bold py-3 rounded hover:bg-gray-200 transition-colors"
+            <div className="pt-4">
+              <a
+                href="https://wa.me/919940338848?text=i%20am%20here%20for%20donation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black font-bold hover:bg-gray-200 transition-all group"
               >
-                Subscribe
-              </button>
-            </form>
+                Support Our Mission
+                <ArrowUpRight
+                  size={18}
+                  className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+                />
+              </a>
+            </div>
+          </div>
+
+          {/* Navigation Links */}
+          <div className="md:col-span-3 md:col-start-7">
+            <h4 className="text-white font-bold mb-6">Explore</h4>
+            <ul className="space-y-4">
+              {links.map((link) => (
+                <li key={link.name}>
+                  <a
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 group"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-white/20 group-hover:bg-blue-500 transition-colors"></span>
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Socials */}
+          <div className="md:col-span-3">
+            <h4 className="text-white font-bold mb-6">Connect</h4>
+            <div className="flex gap-4">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 hover:border-white/30 transition-all"
+                  aria-label={social.name}
+                >
+                  {social.icon}
+                </a>
+              ))}
+            </div>
+            <p className="mt-6 text-sm text-gray-500">
+              Chennai, Tamil Nadu, India <br />
+              ecosystem@startupatti.com
+            </p>
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="border-t border-white/10 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+        {/* Bottom Bar */}
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
           <p>© {new Date().getFullYear()} Startup Atti. All Rights Reserved.</p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white">
+          <div className="flex gap-6">
+            <a href="#" className="hover:text-white transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-white">
+            <a href="#" className="hover:text-white transition-colors">
               Terms of Service
             </a>
           </div>

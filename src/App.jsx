@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import Gallery from "./pages/Gallery";
 import EventGallery from "./pages/EventGallery";
 import ScrollToTop from "./components/ScrollToTop"; // Helper to scroll top on route change
 
@@ -15,6 +16,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/gallery" element={<Gallery />} />
             <Route path="/events/:month" element={<EventGallery />} />
           </Routes>
         </main>

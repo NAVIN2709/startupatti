@@ -1,9 +1,12 @@
 import Hero from "../components/Hero";
 import EventCard from "../components/EventCard";
 import StatsSection from "../components/StatsSection";
-import Testimonials from "../components/Testimonials";
-import Pricing from "../components/Pricing";
+import PastSpeakers from "../components/PastSpeakers";
 import { ArrowRight } from "lucide-react";
+import Partners from "../components/Partners";
+import Initiative from "../components/Initiative";
+import Quote from "../components/Quote";
+import Team from "../components/Team";
 
 const Home = () => {
   const events = [
@@ -46,7 +49,7 @@ const Home = () => {
     <>
       <Hero />
 
-      {/* Latest Events Section */}
+      {/* 1. Latest Events Section (Moved to top as requested) */}
       <section id="events" className="py-24 px-6 relative">
         <div className="container mx-auto">
           {/* Header: Title Left, Link Right */}
@@ -85,11 +88,27 @@ const Home = () => {
         </div>
       </section>
 
+      {/* 2. Mission Statement */}
+      <section id="roots">
+        <Quote />
+      </section>
+
+      {/* 5. Impact Stats */}
       <StatsSection />
 
-      <Testimonials />
+      {/* 6. Social Proof: Past Speakers */}
+      <section id="speakers">
+        <PastSpeakers />
+      </section>
 
-      <Pricing />
+      {/* 3. Authority & Backing (Moved here) */}
+      <Initiative />
+
+      {/* 4. The Team Behind It (Moved here) */}
+      <Team />
+
+      {/* 7. Ecosystem Partners */}
+      <Partners />
     </>
   );
 };

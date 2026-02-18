@@ -46,5 +46,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-white/20 rounded-full hover:bg-white/40 transition-colors;
+  background-color: white;
+  border-radius: 9999px;
+  border: 2px solid black; /* Adds padding effect */
 }
