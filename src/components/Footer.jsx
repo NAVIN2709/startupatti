@@ -114,7 +114,13 @@ const Footer = () => {
             </div>
             <p className="mt-6 text-sm text-gray-500">
               Chennai, Tamil Nadu, India <br />
-              ecosystem@startupatti.com
+              ecosystem@startupatti.com <br />
+              <a
+                href="tel:+919940338848"
+                className="hover:text-white transition-colors"
+              >
+                +91 99403 38848
+              </a>
             </p>
           </div>
         </div>

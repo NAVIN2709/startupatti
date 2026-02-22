@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -6,14 +7,68 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [activeHash, setActiveHash] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const isActive = (href) => {
+    if (href.includes("#")) {
+      const [path, hash] = href.split("#");
+      const targetPath = path || "/";
+      return location.pathname === targetPath && activeHash === hash;
+    }
+    // Exact match for path-only links
+    return location.pathname === href && !activeHash;
+  };
+
+  const handleNavClick = (e, href) => {
+    if (href.includes("#")) {
+      e.preventDefault();
+      const [path, hash] = href.split("#");
+      const targetPath = path || "/";
+
+      if (location.pathname === targetPath) {
+        // Same page — just scroll
+        const el = document.getElementById(hash);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      } else {
+        // Different page — navigate then scroll
+        navigate(targetPath);
+        setTimeout(() => {
+          const el = document.getElementById(hash);
+          if (el) el.scrollIntoView({ behavior: "smooth" });
+        }, 300);
+      }
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
+
+      // Detect which hash section is currently in view
+      const sections = ["speakers", "contact"];
+      let found = "";
+      for (const id of sections) {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 200 && rect.bottom > 200) {
+            found = id;
+            break;
+          }
+        }
+      }
+      setActiveHash(found);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Reset activeHash when navigating to a different page
+  useEffect(() => {
+    setActiveHash("");
+  }, [location.pathname]);
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -58,12 +113,17 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="relative px-5 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors z-10"
+                className={`relative px-5 py-2 text-sm font-medium rounded-full transition-all duration-300 z-10 ${
+                  isActive(link.href)
+                    ? "bg-white text-black"
+                    : "text-gray-300 hover:text-white"
+                }`}
+                onClick={(e) => handleNavClick(e, link.href)}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
                 {link.name}
-                {hoveredIndex === index && (
+                {hoveredIndex === index && !isActive(link.href) && (
                   <motion.span
                     layoutId="navbar-hover"
                     className="absolute inset-0 bg-white/10 rounded-full -z-0"
@@ -122,8 +182,15 @@ const Navbar = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/5 transition-all font-medium flex justify-between items-center"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`px-4 py-3 rounded-xl transition-all font-medium flex justify-between items-center ${
+                    isActive(link.href)
+                      ? "bg-white text-black"
+                      : "text-gray-300 hover:text-white hover:bg-white/5"
+                  }`}
+                  onClick={(e) => {
+                    handleNavClick(e, link.href);
+                    setIsMobileMenuOpen(false);
+                  }}
                 >
                   {link.name}
                   <ArrowUpRight
