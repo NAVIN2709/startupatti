@@ -9,7 +9,7 @@ export const events = [
       "Monthly networking hangout for startups and entrepreneurs. Real stories, real connections.",
     fullDescription:
       "The December edition of our monthly hangout brought together founders, freelancers, and startup enthusiasts at Thangam Flats, Thoraipakkam. An evening of meaningful conversations, founder storytelling, structured networking rounds, and real connections.",
-    image: "../assets/images/DECEMBER ATTI.jpg",
+    image: "/optimized/September_atti.webp",
     gallery: [],
   },
   {
@@ -22,7 +22,7 @@ export const events = [
       "Monthly hangout with founder stories, networking rounds, and startup conversations.",
     fullDescription:
       "The November edition at Tekclan Software Solutions featured interactive sessions with founders, structured intro rounds, and open networking. Attendees included aspiring entrepreneurs, solopreneurs, freelancers, students, enablers, and investors.",
-    image: "../September_atti.png",
+    image: "/optimized/September_atti.webp",
     gallery: [],
   },
   {
@@ -35,7 +35,7 @@ export const events = [
       "Monthly startup hangout with networking and entrepreneur talks.",
     fullDescription:
       "Held at Tekclan Software Solutions, the August edition brought early-stage entrepreneurs together for casual networking, founder storytelling, and meaningful offline connections. Featured interactive sessions and structured intro rounds.",
-    image: "../AUGUST ATTI.jpeg",
+    image: "/optimized/AUGUST ATTI.webp",
     gallery: [],
   },
 ];

@@ -8,8 +8,7 @@ const featured_event = [
     location: "Tekclan Software Solutions Pvt Ltd, Chennai",
     description:
       "A monthly hangout for founders, solopreneurs, and aspiring entrepreneurs. Network, share knowledge, and build connections.",
-    image:
-      "../AUGUST ATTI.jpeg",
+    image: "/optimized/AUGUST ATTI.webp",
     link: "https://allevents.in/chennai/startup-atti-%7C-february-atti-%7C-a-monthly-hangout-tickets/80001513088601",
   },
 ];

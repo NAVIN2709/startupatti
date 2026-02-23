@@ -2,19 +2,19 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ZoomIn } from "lucide-react";
 
-import img1 from "../assets/gallery/DSC09636.JPG";
-import img2 from "../assets/gallery/IMG_0552.JPG";
-import img3 from "../assets/gallery/IMG_0555.JPG";
-import img4 from "../assets/gallery/IMG_0557.JPG";
-import img5 from "../assets/gallery/IMG_0574.JPG";
-import img6 from "../assets/gallery/IMG_0578.JPG";
-import img7 from "../assets/gallery/IMG_0602.JPG";
-import img8 from "../assets/gallery/IMG_0625.JPG";
-import img9 from "../assets/gallery/IMG_0684.JPG";
-import img10 from "../assets/gallery/IMG_0709.JPG";
-import img11 from "../assets/gallery/IMG_0733.JPG";
-import img12 from "../assets/gallery/IMG_0764.JPG";
-import img13 from "../assets/gallery/IMG_0779.JPG";
+import img1 from "../assets/gallery/optimized/DSC09636.webp";
+import img2 from "../assets/gallery/optimized/IMG_0552.webp";
+import img3 from "../assets/gallery/optimized/IMG_0555.webp";
+import img4 from "../assets/gallery/optimized/IMG_0557.webp";
+import img5 from "../assets/gallery/optimized/IMG_0574.webp";
+import img6 from "../assets/gallery/optimized/IMG_0578.webp";
+import img7 from "../assets/gallery/optimized/IMG_0602.webp";
+import img8 from "../assets/gallery/optimized/IMG_0625.webp";
+import img9 from "../assets/gallery/optimized/IMG_0684.webp";
+import img10 from "../assets/gallery/optimized/IMG_0709.webp";
+import img11 from "../assets/gallery/optimized/IMG_0733.webp";
+import img12 from "../assets/gallery/optimized/IMG_0764.webp";
+import img13 from "../assets/gallery/optimized/IMG_0779.webp";
 
 const galleryImages = [
   { src: img1, alt: "Atti Moments", span: "tall" },

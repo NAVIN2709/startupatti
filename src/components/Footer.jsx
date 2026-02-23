@@ -51,7 +51,7 @@ const Footer = () => {
               <div className="flex flex-col gap-1">
                 <div className="flex items-center gap-3">
                   <img
-                    src="/UOY.png"
+                    src="/optimized/UOY.webp"
                     alt="Unity of Youth Foundation"
                     className="h-12 w-auto object-contain bg-white/10 rounded-lg p-1"
                   />

@@ -6,19 +6,19 @@ const Partners = () => {
       name: "Madras Marketers",
       role: "Founding Partner",
       url: "https://madrasmarketers.com",
-      image: "/Madras marketers.png",
+      image: "/optimized/Madras marketers.webp",
     },
     {
       name: "Fellow Founders",
       role: "Founding Partner",
       url: "https://fellowfounder.ai",
-      image: "/fellow founders.png",
+      image: "/optimized/fellow founders.webp",
     },
     {
       name: "Refreshment Partner",
       role: "Founding Partner",
       url: "#",
-      image: "/refreshment.png",
+      image: "/optimized/refreshment.webp",
     },
   ];
 

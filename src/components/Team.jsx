@@ -7,13 +7,13 @@ const Team = () => {
       name: "Venkateshwaran Vanniyarajan",
       role: "Department of Economic & Entrepreneurship Development",
       linkedin: "https://www.linkedin.com/in/venkateshwaranvanniyarajan/",
-      image: "/venkat.png",
+      image: "/optimized/venkat.webp",
     },
     {
       name: "Vijay R",
       role: "Founder, Unity of Youth Foundation",
       linkedin: "https://www.linkedin.com/in/vijay-ramesh-pandiyan-17a503251/",
-      image: "/vijay.png",
+      image: "/optimized/vijay.webp",
     },
   ];
 

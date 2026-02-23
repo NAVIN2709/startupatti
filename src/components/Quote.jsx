@@ -18,7 +18,7 @@ const Quote = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-blue-500/20 blur-[80px] rounded-full"></div>
               <img
-                src="/vivekan.png"
+                src="/optimized/vivekan.webp"
                 alt="Swami Vivekananda"
                 className="relative z-10 max-w-[220px] md:max-w-[400px] drop-shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
               />

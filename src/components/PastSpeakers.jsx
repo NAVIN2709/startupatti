@@ -2,32 +2,32 @@ import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 
 // Speaker images
-import gopiImg from "../assets/speakers/gopi.png";
-import premImg from "../assets/speakers/prem.png";
-import pinkuImg from "../assets/speakers/pinku.png";
-import nirmalImg from "../assets/speakers/nirmal.png";
-import karunyaImg from "../assets/speakers/karunya.png";
-import mosesImg from "../assets/speakers/moses.png";
-import sathyaImg from "../assets/speakers/sathya.png";
-import arunImg from "../assets/speakers/arun.png";
-import sankariImg from "../assets/speakers/sankari.png";
-import deepakImg from "../assets/speakers/deepak.png";
-import selvamImg from "../assets/speakers/selvam.png";
-import karthikImg from "../assets/speakers/karthik.png";
+import gopiImg from "../assets/speakers/optimized/gopi.webp";
+import premImg from "../assets/speakers/optimized/prem.webp";
+import pinkuImg from "../assets/speakers/optimized/pinku.webp";
+import nirmalImg from "../assets/speakers/optimized/nirmal.webp";
+import karunyaImg from "../assets/speakers/optimized/karunya.webp";
+import mosesImg from "../assets/speakers/optimized/moses.webp";
+import sathyaImg from "../assets/speakers/optimized/sathya.webp";
+import arunImg from "../assets/speakers/optimized/arun.webp";
+import sankariImg from "../assets/speakers/optimized/sankari.webp";
+import deepakImg from "../assets/speakers/optimized/deepak.webp";
+import selvamImg from "../assets/speakers/optimized/selvam.webp";
+import karthikImg from "../assets/speakers/optimized/karthik.webp";
 
 // Company logos
-import badboyLogo from "../assets/companies/badboy.png";
-import a99vcLogo from "../assets/companies/dc.png";
-import taxinaLogo from "../assets/companies/taxina.png";
-import ametLogo from "../assets/companies/amet_chamber.png";
-import kottravaiLogo from "../assets/companies/kottravai.png";
-import karupattiLogo from "../assets/companies/karupatti.png";
-import bulkpeLogo from "../assets/companies/bulkpe.png";
-import guviLogo from "../assets/companies/gui.png";
-import oqhLogo from "../assets/companies/overqualified_housewives.png";
-import yourtribeLogo from "../assets/companies/yourtribe.png";
-import shortfundlyLogo from "../assets/companies/short_fundly.png";
-import mindncompanyLogo from "../assets/companies/mindncompany.png";
+import badboyLogo from "../assets/companies/optimized/badboy.webp";
+import a99vcLogo from "../assets/companies/optimized/dc.webp";
+import taxinaLogo from "../assets/companies/optimized/taxina.webp";
+import ametLogo from "../assets/companies/optimized/amet_chamber.webp";
+import kottravaiLogo from "../assets/companies/optimized/kottravai.webp";
+import karupattiLogo from "../assets/companies/optimized/karupatti.webp";
+import bulkpeLogo from "../assets/companies/optimized/bulkpe.webp";
+import guviLogo from "../assets/companies/optimized/gui.webp";
+import oqhLogo from "../assets/companies/optimized/overqualified_housewives.webp";
+import yourtribeLogo from "../assets/companies/optimized/yourtribe.webp";
+import shortfundlyLogo from "../assets/companies/optimized/short_fundly.webp";
+import mindncompanyLogo from "../assets/companies/optimized/mindncompany.webp";
 
 const PastSpeakers = () => {
   const [width, setWidth] = useState(0);
