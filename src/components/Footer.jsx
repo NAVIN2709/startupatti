@@ -72,7 +72,7 @@ const Footer = () => {
             </p>
             <div className="pt-4">
               <a
-                href="https://wa.me/919940338848?text=i%20am%20here%20for%20donation"
+                href="https://wa.me/919487445528?text=Hi%2C%20I%20strongly%20believe%20in%20empowering%20young%20entrepreneurs%20and%20would%20be%20glad%20to%20contribute%20to%20your%20initiative.%20Kindly%20share%20the%20details%20to%20proceed%20with%20a%20donation."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black font-bold hover:bg-gray-200 transition-all group"

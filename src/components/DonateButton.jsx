@@ -1,7 +1,7 @@
 import { MessageCircleHeart } from "lucide-react";
 
 const DonateButton = () => {
-  const phoneNumber = "919940338848"; // Added 91 for India code
+  const phoneNumber = "919487445528"; // Added 91 for India code
   const message = encodeURIComponent("i am here for donation");
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
