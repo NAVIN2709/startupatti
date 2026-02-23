@@ -16,7 +16,7 @@ const Partners = () => {
     },
     {
       name: "Refreshment Partner",
-      role: "Refreshment Partner",
+      role: "Founding Partner",
       url: "#",
       image: "/refreshment.png",
     },

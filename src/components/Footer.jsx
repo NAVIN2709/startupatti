@@ -1,12 +1,4 @@
-import { motion } from "framer-motion";
-import {
-  Linkedin,
-  Instagram,
-  Twitter,
-  Facebook,
-  Youtube,
-  ArrowUpRight,
-} from "lucide-react";
+import { Linkedin, Instagram, Youtube, ArrowUpRight } from "lucide-react";
 
 const Footer = () => {
   const links = [
@@ -18,11 +10,21 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: "LinkedIn", icon: <Linkedin size={20} />, href: "#" },
-    { name: "Instagram", icon: <Instagram size={20} />, href: "#" },
-    { name: "Twitter", icon: <Twitter size={20} />, href: "#" },
-    { name: "Facebook", icon: <Facebook size={20} />, href: "#" },
-    { name: "Youtube", icon: <Youtube size={20} />, href: "#" },
+    {
+      name: "Instagram",
+      icon: <Instagram size={20} />,
+      href: "https://www.instagram.com/startupatti",
+    },
+    {
+      name: "YouTube",
+      icon: <Youtube size={20} />,
+      href: "https://youtube.com/@startupatti",
+    },
+    {
+      name: "LinkedIn",
+      icon: <Linkedin size={20} />,
+      href: "https://www.linkedin.com/company/startupatti/",
+    },
   ];
 
   return (
@@ -40,22 +42,27 @@ const Footer = () => {
             <div className="flex flex-col gap-4">
               <a href="/" className="flex items-center gap-2">
                 <img
-                  src="/logo.png"
+                  src="/logo.svg"
                   alt="Startup Atti"
                   className="h-16 w-auto object-contain"
                 />
-                <p className="text-white text-lg font-bold">Startupatti</p>
+                <p className="text-white text-lg font-bold">Startup Atti</p>
               </a>
               <div className="flex flex-col gap-1">
                 <div className="flex items-center gap-3">
-                  <span className="text-gray-400 text-sm">Registered with</span>
                   <img
                     src="/UOY.png"
-                    alt="Unity of Youth Theory"
+                    alt="Unity of Youth Foundation"
                     className="h-12 w-auto object-contain bg-white/10 rounded-lg p-1"
                   />
                 </div>
-                <p className="text-gray-500 text-xs">Reg No: 2025/100/3000</p>
+                <p className="text-gray-400 text-xs leading-relaxed mt-1">
+                  An initiative by Dept. of Economic &amp; Entrepreneurship
+                  Development, Unity of Youth Foundation
+                </p>
+                <p className="text-gray-500 text-xs">
+                  Darpan ID: TN/2024/0425767
+                </p>
               </div>
             </div>
             <p className="text-gray-400 text-lg leading-relaxed max-w-md">
@@ -114,12 +121,12 @@ const Footer = () => {
             </div>
             <p className="mt-6 text-sm text-gray-500">
               Chennai, Tamil Nadu, India <br />
-              ecosystem@startupatti.com <br />
+              startupatti@startupatti.com <br />
               <a
-                href="tel:+919940338848"
+                href="tel:+919487445528"
                 className="hover:text-white transition-colors"
               >
-                +91 99403 38848
+                +91 94874 45528
               </a>
             </p>
           </div>

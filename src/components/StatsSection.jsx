@@ -42,7 +42,7 @@ const StatsSection = () => {
             className="relative z-10 rounded-3xl overflow-hidden h-[400px] md:h-[600px] grayscale hover:grayscale-0 transition-all duration-700"
           >
             <img
-              src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              src="../mission.jpg"
               alt="Startup Atti Community"
               className="w-full h-full object-cover"
             />

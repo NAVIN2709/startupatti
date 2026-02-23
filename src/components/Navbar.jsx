@@ -98,7 +98,7 @@ const Navbar = () => {
             className="flex items-center gap-2 group relative z-10 mr-8"
           >
             <img
-              src="/logo.png"
+              src="/logo.svg"
               alt="logo"
               className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
             />
