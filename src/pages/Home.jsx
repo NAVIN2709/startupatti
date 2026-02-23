@@ -1,10 +1,10 @@
+import { useRef, useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import Hero from "../components/Hero";
 import EventCard from "../components/EventCard";
-import DonateButton from "../components/DonateButton"; // Kept if needed later, but not used currently
 import Mission from "../components/Mission";
 import StatsSection from "../components/StatsSection";
 import PastSpeakers from "../components/PastSpeakers";
-import { ArrowRight } from "lucide-react";
 import Partners from "../components/Partners";
 import Initiative from "../components/Initiative";
 import Quote from "../components/Quote";
@@ -12,6 +12,16 @@ import Quote from "../components/Quote";
 import { events } from "../data/events";
 
 const Home = () => {
+  const carouselRef = useRef(null);
+  const [dragWidth, setDragWidth] = useState(0);
+
+  useEffect(() => {
+    if (carouselRef.current) {
+      setDragWidth(
+        carouselRef.current.scrollWidth - carouselRef.current.offsetWidth,
+      );
+    }
+  }, []);
   return (
     <>
       <Hero />
@@ -19,11 +29,11 @@ const Home = () => {
       {/* New Mission/Values Section */}
       <Mission />
 
-      {/* 1. Latest Events Section (Moved to top as requested) */}
-      <section id="events" className="py-24 px-6 relative">
-        <div className="container mx-auto">
-          {/* Header: Title Left, Link Right */}
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-white/10 pb-6">
+      {/* 1. Latest Events Section */}
+      <section id="events" className="py-24 relative overflow-hidden">
+        <div className="container mx-auto px-6">
+          {/* Header */}
+          <div className="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-white/10 pb-6">
             <div className="max-w-xl">
               <h2 className="text-4xl font-bold mb-4 text-white">
                 Latest events
@@ -35,17 +45,33 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Desktop Grid */}
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {events.map((event) => (
               <EventCard key={event.id} {...event} />
             ))}
           </div>
+        </div>
 
-          <div className="mt-12 text-center md:hidden">
-            <button className="text-white border-b border-white pb-1 font-bold">
-              View All Events
-            </button>
-          </div>
+        {/* Mobile Carousel */}
+        <div className="md:hidden relative overflow-hidden">
+          <motion.div
+            ref={carouselRef}
+            className="flex gap-4 cursor-grab active:cursor-grabbing px-6"
+            drag="x"
+            dragConstraints={{
+              right: 0,
+              left: -dragWidth,
+            }}
+            dragElastic={0.1}
+            dragTransition={{ bounceStiffness: 300, bounceDamping: 30 }}
+          >
+            {events.map((event) => (
+              <div key={event.id} className="flex-shrink-0 w-[300px]">
+                <EventCard {...event} />
+              </div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
