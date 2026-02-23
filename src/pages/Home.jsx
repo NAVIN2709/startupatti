@@ -1,5 +1,3 @@
-import { useRef, useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import Hero from "../components/Hero";
 import EventCard from "../components/EventCard";
 import Mission from "../components/Mission";
@@ -12,16 +10,6 @@ import Quote from "../components/Quote";
 import { events } from "../data/events";
 
 const Home = () => {
-  const carouselRef = useRef(null);
-  const [dragWidth, setDragWidth] = useState(0);
-
-  useEffect(() => {
-    if (carouselRef.current) {
-      setDragWidth(
-        carouselRef.current.scrollWidth - carouselRef.current.offsetWidth,
-      );
-    }
-  }, []);
   return (
     <>
       <Hero />
@@ -30,7 +18,7 @@ const Home = () => {
       <Mission />
 
       {/* 1. Latest Events Section */}
-      <section id="events" className="py-24 relative overflow-hidden">
+      <section id="events" className="py-24 relative">
         <div className="container mx-auto px-6">
           {/* Header */}
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-white/10 pb-6">
@@ -53,25 +41,16 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Mobile Carousel */}
-        <div className="md:hidden relative overflow-hidden">
-          <motion.div
-            ref={carouselRef}
-            className="flex gap-4 cursor-grab active:cursor-grabbing px-6"
-            drag="x"
-            dragConstraints={{
-              right: 0,
-              left: -dragWidth,
-            }}
-            dragElastic={0.1}
-            dragTransition={{ bounceStiffness: 300, bounceDamping: 30 }}
-          >
-            {events.map((event) => (
-              <div key={event.id} className="flex-shrink-0 w-[300px]">
-                <EventCard {...event} />
-              </div>
-            ))}
-          </motion.div>
+        {/* Mobile Carousel — simple horizontal scroll */}
+        <div
+          className="md:hidden flex gap-4 px-6 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide"
+          style={{ WebkitOverflowScrolling: "touch" }}
+        >
+          {events.map((event) => (
+            <div key={event.id} className="flex-shrink-0 w-[85vw] snap-start">
+              <EventCard {...event} />
+            </div>
+          ))}
         </div>
       </section>
 
