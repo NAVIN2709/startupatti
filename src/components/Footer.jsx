@@ -3,7 +3,6 @@ import { Linkedin, Instagram, Youtube, ArrowUpRight } from "lucide-react";
 const Footer = () => {
   const links = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/#roots" },
     { name: "Events", href: "/#events" },
     { name: "Gallery", href: "/gallery" },
     { name: "Contact Us", href: "/#contact" },
@@ -30,7 +29,7 @@ const Footer = () => {
   return (
     <footer
       id="contact"
-      className="bg-[#050505] pt-16 md:pt-24 pb-8 md:pb-12 border-t border-white/10 relative overflow-hidden"
+      className="bg-[#050505] pt-10 md:pt-24 pb-8 md:pb-12 border-t border-white/10 relative overflow-hidden"
     >
       {/* Ambient Background */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
@@ -56,11 +55,14 @@ const Footer = () => {
                     className="h-12 w-auto object-contain bg-white/10 rounded-lg p-1"
                   />
                 </div>
-                <p className="text-gray-400 text-xs leading-relaxed mt-1">
-                  An initiative by Dept. of Economic &amp; Entrepreneurship
-                  Development, Unity of Youth Foundation
+                <p className="text-gray-400 text-md leading-relaxed mt-1">
+                  An initiative by Department of Economic &amp; Entrepreneurship
+                  Development
                 </p>
-                <p className="text-gray-500 text-xs">
+                <p className="text-gray-400 text-md leading-relaxed">
+                  Unity of Youth Foundation
+                </p>
+                <p className="text-gray-500 text-md">
                   Darpan ID: TN/2024/0425767
                 </p>
               </div>
@@ -130,10 +132,10 @@ const Footer = () => {
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
           <p>© {new Date().getFullYear()} Startup Atti. All Rights Reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">
+            <a href="/privacy" className="hover:text-white transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-white transition-colors">
+            <a href="/terms" className="hover:text-white transition-colors">
               Terms of Service
             </a>
           </div>

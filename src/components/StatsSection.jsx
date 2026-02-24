@@ -2,15 +2,15 @@ import { motion } from "framer-motion";
 
 const StatsSection = () => {
   const stats = [
-    { value: "5000+", label: "Energetic Students" },
-    { value: "50+", label: "Industry Experts & Speakers" },
-    { value: "100+", label: "Startups Impacted" },
+    { value: "1000+", label: "Enthusiasts" },
+    { value: "25+", label: "Founder Speakers" },
+    { value: "100+", label: "Startups" },
     { value: "∞", label: "Learning & Experience" },
   ];
 
   return (
-    <section className="py-24 bg-black relative overflow-hidden text-right">
-      <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section className="py-10 md:py-24 bg-black relative overflow-hidden text-right">
+      <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
         {/* Left: Text Content */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -23,11 +23,6 @@ const StatsSection = () => {
             <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-white">
               Empowering the <br /> Next Generation
             </h2>
-            <p className="text-gray-400 text-lg leading-relaxed max-w-md">
-              We bridge the gap between academic learning and real-world startup
-              challenges. Through our events, mentorship, and network, we
-              provide the XP you need to level up your entrepreneurial journey.
-            </p>
           </div>
         </motion.div>
 

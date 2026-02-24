@@ -5,7 +5,7 @@ const Mission = () => {
   return (
     <section
       id="roots"
-      className="py-16 md:py-24 bg-black border-b border-white/10"
+      className="py-10 md:py-24 bg-black border-b border-white/10"
     >
       <div className="container mx-auto px-4 md:px-6">
         {/* What is Startup Atti */}
@@ -14,7 +14,7 @@ const Mission = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-3xl mx-auto text-center mb-16 md:mb-20"
+          className="max-w-3xl mx-auto text-center mb-10 md:mb-20"
         >
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
             What is Startup Atti?
@@ -40,7 +40,7 @@ const Mission = () => {
         </motion.div>
 
         {/* What we do */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto mb-16 md:mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto mb-10 md:mb-20">
           {[
             {
               icon: Users,
@@ -83,7 +83,7 @@ const Mission = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-3xl mx-auto text-center mb-16 md:mb-20"
+          className="max-w-3xl mx-auto text-center mb-10 md:mb-20"
         >
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
             Who is this for?

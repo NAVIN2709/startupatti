@@ -7,6 +7,8 @@ import TeamPage from "./pages/TeamPage";
 import EventGallery from "./pages/EventGallery";
 import ScrollToTop from "./components/ScrollToTop"; // Helper to scroll top on route change
 import EventDetails from "./pages/EventDetails";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 
 const App = () => {
   return (
@@ -22,6 +24,8 @@ const App = () => {
             <Route path="/team" element={<TeamPage />} />
             <Route path="/event/:id" element={<EventDetails />} />
             <Route path="/events/:month" element={<EventGallery />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<TermsOfService />} />
           </Routes>
         </main>
 

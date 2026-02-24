@@ -1,3 +1,4 @@
+import { useState, useRef, useEffect } from "react";
 import Hero from "../components/Hero";
 import EventCard from "../components/EventCard";
 import Mission from "../components/Mission";
@@ -6,10 +7,72 @@ import StatsSection from "../components/StatsSection";
 import Partners from "../components/Partners";
 import Initiative from "../components/Initiative";
 import Quote from "../components/Quote";
+import { ChevronDown } from "lucide-react";
 
 import { events } from "../data/events";
 
 const Home = () => {
+  const [showAllPast, setShowAllPast] = useState(false);
+
+  const upcomingEvents = events.filter((e) => e.upcoming);
+  const pastEvents = events.filter((e) => !e.upcoming);
+  const visiblePastEvents = showAllPast ? pastEvents : pastEvents.slice(0, 3);
+
+  // Mobile scroll dots state
+  const [upcomingDot, setUpcomingDot] = useState(0);
+  const [pastDot, setPastDot] = useState(0);
+  const upcomingScrollRef = useRef(null);
+  const pastScrollRef = useRef(null);
+
+  const handleScroll = (ref, setDot, total) => {
+    const el = ref.current;
+    if (!el) return;
+    const scrollLeft = el.scrollLeft;
+    const cardWidth = el.querySelector(":scope > div")?.offsetWidth || 1;
+    const gap = 12; // gap-3 = 0.75rem = 12px
+    const index = Math.round(scrollLeft / (cardWidth + gap));
+    setDot(Math.min(index, total - 1));
+  };
+
+  useEffect(() => {
+    const upEl = upcomingScrollRef.current;
+    const pastEl = pastScrollRef.current;
+    const upHandler = () =>
+      handleScroll(upcomingScrollRef, setUpcomingDot, upcomingEvents.length);
+    const pastHandler = () =>
+      handleScroll(
+        pastScrollRef,
+        setPastDot,
+        showAllPast ? pastEvents.length : Math.min(pastEvents.length, 3),
+      );
+
+    if (upEl) upEl.addEventListener("scroll", upHandler, { passive: true });
+    if (pastEl)
+      pastEl.addEventListener("scroll", pastHandler, { passive: true });
+    return () => {
+      if (upEl) upEl.removeEventListener("scroll", upHandler);
+      if (pastEl) pastEl.removeEventListener("scroll", pastHandler);
+    };
+  }, [upcomingEvents.length, pastEvents.length, showAllPast]);
+
+  const ScrollDots = ({ total, active }) => {
+    if (total <= 1) return null;
+    return (
+      <div className="flex justify-center gap-2 mt-4 md:hidden">
+        {Array.from({ length: total }).map((_, i) => (
+          <span
+            key={i}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              i === active
+                ? "bg-white scale-125"
+                : "bg-white/30 hover:bg-white/50"
+            }`}
+          />
+        ))}
+      </div>
+    );
+  };
+
   return (
     <>
       <Hero />
@@ -17,36 +80,104 @@ const Home = () => {
       {/* New Mission/Values Section */}
       <Mission />
 
-      {/* 1. Latest Events Section */}
+      {/* Events Section */}
       <section id="events" className="py-12 md:py-24 relative">
         <div className="container mx-auto px-4 md:px-6">
-          {/* Header */}
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-12 border-b border-white/10 pb-4 md:pb-6">
-            <div className="max-w-xl">
-              <h2 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4 text-white">
-                Past events
-              </h2>
-            </div>
-          </div>
+          {/* ===== UPCOMING EVENTS ===== */}
+          {upcomingEvents.length > 0 && (
+            <div className="mb-8 md:mb-20">
+              {/* Header */}
+              <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-6 md:mb-12 border-b border-white/10 pb-4 md:pb-6">
+                <div className="max-w-xl">
+                  <div className="flex items-center gap-3 mb-2 md:mb-4">
+                    <h2 className="text-2xl md:text-4xl font-bold text-white">
+                      Upcoming Events
+                    </h2>
+                  </div>
+                </div>
+              </div>
 
-          {/* Desktop Grid */}
-          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {events.map((event) => (
-              <EventCard key={event.id} {...event} />
-            ))}
-          </div>
-        </div>
+              {/* Desktop Grid */}
+              <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {upcomingEvents.map((event) => (
+                  <EventCard key={event.id} {...event} />
+                ))}
+              </div>
 
-        {/* Mobile Carousel — simple horizontal scroll */}
-        <div
-          className="md:hidden flex gap-3 px-4 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide"
-          style={{ WebkitOverflowScrolling: "touch" }}
-        >
-          {events.map((event) => (
-            <div key={event.id} className="flex-shrink-0 w-[80vw] snap-start">
-              <EventCard {...event} />
+              {/* Mobile Carousel */}
+              <div
+                ref={upcomingScrollRef}
+                className="md:hidden flex gap-3 px-4 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide"
+                style={{ WebkitOverflowScrolling: "touch" }}
+              >
+                {upcomingEvents.map((event) => (
+                  <div
+                    key={event.id}
+                    className="flex-shrink-0 w-[80vw] snap-start"
+                  >
+                    <EventCard {...event} />
+                  </div>
+                ))}
+              </div>
+              <ScrollDots total={upcomingEvents.length} active={upcomingDot} />
             </div>
-          ))}
+          )}
+
+          {/* ===== PAST EVENTS ===== */}
+          <div>
+            {/* Header */}
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-6 md:mb-12 border-b border-white/10 pb-4 md:pb-6">
+              <div className="max-w-xl">
+                <h2 className="text-2xl md:text-4xl font-bold text-white">
+                  Past Events
+                </h2>
+              </div>
+            </div>
+
+            {/* Desktop Grid */}
+            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {visiblePastEvents.map((event) => (
+                <EventCard key={event.id} {...event} />
+              ))}
+            </div>
+
+            {/* Mobile Carousel */}
+            <div
+              ref={pastScrollRef}
+              className="md:hidden flex gap-3 px-4 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide"
+              style={{ WebkitOverflowScrolling: "touch" }}
+            >
+              {visiblePastEvents.map((event) => (
+                <div
+                  key={event.id}
+                  className="flex-shrink-0 w-[80vw] snap-start"
+                >
+                  <EventCard {...event} />
+                </div>
+              ))}
+            </div>
+            <ScrollDots total={visiblePastEvents.length} active={pastDot} />
+
+            {/* Show More / Show Less */}
+            {pastEvents.length > 3 && (
+              <div className="flex justify-center mt-8">
+                <button
+                  onClick={() => setShowAllPast(!showAllPast)}
+                  className="flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 text-white/80 hover:text-white hover:border-white/40 hover:bg-white/5 transition-all text-sm font-medium"
+                >
+                  {showAllPast
+                    ? "Show Less"
+                    : `Show ${pastEvents.length - 3} More`}
+                  <ChevronDown
+                    size={16}
+                    className={`transition-transform duration-300 ${
+                      showAllPast ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       </section>
 

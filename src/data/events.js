@@ -30,6 +30,21 @@ import yourtribe from "../assets/companies/optimized/yourtribe.webp";
 
 export const events = [
   {
+    id: 0,
+    title: "February Atti",
+    date: "February 28, 2026",
+    time: "2:30 PM onwards",
+    location: "Tekclan Software Solutions Pvt Ltd, Chennai",
+    description:
+      "A monthly hangout for founders, solopreneurs, and aspiring entrepreneurs. Network, share knowledge, and build connections.",
+    fullDescription:
+      "The February 2026 edition continues our monthly tradition of bringing together founders, freelancers, and startup enthusiasts. Join us for an evening of meaningful conversations, founder storytelling, structured networking rounds, and real connections.",
+    image: "/optimized/AUGUST ATTI.webp",
+    upcoming: true,
+    gallery: [],
+    speakers: [],
+  },
+  {
     id: 1,
     title: "January Atti",
     date: "January 24, 2026",
@@ -40,6 +55,7 @@ export const events = [
     fullDescription:
       "The January 2026 edition was hosted at the prestigious IITM Research Park. Founders, solopreneurs, and aspiring entrepreneurs came together for an evening of meaningful conversations, founder storytelling, and structured networking rounds.",
     image: "/optimized/Jan26.webp",
+    upcoming: false,
     gallery: [],
     speakers: [
       {
@@ -82,6 +98,7 @@ export const events = [
     fullDescription:
       "The December edition of our monthly hangout brought together founders, freelancers, and startup enthusiasts at Thangam Flats, Thoraipakkam. An evening of meaningful conversations, founder storytelling, structured networking rounds, and real connections.",
     image: "/optimized/September_atti.webp",
+    upcoming: false,
     gallery: [],
     speakers: [
       {
@@ -124,6 +141,7 @@ export const events = [
     fullDescription:
       "The November edition at Ticel Bio Park, Tharamani featured interactive sessions with founders, structured intro rounds, and open networking. Attendees included aspiring entrepreneurs, solopreneurs, freelancers, students, enablers, and investors.",
     image: "/optimized/Nov25.webp",
+    upcoming: false,
     gallery: [],
     speakers: [
       {
@@ -167,6 +185,7 @@ export const events = [
     fullDescription:
       "The October edition was hosted at the Tamil Nadu Startup and Innovation Mission (StartupTN), Nandanam. Featuring talks by Dinesh Arjun, CEO & Co-Founder of Raptee.HV, and Prem from a99 VC, the evening brought together early-stage entrepreneurs for founder storytelling, investor insights, and meaningful offline connections.",
     image: "/optimized/Oct25.webp",
+    upcoming: false,
     gallery: [],
     speakers: [
       {
@@ -202,6 +221,7 @@ export const events = [
     fullDescription:
       "Held at Tekclan Software Solutions, the August edition brought early-stage entrepreneurs together for casual networking, founder storytelling, and meaningful offline connections. Featured interactive sessions and structured intro rounds.",
     image: "/optimized/AUGUST ATTI.webp",
+    upcoming: false,
     gallery: [],
     speakers: [
       {
