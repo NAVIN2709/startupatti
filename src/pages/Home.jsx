@@ -3,11 +3,12 @@ import Hero from "../components/Hero";
 import EventCard from "../components/EventCard";
 import Mission from "../components/Mission";
 import StatsSection from "../components/StatsSection";
+import PastSpeakers from "../components/PastSpeakers";
 
 import Partners from "../components/Partners";
 import Initiative from "../components/Initiative";
 import Quote from "../components/Quote";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 
 import { events } from "../data/events";
 
@@ -28,10 +29,23 @@ const Home = () => {
     const el = ref.current;
     if (!el) return;
     const scrollLeft = el.scrollLeft;
-    const cardWidth = el.querySelector(":scope > div")?.offsetWidth || 1;
-    const gap = 12; // gap-3 = 0.75rem = 12px
+    const card = el.querySelector(":scope > div");
+    if (!card) return;
+    const cardWidth = card.offsetWidth;
+    const gap = 12; // gap-3 = 12px
     const index = Math.round(scrollLeft / (cardWidth + gap));
     setDot(Math.min(index, total - 1));
+  };
+
+  const scrollToIndex = (ref, index, total) => {
+    const el = ref.current;
+    if (!el) return;
+    const card = el.querySelector(":scope > div");
+    if (!card) return;
+    const cardWidth = card.offsetWidth;
+    const gap = 12;
+    const target = Math.min(index, total - 1) * (cardWidth + gap);
+    el.scrollTo({ left: target, behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -58,14 +72,12 @@ const Home = () => {
   const ScrollDots = ({ total, active }) => {
     if (total <= 1) return null;
     return (
-      <div className="flex justify-center gap-2 mt-4 md:hidden">
+      <div className="flex justify-center gap-1.5 mt-6 md:hidden">
         {Array.from({ length: total }).map((_, i) => (
           <span
             key={i}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              i === active
-                ? "bg-white scale-125"
-                : "bg-white/30 hover:bg-white/50"
+            className={`h-1.5 rounded-full transition-all duration-300 ${
+              i === active ? "bg-white w-6" : "bg-white/20"
             }`}
           />
         ))}
@@ -87,13 +99,43 @@ const Home = () => {
           {upcomingEvents.length > 0 && (
             <div className="mb-8 md:mb-20">
               {/* Header */}
-              <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-6 md:mb-12 border-b border-white/10 pb-4 md:pb-6">
+              <div className="flex flex-row justify-between items-end mb-6 md:mb-12 border-b border-white/10 pb-4 md:pb-6">
                 <div className="max-w-xl">
-                  <div className="flex items-center gap-3 mb-2 md:mb-4">
-                    <h2 className="text-2xl md:text-4xl font-bold text-white">
-                      Upcoming Events
-                    </h2>
-                  </div>
+                  <h2 className="text-2xl md:text-4xl font-bold text-white">
+                    Upcoming Events
+                  </h2>
+                </div>
+                {/* Mobile Navigation */}
+                <div className="flex items-center gap-2 md:hidden">
+                  <span className="text-white/50 text-[10px] font-medium mr-1">
+                    {upcomingDot + 1}/{upcomingEvents.length}
+                  </span>
+                  <button
+                    onClick={() =>
+                      scrollToIndex(
+                        upcomingScrollRef,
+                        upcomingDot - 1,
+                        upcomingEvents.length,
+                      )
+                    }
+                    className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white border border-white/10"
+                    disabled={upcomingDot === 0}
+                  >
+                    <ChevronLeft size={16} />
+                  </button>
+                  <button
+                    onClick={() =>
+                      scrollToIndex(
+                        upcomingScrollRef,
+                        upcomingDot + 1,
+                        upcomingEvents.length,
+                      )
+                    }
+                    className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white border border-white/10"
+                    disabled={upcomingDot >= upcomingEvents.length - 1}
+                  >
+                    <ChevronRight size={16} />
+                  </button>
                 </div>
               </div>
 
@@ -126,11 +168,43 @@ const Home = () => {
           {/* ===== PAST EVENTS ===== */}
           <div>
             {/* Header */}
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-6 md:mb-12 border-b border-white/10 pb-4 md:pb-6">
+            <div className="flex flex-row justify-between items-end mb-6 md:mb-12 border-b border-white/10 pb-4 md:pb-6">
               <div className="max-w-xl">
                 <h2 className="text-2xl md:text-4xl font-bold text-white">
                   Past Events
                 </h2>
+              </div>
+              {/* Mobile Navigation */}
+              <div className="flex items-center gap-2 md:hidden">
+                <span className="text-white/50 text-[10px] font-medium mr-1">
+                  {pastDot + 1}/{visiblePastEvents.length}
+                </span>
+                <button
+                  onClick={() =>
+                    scrollToIndex(
+                      pastScrollRef,
+                      pastDot - 1,
+                      visiblePastEvents.length,
+                    )
+                  }
+                  className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white border border-white/10"
+                  disabled={pastDot === 0}
+                >
+                  <ChevronLeft size={16} />
+                </button>
+                <button
+                  onClick={() =>
+                    scrollToIndex(
+                      pastScrollRef,
+                      pastDot + 1,
+                      visiblePastEvents.length,
+                    )
+                  }
+                  className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white border border-white/10"
+                  disabled={pastDot >= visiblePastEvents.length - 1}
+                >
+                  <ChevronRight size={16} />
+                </button>
               </div>
             </div>
 
@@ -144,8 +218,11 @@ const Home = () => {
             {/* Mobile Carousel */}
             <div
               ref={pastScrollRef}
-              className="md:hidden flex gap-3 px-4 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide"
-              style={{ WebkitOverflowScrolling: "touch" }}
+              className="md:hidden flex gap-3 px-4 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide scroll-smooth"
+              style={{
+                WebkitOverflowScrolling: "touch",
+                scrollPaddingInline: "1rem",
+              }}
             >
               {visiblePastEvents.map((event) => (
                 <div
@@ -183,6 +260,9 @@ const Home = () => {
 
       {/* 5. Impact Stats */}
       <StatsSection />
+
+      {/* Past Speakers */}
+      <PastSpeakers />
 
       {/* 2. Mission Statement */}
       <section>

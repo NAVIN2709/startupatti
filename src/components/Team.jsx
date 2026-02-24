@@ -68,10 +68,10 @@ const Team = () => {
                 href={member.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#0077b5] text-white hover:bg-[#006396] transition-colors"
-                title="Connect on LinkedIn"
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0A66C2]/10 border border-[#0A66C2]/20 text-[#70B5F9] text-xs font-semibold hover:bg-[#0A66C2]/25 hover:border-[#0A66C2]/40 transition-all"
               >
-                <Linkedin size={20} />
+                <Linkedin size={13} />
+                LinkedIn
               </a>
             </motion.div>
           ))}

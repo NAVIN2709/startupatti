@@ -12,49 +12,41 @@ const EventCard = ({
   isFeatured,
 }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
+    <div
       className={`group relative overflow-hidden rounded-2xl bg-[#0A0A0A] border border-white/10 transition-all duration-300 flex flex-col ${isFeatured ? "md:col-span-2" : ""}`}
     >
       {/* Image Container */}
       <div
         className={`relative overflow-hidden ${isFeatured ? "h-64" : "h-48"}`}
       >
-        <img
-          src={image}
-          alt={title}
-          className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-        />
+        <img src={image} alt={title} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300" />
       </div>
 
       {/* Content */}
-      <div className="p-6 flex flex-col flex-grow">
-        <div className="flex items-center gap-2 text-xs font-bold text-gray-400 mb-3 uppercase tracking-wider">
+      <div className="p-5 md:p-6 flex flex-col flex-grow">
+        <div className="flex items-center gap-2 text-[10px] md:text-xs font-bold text-gray-400 mb-2 md:mb-3 uppercase tracking-wider">
           <Calendar size={12} />
           <span className="text-white">{date}</span>
         </div>
-        <h3 className="text-xl font-bold text-white mb-2 group-hover:underline decoration-1 underline-offset-4">
+        <h3 className="text-lg md:text-xl font-bold text-white mb-2">
           {title}
         </h3>
-        <div className="flex items-center gap-1 text-gray-500 text-xs mb-4">
+        <div className="flex items-center gap-1 text-gray-500 text-[10px] md:text-xs mb-3 md:mb-4">
           <MapPin size={12} />
           <span>{location}</span>
         </div>
-        <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-grow border-b border-white/5 pb-4">
+        <p className="text-gray-400 text-xs md:text-sm leading-relaxed mb-4 md:mb-6 flex-grow border-b border-white/5 pb-4">
           {description}
         </p>
         <Link
           to={`/event/${id}`}
-          className="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-black hover:bg-white rounded-full px-2.5 py-2 w-fit group-hover:gap-3 transition-all"
+          className="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-black hover:bg-white rounded-full px-2.5 py-2 w-fit transition-all"
         >
           Read More <ArrowRight size={14} />
         </Link>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

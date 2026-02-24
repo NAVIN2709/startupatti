@@ -12,6 +12,12 @@ import prem from "../assets/speakers/optimized/prem.webp";
 import sankari from "../assets/speakers/optimized/sankari.webp";
 import sathya from "../assets/speakers/optimized/sathya.webp";
 import selvam from "../assets/speakers/optimized/selvam.webp";
+import mani from "../assets/speakers/optimized/mani.webp";
+import praveen from "../assets/speakers/optimized/praveen.webp";
+import brabasuthan from "../assets/speakers/optimized/brabasuthan.webp";
+import velmurugan from "../assets/speakers/optimized/velmurugan.webp";
+import dhinesh from "../assets/speakers/optimized/dhinesh.webp";
+import vinoth from "../assets/speakers/optimized/vinoth.webp";
 
 // Company logos
 import raptee from "../assets/companies/optimized/Raptee.webp";
@@ -27,6 +33,12 @@ import overqualifiedHousewives from "../assets/companies/optimized/overqualified
 import shortFundly from "../assets/companies/optimized/short_fundly.webp";
 import taxina from "../assets/companies/optimized/taxina.webp";
 import yourtribe from "../assets/companies/optimized/yourtribe.webp";
+import cloudbankin from "../assets/companies/optimized/cloudbankin.webp";
+import backspace from "../assets/companies/optimized/backspace.webp";
+import cumma from "../assets/companies/optimized/cumma.webp";
+import vividobots from "../assets/companies/optimized/vividobots.webp";
+import a99vc from "../assets/companies/optimized/a99vc.webp";
+import drawlead from "../assets/companies/optimized/drawlead.webp";
 
 export const events = [
   {
@@ -34,7 +46,7 @@ export const events = [
     title: "February Atti",
     date: "February 28, 2026",
     time: "2:30 PM onwards",
-    location: "Tekclan Software Solutions Pvt Ltd, Chennai",
+    location: "Yuniq, Tharamani , Chennai",
     description:
       "A monthly hangout for founders, solopreneurs, and aspiring entrepreneurs. Network, share knowledge, and build connections.",
     fullDescription:
@@ -57,35 +69,6 @@ export const events = [
     image: "/optimized/Jan26.webp",
     upcoming: false,
     gallery: [],
-    speakers: [
-      {
-        name: "Speaker 1",
-        company: "Company Name",
-        role: "Founder",
-        linkedin: "https://linkedin.com/in/",
-        topic: "Building Startups in 2026",
-        image: "",
-        companyLogo: "",
-      },
-      {
-        name: "Speaker 2",
-        company: "Company Name",
-        role: "Founder",
-        linkedin: "https://linkedin.com/in/",
-        topic: "Fundraising Essentials",
-        image: "",
-        companyLogo: "",
-      },
-      {
-        name: "Speaker 3",
-        company: "Company Name",
-        role: "Founder",
-        linkedin: "https://linkedin.com/in/",
-        topic: "Scaling Your Product",
-        image: "",
-        companyLogo: "",
-      },
-    ],
   },
   {
     id: 2,
@@ -97,84 +80,12 @@ export const events = [
       "Monthly networking hangout for startups and entrepreneurs. Real stories, real connections.",
     fullDescription:
       "The December edition of our monthly hangout brought together founders, freelancers, and startup enthusiasts at Thangam Flats, Thoraipakkam. An evening of meaningful conversations, founder storytelling, structured networking rounds, and real connections.",
-    image: "/optimized/September_atti.webp",
+    image: "/optimized/decemberatti.webp",
     upcoming: false,
     gallery: [],
-    speakers: [
-      {
-        name: "Speaker 1",
-        company: "Company Name",
-        role: "Founder",
-        linkedin: "https://linkedin.com/in/",
-        topic: "Growth Hacking for Early Startups",
-        image: "",
-        companyLogo: "",
-      },
-      {
-        name: "Speaker 2",
-        company: "Company Name",
-        role: "Founder",
-        linkedin: "https://linkedin.com/in/",
-        topic: "From Idea to MVP",
-        image: "",
-        companyLogo: "",
-      },
-      {
-        name: "Speaker 3",
-        company: "Company Name",
-        role: "Founder",
-        linkedin: "https://linkedin.com/in/",
-        topic: "Finding Product-Market Fit",
-        image: "",
-        companyLogo: "",
-      },
-    ],
   },
   {
     id: 3,
-    title: "November Atti",
-    date: "November 22, 2025",
-    time: "2:30 PM – 6:30 PM",
-    location: "Ticel Bio Park, Tharamani, Chennai",
-    description:
-      "Monthly hangout with founder stories, networking rounds, and startup conversations.",
-    fullDescription:
-      "The November edition at Ticel Bio Park, Tharamani featured interactive sessions with founders, structured intro rounds, and open networking. Attendees included aspiring entrepreneurs, solopreneurs, freelancers, students, enablers, and investors.",
-    image: "/optimized/Nov25.webp",
-    upcoming: false,
-    gallery: [],
-    speakers: [
-      {
-        name: "Speaker 1",
-        company: "Company Name",
-        role: "Founder",
-        linkedin: "https://linkedin.com/in/",
-        topic: "The Founder's Journey",
-        image: "",
-        companyLogo: "",
-      },
-      {
-        name: "Speaker 2",
-        company: "Company Name",
-        role: "Founder",
-        linkedin: "https://linkedin.com/in/",
-        topic: "Building in Public",
-        image: "",
-        companyLogo: "",
-      },
-      {
-        name: "Speaker 3",
-        company: "Company Name",
-        role: "Founder",
-        linkedin: "https://linkedin.com/in/",
-        topic: "Bootstrapping vs Fundraising",
-        image: "",
-        companyLogo: "",
-      },
-    ],
-  },
-  {
-    id: 4,
     title: "October Atti",
     date: "October 25, 2025",
     time: "2:30 PM – 6:30 PM",
@@ -183,11 +94,29 @@ export const events = [
     description:
       "Monthly startup hangout at StartupTN with networking and founder talks.",
     fullDescription:
-      "The October edition was hosted at the Tamil Nadu Startup and Innovation Mission (StartupTN), Nandanam. Featuring talks by Dinesh Arjun, CEO & Co-Founder of Raptee.HV, and Prem from a99 VC, the evening brought together early-stage entrepreneurs for founder storytelling, investor insights, and meaningful offline connections.",
+      "The October edition was hosted at the Tamil Nadu Startup and Innovation Mission (StartupTN), Nandanam. Featuring talks by Gopi Raja from Bad Boy, Dhinesh Babu from Vividobots, Dinesh Arjun, CEO & Co-Founder of Raptee.HV, and Prem from a99 VC, the evening brought together early-stage entrepreneurs for founder storytelling, robotics insights, and meaningful offline connections.",
     image: "/optimized/Oct25.webp",
     upcoming: false,
     gallery: [],
     speakers: [
+      {
+        name: "Gopi Raja",
+        company: "Bad Boy",
+        role: "Co-founder & CEO",
+        linkedin: "https://www.linkedin.com/in/gopi-raja-com/",
+        topic: "Building a brand from scratch — the journey of Bad Boy",
+        image: gopi,
+        companyLogo: badboy,
+      },
+      {
+        name: "Dhinesh Babu",
+        company: "Vividobots",
+        role: "Founder",
+        linkedin: "https://www.linkedin.com/in/dhinesh-babu-vividobots/",
+        topic: "Robotics and Automation in Startups — the Vividobots story",
+        image: dhinesh,
+        companyLogo: vividobots,
+      },
       {
         name: "Dinesh Arjun",
         company: "Raptee.HV",
@@ -206,50 +135,214 @@ export const events = [
         topic:
           "Early-stage investing — what VCs look for in founding teams and how to pitch your startup",
         image: prem,
-        companyLogo: "",
+        companyLogo: a99vc,
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "August Atti",
+    date: "August 23, 2025",
+    time: "3:00 PM onwards",
+    location: "Yuniq, Tharamani, Chennai",
+    description:
+      "Monthly startup hangout with networking and entrepreneur talks.",
+    fullDescription:
+      "Held at Yuniq, the August edition brought early-stage entrepreneurs together for casual networking, founder storytelling, and meaningful offline connections. Featured interactive sessions and structured intro rounds.",
+    image: "/optimized/atti.webp",
+    upcoming: false,
+    gallery: [],
+    speakers: [
+      {
+        name: "Pinku Bharathi",
+        company: "Taxina Mobility",
+        role: "Co-Founder & CEO",
+        linkedin: "https://www.linkedin.com/in/pinkubharathi",
+        topic:
+          "Disrupting intercity ride-hailing — building a commission-free, subscription-based cab platform for drivers and riders",
+        image: pinku,
+        companyLogo: taxina,
+      },
+      {
+        name: "Brabasuthan Murugesan",
+        company: "Cumma",
+        role: "Co-Founder & CBO",
+        linkedin: "https://www.linkedin.com/in/brabasuthan-murugesan/",
+        topic:
+          "Building India's first startup facilities platform — what founders should know before entering a startup facility",
+        image: brabasuthan,
+        companyLogo: cumma,
       },
     ],
   },
   {
     id: 5,
-    title: "August Atti",
-    date: "August 23, 2025",
-    time: "3:00 PM onwards",
-    location: "Tekclan Software Solutions, Chennai",
+    title: "July Atti",
+    date: "July 26, 2025",
+    time: "2:30 PM – 6:30 PM",
+    location: "Yuniq, Tharamani, Chennai",
     description:
-      "Monthly startup hangout with networking and entrepreneur talks.",
+      "Monthly startup hangout with networking and entrepreneur talks at Yuniq, Tharamani.",
     fullDescription:
-      "Held at Tekclan Software Solutions, the August edition brought early-stage entrepreneurs together for casual networking, founder storytelling, and meaningful offline connections. Featured interactive sessions and structured intro rounds.",
+      "The July edition of Startup Atti was held at Yuniq, Tharamani, Chennai. Featuring talks by Karunya Gunavathy, VinothKumar Babu, and Nirmal Raj, the evening brought together early-stage entrepreneurs for founder storytelling, structured networking rounds, and real connections.",
     image: "/optimized/AUGUST ATTI.webp",
     upcoming: false,
     gallery: [],
     speakers: [
       {
-        name: "Speaker 1",
-        company: "Company Name",
+        name: "Karunya Gunavathy K",
+        company: "Kottravai",
         role: "Founder",
-        linkedin: "https://linkedin.com/in/",
-        topic: "The Art of Networking",
-        image: "",
-        companyLogo: "",
+        linkedin: "https://www.linkedin.com/in/karunyagunavathy/",
+        topic: "Building a brand rooted in culture and identity",
+        image: karunya,
+        companyLogo: kottravai,
       },
       {
-        name: "Speaker 2",
-        company: "Company Name",
-        role: "Founder",
-        linkedin: "https://linkedin.com/in/",
-        topic: "Marketing on a Budget",
-        image: "",
-        companyLogo: "",
+        name: "VinothKumar Babu",
+        company: "Drawlead",
+        role: "Founder & CEO",
+        linkedin: "https://www.linkedin.com/in/vinothkumarkb/",
+        topic: "Helping D2C brands build high-converting Shopify stores",
+        image: vinoth,
+        companyLogo: drawlead,
       },
       {
-        name: "Speaker 3",
-        company: "Company Name",
+        name: "Nirmal Raj",
+        company: "AMET Chamber for Entrepreneurship Innovation and Incubation",
+        role: "Director",
+        linkedin: "https://www.linkedin.com/in/nirmalrajg/",
+        topic: "Navigating the startup ecosystem — incubation and mentorship",
+        image: nirmal,
+        companyLogo: ametChamber,
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: "June Atti",
+    date: "June 28, 2025",
+    time: "2:30 PM – 6:30 PM",
+    location: "Yuniq, Tharamani, Chennai",
+    description:
+      "Monthly startup hangout with networking and entrepreneur talks at YNUIQ, Tharamani.",
+    fullDescription:
+      "The June edition of Startup Atti was held at YNUIQ, Tharamani, Chennai. Featuring talks by Vel Murugan from Taxina Mobility and Moses Dharma Balan from Aladipattiyan Karupatti Coffee, the evening brought together early-stage entrepreneurs for founder storytelling, structured networking rounds, and real connections.",
+    image: "/optimized/AUGUST ATTI.webp",
+    upcoming: false,
+    gallery: [],
+    speakers: [
+      {
+        name: "Vel Murugan",
+        company: "Taxina Mobility",
+        role: "CDO & Co-Founder",
+        linkedin: "https://www.linkedin.com/in/velmuruganpaneerselvam/",
+        topic:
+          "Designing for impact — the role of design thinking in building an affordable and sustainable ride-hailing platform",
+        image: velmurugan,
+        companyLogo: taxina,
+      },
+      {
+        name: "Moses Dharma Balan",
+        company: "Aladipattiyan Karupatti Coffee",
+        role: "Co-Founder",
+        linkedin: "https://www.linkedin.com/in/moses-dharma-balan-035b9866/",
+        topic:
+          "From Halwakadai.com to Karupatti Coffee — building authentic traditional food brands from scratch",
+        image: moses,
+        companyLogo: karupatti,
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: "April Atti",
+    date: "April 26, 2025",
+    time: "2:30 PM – 6:30 PM",
+    location: "Yuniq, Tharamani, Chennai",
+    description:
+      "Monthly startup hangout with networking and entrepreneur talks at Yuniq, Tharamani.",
+    fullDescription:
+      "The April edition of Startup Atti was held at Yuniq, Tharamani, Chennai. Featuring talks by Mani Parthasarathy from Cloudbankin, Pravven Krishna Dev from Blackspace, and Sathya Narayanan from BulkPe, the evening brought together early-stage entrepreneurs for founder storytelling, structured networking rounds, and real connections.",
+    image: "/optimized/randomatti.webp",
+    upcoming: false,
+    gallery: [],
+    speakers: [
+      {
+        name: "Mani Parthasarathy",
+        company: "Cloudbankin",
         role: "Founder",
-        linkedin: "https://linkedin.com/in/",
-        topic: "Building Your First Product",
-        image: "",
-        companyLogo: "",
+        linkedin: "https://www.linkedin.com/in/maniparthasarathy/",
+        topic:
+          "From service to SaaS — pivoting Cloudbankin to build digital lending solutions for financial institutions",
+        image: mani,
+        companyLogo: cloudbankin,
+      },
+      {
+        name: "Praveen Krishna Dev",
+        company: "Blackspace",
+        role: "Founder",
+        linkedin: "https://www.linkedin.com/in/praveen-krishna-dev/",
+        topic:
+          "Solving chargeback disputes — building Backspace Tech to revolutionize payment reconciliation for banks",
+        image: praveen,
+        companyLogo: backspace,
+      },
+      {
+        name: "Sathya Narayanan",
+        company: "BulkPe",
+        role: "Founder",
+        linkedin: "https://www.linkedin.com/in/krypton-narayanan/",
+        topic:
+          "Simplifying business payments — how BulkPe is making banking operations effortless for businesses",
+        image: sathya,
+        companyLogo: bulkpe,
+      },
+    ],
+  },
+  {
+    id: 8,
+    title: "February 2025 Atti",
+    date: "February 22, 2025",
+    time: "2:30 PM – 6:30 PM",
+    location: "Yuniq, Tharamani, Chennai",
+    description:
+      "The February 2025 edition featuring iconic founders from the ecosystem.",
+    fullDescription:
+      "The February 2025 edition featured insights from legendary founders Arun Prakash M of GUVI, Sankari Sudhar of Overqualified Housewives, and Deepak Subramanian of YourTribe, sharing their journeys of building impactful startups.",
+    image: "/optimized/febatti.webp",
+    upcoming: false,
+    gallery: [],
+    speakers: [
+      {
+        name: "Arun Prakash M",
+        company: "GUVI",
+        role: "Founder & CEO",
+        linkedin: "https://www.linkedin.com/in/arunprakashm/",
+        topic:
+          "The journey of building and scaling GUVI to impact millions of learners",
+        image: arun,
+        companyLogo: gui,
+      },
+      {
+        name: "Sankari Sudhar",
+        company: "Overqualified Housewives",
+        role: "Founder & CEO",
+        linkedin: "https://www.linkedin.com/in/sankari-sudhar-205b38a4/",
+        topic:
+          "Empowering talent — building a platform for women to re-enter the workforce",
+        image: sankari,
+        companyLogo: overqualifiedHousewives,
+      },
+      {
+        name: "Deepak Subramanian (DS)",
+        company: "YourTribe",
+        role: "Founder & CEO",
+        linkedin: "https://www.linkedin.com/in/deepak-ds-subramanian/",
+        topic:
+          "Building high-intent communities and the power of peer-to-peer networking",
+        image: deepak,
+        companyLogo: yourtribe,
       },
     ],
   },

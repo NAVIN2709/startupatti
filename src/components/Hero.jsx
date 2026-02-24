@@ -46,6 +46,11 @@ const Hero = () => {
           >
             <a
               href="#roots"
+              onClick={(e) => {
+                e.preventDefault();
+                const el = document.getElementById("roots");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+              }}
               className="px-6 py-3 md:px-8 md:py-4 rounded-full bg-white text-black font-bold hover:bg-gray-200 transition-all flex items-center gap-2 group text-sm md:text-base"
             >
               <span>Discover more</span>
