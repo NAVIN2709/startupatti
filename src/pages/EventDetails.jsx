@@ -1,7 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { events } from "../data/events";
-import { motion } from "framer-motion";
-import { Calendar, MapPin, ArrowLeft } from "lucide-react";
+import { Calendar, MapPin, ArrowLeft, Linkedin, Mic } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -72,6 +71,89 @@ const EventDetails = () => {
                   {event.fullDescription || event.description}
                 </p>
               </div>
+
+              {/* Speakers */}
+              {event.speakers && event.speakers.length > 0 && (
+                <div>
+                  <h2 className="text-2xl font-bold mb-8 border-l-4 border-purple-500 pl-4 flex items-center gap-3">
+                    Speakers
+                  </h2>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                    {event.speakers.map((speaker, idx) => (
+                      <div
+                        key={idx}
+                        className="relative bg-[#111] border border-white/10 rounded-2xl p-6 text-center hover:border-purple-500/30 transition-all duration-500 group"
+                      >
+                        {/* Circular Portrait */}
+                        <div className="mx-auto mb-4 relative w-28 h-28">
+                          <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-blue-500/40 to-purple-500/40 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                          {speaker.image ? (
+                            <img
+                              src={speaker.image}
+                              alt={speaker.name}
+                              className="relative w-28 h-28 rounded-full object-cover object-top ring-2 ring-white/10 group-hover:ring-purple-500/40 transition-all duration-500"
+                            />
+                          ) : (
+                            <div className="relative w-28 h-28 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center ring-2 ring-white/10">
+                              <span className="text-3xl font-bold text-white/80">
+                                {speaker.name.charAt(0)}
+                              </span>
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Name */}
+                        <h3 className="text-lg font-bold text-white leading-tight">
+                          {speaker.name}
+                        </h3>
+                        <p className="text-xs text-purple-400 font-semibold mt-0.5">
+                          {speaker.role}
+                        </p>
+
+                        {/* Company + Logo */}
+                        <div className="flex items-center justify-center gap-2 mt-1.5">
+                          {speaker.companyLogo && (
+                            <img
+                              src={speaker.companyLogo}
+                              alt={speaker.company}
+                              className="h-4 w-auto object-contain opacity-60"
+                            />
+                          )}
+                          <p className="text-xs text-gray-500">
+                            {speaker.company}
+                          </p>
+                        </div>
+
+                        {/* Divider */}
+                        <div className="h-px bg-white/5 my-4 mx-4" />
+
+                        {/* Topic */}
+                        <div className="text-left bg-white/[0.03] rounded-xl px-4 py-3">
+                          <p className="text-[10px] text-gray-600 uppercase tracking-[0.15em] font-bold mb-1">
+                            Spoke about
+                          </p>
+                          <p className="text-[13px] text-gray-300 leading-relaxed">
+                            {speaker.topic}
+                          </p>
+                        </div>
+
+                        {/* LinkedIn */}
+                        {speaker.linkedin && (
+                          <a
+                            href={speaker.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-4 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0A66C2]/10 border border-[#0A66C2]/20 text-[#70B5F9] text-xs font-semibold hover:bg-[#0A66C2]/25 hover:border-[#0A66C2]/40 transition-all"
+                          >
+                            <Linkedin size={13} />
+                            LinkedIn
+                          </a>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* Gallery */}
               {event.gallery && event.gallery.length > 0 && (

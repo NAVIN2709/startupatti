@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { Menu, X, ArrowUpRight, Ticket } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
@@ -47,7 +47,7 @@ const Navbar = () => {
       setIsScrolled(window.scrollY > 20);
 
       // Detect which hash section is currently in view
-      const sections = ["speakers", "contact"];
+      const sections = ["events", "contact"];
       let found = "";
       for (const id of sections) {
         const el = document.getElementById(id);
@@ -73,7 +73,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Team", href: "/team" },
-    { name: "Speakers", href: "/#speakers" },
+    { name: "Events", href: "/#events" },
     { name: "Gallery", href: "/gallery" },
     { name: "Contact", href: "/#contact" },
   ];
@@ -81,13 +81,13 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed top-4 left-0 right-0 z-50 transition-all duration-300 px-4 md:px-0 flex justify-center`}
+        className={`fixed top-3 md:top-4 left-0 right-0 z-50 transition-all duration-300 px-3 md:px-0 flex justify-center`}
       >
         <div
           className={`
             w-full md:w-auto md:min-w-[700px] max-w-5xl
             backdrop-blur-md border border-white/10 rounded-full
-            flex justify-between items-center px-6 py-3
+            flex justify-between items-center px-4 py-2.5 md:px-6 md:py-3
             transition-all duration-500
             ${isScrolled ? "bg-black/80 shadow-lg shadow-blue-500/10" : "bg-black/50"}
           `}
@@ -95,12 +95,12 @@ const Navbar = () => {
           {/* Logo */}
           <a
             href="/"
-            className="flex items-center gap-2 group relative z-10 mr-8"
+            className="flex items-center gap-2 group relative z-10 md:mr-8"
           >
             <img
               src="/logo.svg"
               alt="logo"
-              className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+              className="w-8 h-8 md:w-10 md:h-10 object-contain group-hover:scale-110 transition-transform duration-300"
             />
             <span className="font-bold text-white tracking-tight hidden sm:block">
               Startup Atti
@@ -137,8 +137,26 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Donate / CTA */}
-          <div className="hidden md:flex items-center ml-8">
+          {/* Book Tickets + Donate CTA */}
+          <div className="hidden md:flex items-center ml-8 gap-3">
+            <a
+              href="https://allevents.in/chennai/startup-atti-%7C-february-atti-%7C-a-monthly-hangout-tickets/80001513088601"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                    relative overflow-hidden
+                    px-5 py-2 rounded-full 
+                    bg-gradient-to-r from-blue-500 to-purple-500 text-white 
+                    text-sm font-bold 
+                    hover:from-blue-400 hover:to-purple-400 transition-all duration-300
+                    flex items-center gap-2
+                    shadow-[0_0_20px_rgba(99,102,241,0.4)] hover:shadow-[0_0_30px_rgba(99,102,241,0.6)]
+                    animate-pulse-subtle
+                "
+            >
+              <Ticket size={14} />
+              <span>Book Tickets</span>
+            </a>
             <a
               href="https://wa.me/919487445528?text=Hi%2C%20I%20strongly%20believe%20in%20empowering%20young%20entrepreneurs%20and%20would%20be%20glad%20to%20contribute%20to%20your%20initiative.%20Kindly%20share%20the%20details%20to%20proceed%20with%20a%20donation."
               target="_blank"
@@ -201,13 +219,23 @@ const Navbar = () => {
               ))}
               <div className="h-px bg-white/10 my-2" />
               <a
+                href="https://allevents.in/chennai/startup-atti-%7C-february-atti-%7C-a-monthly-hangout-tickets/80001513088601"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3 mt-2 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold hover:from-blue-400 hover:to-purple-400 transition-all shadow-[0_0_20px_rgba(99,102,241,0.3)]"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <Ticket size={16} />
+                Book Tickets
+              </a>
+              <a
                 href="https://wa.me/919487445528?text=Hi%2C%20I%20strongly%20believe%20in%20empowering%20young%20entrepreneurs%20and%20would%20be%20glad%20to%20contribute%20to%20your%20initiative.%20Kindly%20share%20the%20details%20to%20proceed%20with%20a%20donation."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-3 mt-2 flex items-center justify-center gap-2 rounded-xl bg-white text-black font-bold hover:bg-gray-200 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Donate Support
+                Donate
                 <ArrowUpRight size={16} />
               </a>
             </div>

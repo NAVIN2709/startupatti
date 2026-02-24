@@ -34,8 +34,8 @@ const Mission = () => {
           </p>
 
           <p className="text-sm md:text-base text-gray-500">
-            Not a community. Not mentorship. Just real founders, real stories,
-            real connections.
+            Not a club. Not mentorship. Just real founders, real stories, real
+            connections.
           </p>
         </motion.div>
 

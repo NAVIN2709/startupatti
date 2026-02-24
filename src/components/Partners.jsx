@@ -40,7 +40,7 @@ const Partners = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12 items-center justify-center">
           {partners.map((partner, index) => (
             <motion.div
               key={index}
@@ -54,15 +54,15 @@ const Partners = () => {
                 href={partner.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block relative p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-white/30 hover:bg-white/10 transition-all duration-300 w-full h-48 flex items-center justify-center"
+                className="block relative p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-white/30 hover:bg-white/10 transition-all duration-300 w-full h-36 md:h-48 flex items-center justify-center"
               >
                 <img
                   src={partner.image}
                   alt={partner.name}
                   className={`object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 opacity-80 group-hover:opacity-100 ${
                     partner.name === "Madras Marketers"
-                      ? "max-w-[400px] max-h-[250px]"
-                      : "max-w-[180px] max-h-[100px]"
+                      ? "max-w-[280px] md:max-w-[400px] max-h-[200px] md:max-h-[250px]"
+                      : "max-w-[140px] md:max-w-[180px] max-h-[80px] md:max-h-[100px]"
                   }`}
                 />
               </a>

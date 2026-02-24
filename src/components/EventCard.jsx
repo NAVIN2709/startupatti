@@ -17,8 +17,7 @@ const EventCard = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      whileHover={{ y: -5 }}
-      className={`group relative overflow-hidden rounded-2xl bg-[#0A0A0A] border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col ${isFeatured ? "md:col-span-2" : ""}`}
+      className={`group relative overflow-hidden rounded-2xl bg-[#0A0A0A] border border-white/10 transition-all duration-300 flex flex-col ${isFeatured ? "md:col-span-2" : ""}`}
     >
       {/* Image Container */}
       <div
@@ -50,7 +49,7 @@ const EventCard = ({
         </p>
         <Link
           to={`/event/${id}`}
-          className="inline-flex items-center gap-2 text-sm font-bold text-white group-hover:gap-3 transition-all"
+          className="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-black hover:bg-white rounded-full px-2.5 py-2 w-fit group-hover:gap-3 transition-all"
         >
           Read More <ArrowRight size={14} />
         </Link>

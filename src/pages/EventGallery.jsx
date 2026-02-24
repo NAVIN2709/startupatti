@@ -38,8 +38,8 @@ const EventGallery = () => {
             {formattedMonth}
           </h1>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Captured moments from our community gathering. Relive the memories
-            and connections made.
+            Captured moments from our gathering. Relive the memories and
+            connections made.
           </p>
         </motion.div>
 

@@ -25,7 +25,7 @@ const StatsSection = () => {
             </h2>
             <p className="text-gray-400 text-lg leading-relaxed max-w-md">
               We bridge the gap between academic learning and real-world startup
-              challenges. Through our events, mentorship, and community, we
+              challenges. Through our events, mentorship, and network, we
               provide the XP you need to level up your entrepreneurial journey.
             </p>
           </div>
@@ -43,7 +43,7 @@ const StatsSection = () => {
           >
             <img
               src="/optimized/AUGUST ATTI.webp"
-              alt="Startup Atti Community"
+              alt="Startup Atti"
               className="w-full h-full object-cover"
             />
 

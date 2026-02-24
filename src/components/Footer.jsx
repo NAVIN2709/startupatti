@@ -4,7 +4,7 @@ const Footer = () => {
   const links = [
     { name: "Home", href: "/" },
     { name: "About", href: "/#roots" },
-    { name: "Speakers", href: "/#speakers" },
+    { name: "Events", href: "/#events" },
     { name: "Gallery", href: "/gallery" },
     { name: "Contact Us", href: "/#contact" },
   ];
@@ -30,13 +30,13 @@ const Footer = () => {
   return (
     <footer
       id="contact"
-      className="bg-[#050505] pt-24 pb-12 border-t border-white/10 relative overflow-hidden"
+      className="bg-[#050505] pt-16 md:pt-24 pb-8 md:pb-12 border-t border-white/10 relative overflow-hidden"
     >
       {/* Ambient Background */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 mb-10 md:mb-16">
           {/* Brand & Call to Action */}
           <div className="md:col-span-5 space-y-6">
             <div className="flex flex-col gap-4">
@@ -65,9 +65,9 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-            <p className="text-gray-400 text-lg leading-relaxed max-w-md">
+            <p className="text-gray-400 text-sm md:text-lg leading-relaxed max-w-md">
               The gateway to the real startup ecosystem. Join us for meaningful
-              connections, offline collisions, and a community that builds
+              connections, offline collisions, and a network that builds
               together.
             </p>
             <div className="pt-4">
@@ -75,7 +75,7 @@ const Footer = () => {
                 href="https://wa.me/919487445528?text=Hi%2C%20I%20strongly%20believe%20in%20empowering%20young%20entrepreneurs%20and%20would%20be%20glad%20to%20contribute%20to%20your%20initiative.%20Kindly%20share%20the%20details%20to%20proceed%20with%20a%20donation."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black font-bold hover:bg-gray-200 transition-all group"
+                className="inline-flex items-center gap-2 px-5 py-2.5 md:px-6 md:py-3 rounded-full bg-white text-black font-bold text-sm hover:bg-gray-200 transition-all group"
               >
                 Support Our Mission
                 <ArrowUpRight
@@ -122,12 +122,6 @@ const Footer = () => {
             <p className="mt-6 text-sm text-gray-500">
               Chennai, Tamil Nadu, India <br />
               startupatti@startupatti.com <br />
-              <a
-                href="tel:+919487445528"
-                className="hover:text-white transition-colors"
-              >
-                +91 94874 45528
-              </a>
             </p>
           </div>
         </div>

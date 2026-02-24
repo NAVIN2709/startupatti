@@ -3,6 +3,19 @@
 @theme {
   --color-brand-black: #050505;
   --font-sans: "Inter", sans-serif;
+  --animate-pulse-subtle: pulse-subtle 2s ease-in-out infinite;
+}
+
+@keyframes pulse-subtle {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+  }
+  50% {
+    opacity: 0.9;
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.6);
+  }
 }
 
 :root {
@@ -49,4 +62,13 @@ body {
   background-color: white;
   border-radius: 9999px;
   border: 2px solid black; /* Adds padding effect */
+}
+
+/* Hide scrollbar for carousel */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

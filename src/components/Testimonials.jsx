@@ -23,7 +23,7 @@ const testimonials = [
   {
     id: 3,
     quote:
-      "The personalized matching system and comprehensive community support provided me with valuable insights and connections.",
+      "The personalized matching system and comprehensive support provided me with valuable insights and connections.",
     author: "Katy Pankon",
     role: "Product Designer",
     image:

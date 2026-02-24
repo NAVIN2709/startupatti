@@ -21,7 +21,7 @@ const galleryImages = [
   { src: img2, alt: "Founder Stories", span: "normal" },
   { src: img3, alt: "Networking Session", span: "wide" },
   { src: img4, alt: "Startup Conversations", span: "normal" },
-  { src: img5, alt: "Community Connect", span: "tall" },
+  { src: img5, alt: "Founders Connect", span: "tall" },
   { src: img6, alt: "Speaker Session", span: "normal" },
   { src: img7, alt: "Atti Vibes", span: "normal" },
   { src: img8, alt: "The Hangout", span: "wide" },
