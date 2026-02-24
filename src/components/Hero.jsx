@@ -30,7 +30,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-3xl sm:text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] text-white"
+            className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] text-white"
           >
             The Gateway to <br />
             the Real Startup <br />
