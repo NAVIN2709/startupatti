@@ -319,8 +319,6 @@ const EventDetails = () => {
           </div>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 };
