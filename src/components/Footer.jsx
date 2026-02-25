@@ -4,6 +4,7 @@ const Footer = () => {
   const links = [
     { name: "Home", href: "/" },
     { name: "Events", href: "/#events" },
+    { name: "Team", href: "/team" },
     { name: "Gallery", href: "/gallery" },
     { name: "Contact Us", href: "/#contact" },
   ];
@@ -48,13 +49,6 @@ const Footer = () => {
                 <p className="text-white text-lg font-bold">Startup Atti</p>
               </a>
               <div className="flex flex-col gap-1">
-                <div className="flex items-center gap-3">
-                  <img
-                    src="/optimized/UOY.webp"
-                    alt="Unity of Youth Foundation"
-                    className="h-12 w-auto object-contain bg-white/10 rounded-lg p-1"
-                  />
-                </div>
                 <p className="text-gray-400 text-md leading-relaxed mt-1">
                   An initiative by Department of Economic &amp; Entrepreneurship
                   Development
@@ -72,6 +66,13 @@ const Footer = () => {
               connections, offline collisions, and a network that builds
               together.
             </p>
+            <div className="flex items-center gap-3">
+              <img
+                src="/optimized/UOY.webp"
+                alt="Unity of Youth Foundation"
+                className="h-12 w-auto object-contain bg-white/10 rounded-lg p-1"
+              />
+            </div>
             <div className="pt-4">
               <a
                 href="https://wa.me/919487445528?text=Hi%2C%20I%20strongly%20believe%20in%20empowering%20young%20entrepreneurs%20and%20would%20be%20glad%20to%20contribute%20to%20your%20initiative.%20Kindly%20share%20the%20details%20to%20proceed%20with%20a%20donation."

@@ -13,7 +13,7 @@ const Hero = () => {
       {/* Background Ambience - Subtle White/Gray Glow instead of colors */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-white/5 rounded-full blur-[120px] pointer-events-none z-0" />
 
-      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
+      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10 mt-10">
         {/* Left Column: Text Content */}
         <div className="text-left space-y-5 md:space-y-8">
           <motion.h1
@@ -76,7 +76,7 @@ const Hero = () => {
             <div className="relative bg-[#0A0A0A] border border-white/10 rounded-2xl md:rounded-3xl p-4 md:p-8 hover:border-white/30 transition-all group cursor-pointer">
               <div className="mb-4 md:mb-6 overflow-hidden rounded-xl md:rounded-2xl h-44 md:h-64 relative transition-all duration-700">
                 <img
-                  src={event.image}
+                  src="/optimized/Feb26atti.webp"
                   alt={event.title}
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                 />

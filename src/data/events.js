@@ -48,10 +48,10 @@ export const events = [
     time: "2:30 PM onwards",
     location: "Yuniq, Tharamani , Chennai",
     description:
-      "A monthly hangout for founders, solopreneurs, and aspiring entrepreneurs. Network, share knowledge, and build connections.",
+      "A casual monthly hangout by Startup Atti for founders, solopreneurs, and aspiring entrepreneurs to connect, share knowledge, and build meaningful offline connections.",
     fullDescription:
-      "The February 2026 edition continues our monthly tradition of bringing together founders, freelancers, and startup enthusiasts. Join us for an evening of meaningful conversations, founder storytelling, structured networking rounds, and real connections.",
-    image: "/optimized/AUGUST ATTI.webp",
+      "Startup Atti | February Atti | A Monthly Hangout\n\nStartup Atti is an initiative by Department of Economic and Entrepreneurship Development Unity of Youth Foundation. Designed to bring start-ups and like-minded individuals together for meaningful offline networking.\n\nWhy?\n\nWhile many connect through WhatsApp groups they rarely get to know each other’s ambitions and passions deeply. Whether you're a founder solopreneur aspiring entrepreneur freelancer student enabler or investor this is the perfect space for you! It’s a casual get-together where you can share knowledge gain insights and build valuable connections.\n\nAgenda: Atti Network (Subject to Change)\n2.30 PM - Desk Open\n3.00 PM to 4.00 PM - Atti Into Round 1\n4.00 PM to 4.30 PM - Networking\n4.30 PM to 5.45 PM - Atti Into Round 2\n5.45 PM to 6.00 PM - Final Networking\n6.00 PM - Windup\n\nMake it yours: find a connection land a project or start a new relationship—it’s all in your hands.\n\nImportant details:\nWe’re also open to partnerships for future events.\nLet’s Atti and grow together!",
+    image: "/optimized/Feb26atti.webp",
     upcoming: true,
     ticketLink:
       "https://allevents.in/chennai/startup-atti-%7C-february-atti-%7C-a-monthly-hangout-tickets/80001513088601",

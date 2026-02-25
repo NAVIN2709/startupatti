@@ -50,11 +50,25 @@ const PastSpeakers = () => {
 
   const speakers = [
     {
-      name: "Gopi Raja",
-      company: "Bad Boy",
-      image: gopiImg,
-      logo: badboyLogo,
-      linkedin: "https://www.linkedin.com/in/gopi-raja-com/",
+      name: "Arun Prakash",
+      company: "GUVI.io",
+      image: arunImg,
+      logo: guviLogo,
+      linkedin: "https://www.linkedin.com/in/arunprakashm/",
+    },
+    {
+      name: "Dinesh Arjun",
+      company: "Raptee.HV",
+      image: dineshArjunImg,
+      logo: rapteeLogo,
+      linkedin: "https://www.linkedin.com/in/dinesharjun/",
+    },
+    {
+      name: "Moses Dharma Balan",
+      company: "Aladipattiyan Karupaati Coffee",
+      image: mosesImg,
+      logo: karupattiLogo,
+      linkedin: "https://www.linkedin.com/in/moses-dharma-balan-035b9866/",
     },
     {
       name: "Prem Shanth",
@@ -62,6 +76,13 @@ const PastSpeakers = () => {
       image: premImg,
       logo: a99vcLogo,
       linkedin: "https://www.linkedin.com/in/prem-shanth-027901105/",
+    },
+    {
+      name: "Gopi Raja",
+      company: "Bad Boy",
+      image: gopiImg,
+      logo: badboyLogo,
+      linkedin: "https://www.linkedin.com/in/gopi-raja-com/",
     },
     {
       name: "Pinku Bharathi",
@@ -85,25 +106,11 @@ const PastSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/karunyagunavathy/",
     },
     {
-      name: "Moses Dharma Balan",
-      company: "Aladipattiyan Karupaati Coffee",
-      image: mosesImg,
-      logo: karupattiLogo,
-      linkedin: "https://www.linkedin.com/in/moses-dharma-balan-035b9866/",
-    },
-    {
       name: "Sathya Narayanan",
       company: "BulkPe",
       image: sathyaImg,
       logo: bulkpeLogo,
       linkedin: "https://www.linkedin.com/in/krypton-narayanan/",
-    },
-    {
-      name: "Arun Prakash",
-      company: "GUVI.io",
-      image: arunImg,
-      logo: guviLogo,
-      linkedin: "https://www.linkedin.com/in/arunprakashm/",
     },
     {
       name: "Sankari Sudhar",
@@ -139,13 +146,6 @@ const PastSpeakers = () => {
       image: dhineshImg,
       logo: vividobotsLogo,
       linkedin: "https://www.linkedin.com/in/dhinesh-babu-vividobots/",
-    },
-    {
-      name: "Dinesh Arjun",
-      company: "Raptee.HV",
-      image: dineshArjunImg,
-      logo: rapteeLogo,
-      linkedin: "https://www.linkedin.com/in/dinesharjun/",
     },
     {
       name: "Brabasuthan Murugesan",

@@ -100,7 +100,7 @@ const Navbar = () => {
             <img
               src="/logo.svg"
               alt="logo"
-              className="w-10 h-10 md:w-14 md:h-14 object-contain group-hover:scale-110 transition-transform duration-300"
+              className="w-14 h-14 md:w-16 md:h-16 object-contain group-hover:scale-110 transition-transform duration-300"
             />
             <span className="font-bold text-white tracking-tight hidden sm:block">
               Startup Atti
@@ -126,7 +126,7 @@ const Navbar = () => {
                 {hoveredIndex === index && !isActive(link.href) && (
                   <motion.span
                     layoutId="navbar-hover"
-                    className="absolute inset-0 bg-white/10 rounded-full -z-0"
+                    className="absolute inset-0 bg-white/10 rounded-full z-0"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -144,9 +144,9 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="
-                    relative overflow-hidden text-white
+                    relative overflow-hidden text-black
                     px-5 py-2.5 rounded-full 
-                    bg-yellow-500 text-black 
+                    bg-yellow-500 
                     text-sm font-bold 
                     hover:bg-yellow-400 transition-all duration-300
                     flex items-center gap-2
@@ -221,7 +221,7 @@ const Navbar = () => {
                 href="https://allevents.in/chennai/startup-atti-%7C-february-atti-%7C-a-monthly-hangout-tickets/80001513088601"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3 mt-2 flex items-center justify-center gap-2 rounded-xl bg-yellow-500 text-black font-bold hover:bg-yellow-400 transition-all shadow-[0_0_20px_rgba(234,179,8,0.3)]"
+                className="w-full py-3 mt-2 flex items-center justify-center gap-2 rounded-xl bg-yellow-500 text-white font-bold hover:bg-yellow-400 transition-all shadow-[0_0_20px_rgba(234,179,8,0.3)]"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <Ticket size={16} />
