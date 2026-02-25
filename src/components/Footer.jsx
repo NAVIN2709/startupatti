@@ -50,7 +50,7 @@ const Footer = () => {
               </a>
               <div className="flex flex-col gap-1">
                 <p className="text-gray-400 text-md leading-relaxed mt-1">
-                  An initiative by Department of Economic &amp; Entrepreneurship
+                  An Initiative by Department of Economic &amp; Entrepreneurship
                   Development
                 </p>
                 <p className="text-gray-400 text-md leading-relaxed">
