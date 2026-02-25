@@ -32,7 +32,7 @@ const Footer = () => {
       className="bg-[#050505] pt-10 md:pt-24 pb-8 md:pb-12 border-t border-white/10 relative overflow-hidden"
     >
       {/* Ambient Background */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-yellow-500/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 mb-10 md:mb-16">
@@ -98,7 +98,7 @@ const Footer = () => {
                     href={link.href}
                     className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 group"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-white/20 group-hover:bg-blue-500 transition-colors"></span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-white/20 group-hover:bg-yellow-500 transition-colors"></span>
                     {link.name}
                   </a>
                 </li>

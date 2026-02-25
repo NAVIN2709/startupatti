@@ -1,6 +1,13 @@
 import { useParams, Link } from "react-router-dom";
 import { events } from "../data/events";
-import { Calendar, MapPin, ArrowLeft, Linkedin, Mic } from "lucide-react";
+import {
+  Calendar,
+  MapPin,
+  ArrowLeft,
+  Linkedin,
+  Mic,
+  Ticket,
+} from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -13,7 +20,7 @@ const EventDetails = () => {
       <div className="min-h-screen bg-black text-white flex items-center justify-center">
         <div className="text-center">
           <h2 className="text-2xl font-bold mb-4">Event not found</h2>
-          <Link to="/" className="text-blue-500 hover:underline">
+          <Link to="/" className="text-yellow-500 hover:underline">
             Back to Home
           </Link>
         </div>
@@ -47,14 +54,29 @@ const EventDetails = () => {
               </h1>
               <div className="flex flex-col md:flex-row gap-4 md:gap-8 text-gray-300">
                 <div className="flex items-center gap-2">
-                  <Calendar className="text-blue-500" size={20} />
+                  <Calendar className="text-yellow-500" size={20} />
                   <span>{event.date}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <MapPin className="text-blue-500" size={20} />
+                  <MapPin className="text-yellow-500" size={20} />
                   <span>{event.location}</span>
                 </div>
               </div>
+
+              {/* Book Tickets Button */}
+              {event.upcoming && event.ticketLink && (
+                <div className="mt-8">
+                  <a
+                    href={event.ticketLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-yellow-600 hover:bg-yellow-700 text-black font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-yellow-500/20 text-white"
+                  >
+                    <Ticket size={20} />
+                    Book Tickets
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -64,7 +86,7 @@ const EventDetails = () => {
             {/* Main Content */}
             <div className="md:col-span-2 space-y-8">
               <div>
-                <h2 className="text-2xl font-bold mb-4 border-l-4 border-blue-500 pl-4">
+                <h2 className="text-2xl font-bold mb-4 border-l-4 border-yellow-500 pl-4">
                   About the Event
                 </h2>
                 <p className="text-gray-300 text-lg leading-relaxed">
@@ -86,7 +108,7 @@ const EventDetails = () => {
                       >
                         {/* Circular Portrait */}
                         <div className="mx-auto mb-4 relative w-28 h-28">
-                          <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-blue-500/40 to-purple-500/40 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                          <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-yellow-500/40 to-purple-500/40 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                           {speaker.image ? (
                             <img
                               src={speaker.image}
@@ -94,7 +116,7 @@ const EventDetails = () => {
                               className="relative w-28 h-28 rounded-full object-cover object-top ring-2 ring-white/10 group-hover:ring-purple-500/40 transition-all duration-500"
                             />
                           ) : (
-                            <div className="relative w-28 h-28 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center ring-2 ring-white/10">
+                            <div className="relative w-28 h-28 rounded-full bg-gradient-to-br from-yellow-600 to-purple-600 flex items-center justify-center ring-2 ring-white/10">
                               <span className="text-3xl font-bold text-white/80">
                                 {speaker.name.charAt(0)}
                               </span>

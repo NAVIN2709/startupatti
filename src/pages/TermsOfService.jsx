@@ -197,7 +197,7 @@ const TermsOfService = () => {
                 Email:{" "}
                 <a
                   href="mailto:startupatti@startupatti.com"
-                  className="text-blue-400 hover:text-blue-300 transition-colors"
+                  className="text-yellow-400 hover:text-yellow-300 transition-colors"
                 >
                   startupatti@startupatti.com
                 </a>

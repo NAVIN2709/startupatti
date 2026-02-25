@@ -16,7 +16,7 @@ const Quote = () => {
             className="w-full md:w-1/2 flex justify-center md:justify-end"
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-blue-500/20 blur-[80px] rounded-full"></div>
+              <div className="absolute inset-0 bg-yellow-500/20 blur-[80px] rounded-full"></div>
               <img
                 src="/optimized/vivekan.webp"
                 alt="Swami Vivekananda"
@@ -39,10 +39,13 @@ const Quote = () => {
               <h2 className="text-xl md:text-5xl font-serif text-white leading-tight italic relative z-10 font-light">
                 Give me 100 energetic young men and I shall transform India.
               </h2>
+              <p className="text-yellow-500 font-bold mt-4 md:mt-6 text-lg md:text-2xl tracking-tight">
+                And here we are 10,000
+              </p>
             </div>
 
             <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 mt-6 md:mt-10">
-              <div className="h-px bg-gradient-to-r from-blue-500 to-transparent w-20 md:w-32"></div>
+              <div className="h-px bg-gradient-to-r from-yellow-500 to-transparent w-20 md:w-32"></div>
               <p className="text-base md:text-xl font-bold text-white uppercase tracking-widest">
                 Swami Vivekananda
               </p>

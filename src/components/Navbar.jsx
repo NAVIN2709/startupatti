@@ -89,7 +89,7 @@ const Navbar = () => {
             backdrop-blur-md border border-white/10 rounded-full
             flex justify-between items-center px-4 py-2.5 md:px-6 md:py-3
             transition-all duration-500
-            ${isScrolled ? "bg-black/80 shadow-lg shadow-blue-500/10" : "bg-black/50"}
+            ${isScrolled ? "bg-black/80 shadow-lg shadow-yellow-500/10" : "bg-black/50"}
           `}
         >
           {/* Logo */}
@@ -100,7 +100,7 @@ const Navbar = () => {
             <img
               src="/logo.svg"
               alt="logo"
-              className="w-8 h-8 md:w-10 md:h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+              className="w-10 h-10 md:w-14 md:h-14 object-contain group-hover:scale-110 transition-transform duration-300"
             />
             <span className="font-bold text-white tracking-tight hidden sm:block">
               Startup Atti
@@ -144,14 +144,13 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="
-                    relative overflow-hidden
-                    px-5 py-2 rounded-full 
-                    bg-gradient-to-r from-blue-500 to-purple-500 text-white 
+                    relative overflow-hidden text-white
+                    px-5 py-2.5 rounded-full 
+                    bg-yellow-500 text-black 
                     text-sm font-bold 
-                    hover:from-blue-400 hover:to-purple-400 transition-all duration-300
+                    hover:bg-yellow-400 transition-all duration-300
                     flex items-center gap-2
-                    shadow-[0_0_20px_rgba(99,102,241,0.4)] hover:shadow-[0_0_30px_rgba(99,102,241,0.6)]
-                    animate-pulse-subtle
+                    shadow-[0_0_20px_rgba(234,179,8,0.4)] hover:shadow-[0_0_30px_rgba(234,179,8,0.6)]
                 "
             >
               <Ticket size={14} />
@@ -222,7 +221,7 @@ const Navbar = () => {
                 href="https://allevents.in/chennai/startup-atti-%7C-february-atti-%7C-a-monthly-hangout-tickets/80001513088601"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3 mt-2 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold hover:from-blue-400 hover:to-purple-400 transition-all shadow-[0_0_20px_rgba(99,102,241,0.3)]"
+                className="w-full py-3 mt-2 flex items-center justify-center gap-2 rounded-xl bg-yellow-500 text-black font-bold hover:bg-yellow-400 transition-all shadow-[0_0_20px_rgba(234,179,8,0.3)]"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <Ticket size={16} />

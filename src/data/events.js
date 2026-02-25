@@ -53,6 +53,8 @@ export const events = [
       "The February 2026 edition continues our monthly tradition of bringing together founders, freelancers, and startup enthusiasts. Join us for an evening of meaningful conversations, founder storytelling, structured networking rounds, and real connections.",
     image: "/optimized/AUGUST ATTI.webp",
     upcoming: true,
+    ticketLink:
+      "https://allevents.in/chennai/startup-atti-%7C-february-atti-%7C-a-monthly-hangout-tickets/80001513088601",
     gallery: [],
     speakers: [],
   },
@@ -185,7 +187,7 @@ export const events = [
       "Monthly startup hangout with networking and entrepreneur talks at Yuniq, Tharamani.",
     fullDescription:
       "The July edition of Startup Atti was held at Yuniq, Tharamani, Chennai. Featuring talks by Karunya Gunavathy, VinothKumar Babu, and Nirmal Raj, the evening brought together early-stage entrepreneurs for founder storytelling, structured networking rounds, and real connections.",
-    image: "/optimized/AUGUST ATTI.webp",
+    image: "/optimized/Nov25.webp",
     upcoming: false,
     gallery: [],
     speakers: [

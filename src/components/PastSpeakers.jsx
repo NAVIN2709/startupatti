@@ -184,20 +184,31 @@ const PastSpeakers = () => {
     },
   ];
 
-  const cardWidth = 288; // w-[280px] + gap
-  const gap = 32; // gap-8
-
   const handleScroll = () => {
     const el = scrollRef.current;
     if (!el) return;
-    const index = Math.round(el.scrollLeft / (cardWidth + gap));
+    const firstItem = el.querySelector(":scope > a");
+    if (!firstItem) return;
+
+    const itemWidth = firstItem.offsetWidth;
+    const style = window.getComputedStyle(el);
+    const gapWidth = parseInt(style.gap) || 0;
+
+    const index = Math.round(el.scrollLeft / (itemWidth + gapWidth));
     setCurrentIndex(Math.min(index, speakers.length - 1));
   };
 
   const scrollTo = (direction) => {
     const el = scrollRef.current;
     if (!el) return;
-    const step = cardWidth + gap;
+    const firstItem = el.querySelector(":scope > a");
+    if (!firstItem) return;
+
+    const itemWidth = firstItem.offsetWidth;
+    const style = window.getComputedStyle(el);
+    const gapWidth = parseInt(style.gap) || 0;
+    const step = itemWidth + gapWidth;
+
     const newScroll =
       direction === "next" ? el.scrollLeft + step : el.scrollLeft - step;
     el.scrollTo({ left: newScroll, behavior: "smooth" });
@@ -223,9 +234,6 @@ const PastSpeakers = () => {
 
           {/* Arrows + Indicator */}
           <div className="flex items-center gap-2">
-            <span className="text-white/50 text-xs font-medium mr-1 hidden sm:block">
-              {currentIndex + 1}/{speakers.length}
-            </span>
             <button
               onClick={() => scrollTo("prev")}
               className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors disabled:opacity-20 disabled:cursor-not-allowed"
@@ -278,7 +286,7 @@ const PastSpeakers = () => {
               <p className="text-gray-400 font-medium text-xs md:text-sm leading-tight">
                 {speaker.company}
               </p>
-              <div className="mt-3 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0A66C2]/10 border border-[#0A66C2]/20 text-[#70B5F9] text-xs font-semibold">
+              <div className="mt-3 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-500 text-xs font-semibold">
                 <Linkedin size={13} />
                 LinkedIn
               </div>

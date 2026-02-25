@@ -15,7 +15,7 @@ const Partners = () => {
       image: "/optimized/fellow founders.webp",
     },
     {
-      name: "Refreshment Partner",
+      name: "Refreshment Company",
       role: "Founding Partner",
       url: "#",
       image: "/optimized/refreshment.webp",
@@ -59,7 +59,7 @@ const Partners = () => {
                 <img
                   src={partner.image}
                   alt={partner.name}
-                  className={`object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 opacity-80 group-hover:opacity-100 ${
+                  className={`object-contain filter grayscale-0 md:grayscale group-hover:grayscale-0 transition-all duration-500 opacity-100 md:opacity-80 group-hover:opacity-100 ${
                     partner.name === "Madras Marketers"
                       ? "max-w-[280px] md:max-w-[400px] max-h-[200px] md:max-h-[250px]"
                       : "max-w-[140px] md:max-w-[180px] max-h-[80px] md:max-h-[100px]"

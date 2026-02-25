@@ -26,7 +26,7 @@ const Initiative = () => {
             viewport={{ once: true }}
             className="w-full md:w-2/3 text-center md:text-left"
           >
-            <h3 className="text-xs md:text-sm font-bold text-blue-400 mb-2 md:mb-3 uppercase tracking-[0.2em]">
+            <h3 className="text-xs md:text-sm font-bold text-yellow-400 mb-2 md:mb-3 uppercase tracking-[0.2em]">
               A Vision Brought to Life By
             </h3>
             <h2 className="text-2xl md:text-5xl font-extrabold text-white mb-2 leading-tight">

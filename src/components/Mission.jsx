@@ -19,7 +19,7 @@ const Mission = () => {
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
             What is Startup Atti?
           </h2>
-          <div className="w-16 h-1 bg-blue-500 mx-auto rounded-full mb-8"></div>
+          <div className="w-16 h-1 bg-yellow-500 mx-auto rounded-full mb-8"></div>
 
           <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-4">
             A{" "}
@@ -66,7 +66,7 @@ const Mission = () => {
               transition={{ duration: 0.4, delay: idx * 0.1 }}
               className="p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-center"
             >
-              <item.icon className="w-7 h-7 text-blue-400 mb-3 mx-auto" />
+              <item.icon className="w-7 h-7 text-yellow-400 mb-3 mx-auto" />
               <h3 className="text-white font-bold text-sm mb-1">
                 {item.title}
               </h3>
@@ -88,7 +88,7 @@ const Mission = () => {
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
             Who is this for?
           </h2>
-          <div className="w-16 h-1 bg-blue-500 mx-auto rounded-full mb-8"></div>
+          <div className="w-16 h-1 bg-yellow-500 mx-auto rounded-full mb-8"></div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
             {[

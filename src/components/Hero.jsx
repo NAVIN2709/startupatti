@@ -20,7 +20,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] text-white"
+            className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-[1.1] text-white"
           >
             The Gateway to <br />
             the Real Startup <br />
@@ -114,7 +114,7 @@ const Hero = () => {
                   />
                 </Link>
                 <a
-                  href={event.link}
+                  href={event.ticketLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto md:w-60 flex items-center justify-center gap-2 px-5 py-2.5 md:px-6 md:py-3 rounded-full bg-white text-black font-bold text-sm md:text-base hover:bg-gray-200 transition-all group/btn"
