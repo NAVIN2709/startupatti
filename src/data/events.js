@@ -54,7 +54,7 @@ export const events = [
     image: "/optimized/Feb26atti.webp",
     upcoming: true,
     ticketLink: "",
-    mapsLink: "https://maps.app.goo.gl/g6z6Y3p5fM5L8ZcE8",
+    mapsLink: "https://maps.app.goo.gl/39eUmmJPmC3eoLZJ7",
     gallery: [],
     speakers: [],
   },
