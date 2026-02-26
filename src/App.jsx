@@ -31,6 +31,8 @@ const App = () => {
             <Route path="/events/:month" element={<EventGallery />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<TermsOfService />} />
+            {/* Catch-all route to display homepage for any unmatched path */}
+            <Route path="*" element={<Home />} />
           </Routes>
         </main>
 
