@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { Menu, X, ArrowUpRight, Ticket } from "lucide-react";
+import { Menu, X, ArrowUpRight, Ticket, Coins } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const Navbar = () => {
+const Navbar = ({ onOpenPerks }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -21,8 +21,19 @@ const Navbar = () => {
     return location.pathname === href && !activeHash;
   };
 
-  const handleNavClick = (e, href) => {
-    if (href.includes("#")) {
+  const handleNavClick = (e, linkOrHref) => {
+    // Check if it's an object with onClick or just a string href
+    const isLinkObject = typeof linkOrHref === "object";
+    const href = isLinkObject ? linkOrHref.href : linkOrHref;
+    const onClick = isLinkObject ? linkOrHref.onClick : null;
+
+    if (onClick) {
+      e.preventDefault();
+      onClick();
+      return;
+    }
+
+    if (href && href.includes("#")) {
       e.preventDefault();
       const [path, hash] = href.split("#");
       const targetPath = path || "/";
@@ -85,7 +96,7 @@ const Navbar = () => {
       >
         <div
           className={`
-            w-full md:w-auto md:min-w-[700px] max-w-5xl
+            w-full md:w-auto md:min-w-[900px] max-w-6xl
             backdrop-blur-md border border-white/10 rounded-full
             flex justify-between items-center px-4 py-2.5 md:px-6 md:py-3
             transition-all duration-500
@@ -139,6 +150,21 @@ const Navbar = () => {
 
           {/* Book Tickets + Donate CTA */}
           <div className="hidden md:flex items-center ml-8 gap-3">
+            <button
+              onClick={onOpenPerks}
+              className="
+                    px-5 py-2.5 rounded-full 
+                    border border-white/10
+                    bg-white/5 text-white 
+                    text-sm font-bold 
+                    hover:bg-white/10 transition-all duration-300
+                    flex items-center gap-2
+                    cursor-pointer
+                "
+            >
+              <Coins size={14} className="text-yellow-500" />
+              <span>Perks</span>
+            </button>
             <a
               href="https://allevents.in/chennai/startup-atti-%7C-february-atti-%7C-a-monthly-hangout-tickets/80001513088601"
               target="_blank"

@@ -42,6 +42,40 @@ import drawlead from "../assets/companies/optimized/drawlead.webp";
 
 export const events = [
   {
+    id: 9,
+    title: "March Atti",
+    date: "March 21, 2026",
+    time: "2:30 PM onwards",
+    location: "Tekclan Software Solutions PVT. LTD., Tharamani, Chennai",
+    description:
+      "A casual monthly hangout for founders, solopreneurs, and aspiring entrepreneurs to connect and build meaningful offline connections.",
+    fullDescription:
+      "Tekclan Software Solutions PVT. LTD.\nLocated in: TICEL Bio Park Phase 1\n4th Floor, PHASE-2, TICEL Biopark Rd, Tharamani, Chennai, Tamil Nadu 600113\n\nStartup Atti is an initiative by Department of Economic and Entrepreneurship Development Unity of Youth Foundation. Designed to bring start-ups and like-minded individuals together for meaningful offline networking.\n\nWhy?\n\nWhile many connect through WhatsApp groups they rarely get to know each other’s ambitions and passions deeply. Whether you're a founder solopreneur aspiring entrepreneur freelancer student enabler or investor this is the perfect space for you! It’s a casual get-together where you can share knowledge gain insights and build valuable connections.\n\nAgenda: Atti Network (Subject to Change)\n2.30 PM - Desk Open\n3.00 PM to 4.00 PM - Atti Into Round 1\n4.00 PM to 4.30 PM - Networking\n4.30 PM to 5.45 PM - Atti Into Round 2\n5.45 PM to 6.00 PM - Final Networking\n6.00 PM - Windup\n\nMake it yours: find a connection land a project or start a new relationship—it’s all in your hands.\n\nImportant details:\nWe’re also open to partnerships for future events.\nLet’s Atti and grow together!",
+    image: "/optimized/Feb26atti.webp",
+    upcoming: true,
+    ticketLink: "",
+    mapsLink: "https://maps.app.goo.gl/g6z6Y3p5fM5L8ZcE8",
+    gallery: [],
+    speakers: [],
+  },
+  {
+    id: 10,
+    title: "April Atti",
+    date: "April 25, 2026",
+    time: "2:30 PM onwards",
+    location: "Tekclan Software Solutions PVT. LTD., Tharamani, Chennai",
+    description:
+      "A casual monthly hangout for founders, solopreneurs, and aspiring entrepreneurs to connect and build meaningful offline connections.",
+    fullDescription:
+      "Tekclan Software Solutions PVT. LTD.\nLocated in: TICEL Bio Park Phase 1\n4th Floor, PHASE-2, TICEL Biopark Rd, Tharamani, Chennai, Tamil Nadu 600113\n\nStartup Atti is an initiative by Department of Economic and Entrepreneurship Development Unity of Youth Foundation. Designed to bring start-ups and like-minded individuals together for meaningful offline networking.\n\nWhy?\n\nWhile many connect through WhatsApp groups they rarely get to know each other’s ambitions and passions deeply. Whether you're a founder solopreneur aspiring entrepreneur freelancer student enabler or investor this is the perfect space for you! It’s a casual get-together where you can share knowledge gain insights and build valuable connections.\n\nAgenda: Atti Network (Subject to Change)\n2.30 PM - Desk Open\n3.00 PM to 4.00 PM - Atti Into Round 1\n4.00 PM to 4.30 PM - Networking\n4.30 PM to 5.45 PM - Atti Into Round 2\n5.45 PM to 6.00 PM - Final Networking\n6.00 PM - Windup\n\nMake it yours: find a connection land a project or start a new relationship—it’s all in your hands.\n\nImportant details:\nWe’re also open to partnerships for future events.\nLet’s Atti and grow together!",
+    image: "/optimized/Feb26atti.webp",
+    upcoming: true,
+    ticketLink: "",
+    mapsLink: "https://maps.app.goo.gl/39eUmmJPmC3eoLZJ7",
+    gallery: [],
+    speakers: [],
+  },
+  {
     id: 0,
     title: "February Atti",
     date: "February 28, 2026",
@@ -55,6 +89,7 @@ export const events = [
     upcoming: true,
     ticketLink:
       "https://allevents.in/chennai/startup-atti-%7C-february-atti-%7C-a-monthly-hangout-tickets/80001513088601",
+    mapsLink: "https://www.google.com/maps/search/Yuniq+Tharamani+Chennai",
     gallery: [],
     speakers: [],
   },
@@ -70,6 +105,7 @@ export const events = [
       "The January 2026 edition was hosted at the prestigious IITM Research Park. Founders, solopreneurs, and aspiring entrepreneurs came together for an evening of meaningful conversations, founder storytelling, and structured networking rounds.",
     image: "/optimized/Jan26.webp",
     upcoming: false,
+    mapsLink: "https://www.google.com/maps/search/IITM+Research+Park+Chennai",
     gallery: [],
   },
   {
@@ -84,6 +120,8 @@ export const events = [
       "The December edition of our monthly hangout brought together founders, freelancers, and startup enthusiasts at Thangam Flats, Thoraipakkam. An evening of meaningful conversations, founder storytelling, structured networking rounds, and real connections.",
     image: "/optimized/decemberatti.webp",
     upcoming: false,
+    mapsLink:
+      "https://www.google.com/maps/search/Thangam+Flats+Thoraipakkam+Chennai",
     gallery: [],
   },
   {
@@ -99,6 +137,7 @@ export const events = [
       "The October edition was hosted at the Tamil Nadu Startup and Innovation Mission (StartupTN), Nandanam. Featuring talks by Gopi Raja from Bad Boy, Dhinesh Babu from Vividobots, Dinesh Arjun, CEO & Co-Founder of Raptee.HV, and Prem from a99 VC, the evening brought together early-stage entrepreneurs for founder storytelling, robotics insights, and meaningful offline connections.",
     image: "/optimized/Oct25.webp",
     upcoming: false,
+    mapsLink: "https://www.google.com/maps/search/StartupTN+Nandanam+Chennai",
     gallery: [],
     speakers: [
       {
@@ -153,6 +192,7 @@ export const events = [
       "Held at Yuniq, the August edition brought early-stage entrepreneurs together for casual networking, founder storytelling, and meaningful offline connections. Featured interactive sessions and structured intro rounds.",
     image: "/optimized/atti.webp",
     upcoming: false,
+    mapsLink: "https://www.google.com/maps/search/Yuniq+Tharamani+Chennai",
     gallery: [],
     speakers: [
       {
@@ -189,6 +229,7 @@ export const events = [
       "The July edition of Startup Atti was held at Yuniq, Tharamani, Chennai. Featuring talks by Karunya Gunavathy, VinothKumar Babu, and Nirmal Raj, the evening brought together early-stage entrepreneurs for founder storytelling, structured networking rounds, and real connections.",
     image: "/optimized/Nov25.webp",
     upcoming: false,
+    mapsLink: "https://www.google.com/maps/search/Yuniq+Tharamani+Chennai",
     gallery: [],
     speakers: [
       {
@@ -232,6 +273,7 @@ export const events = [
       "The June edition of Startup Atti was held at YNUIQ, Tharamani, Chennai. Featuring talks by Vel Murugan from Taxina Mobility and Moses Dharma Balan from Aladipattiyan Karupatti Coffee, the evening brought together early-stage entrepreneurs for founder storytelling, structured networking rounds, and real connections.",
     image: "/optimized/AUGUST ATTI.webp",
     upcoming: false,
+    mapsLink: "https://www.google.com/maps/search/Yuniq+Tharamani+Chennai",
     gallery: [],
     speakers: [
       {
@@ -268,6 +310,7 @@ export const events = [
       "The April edition of Startup Atti was held at Yuniq, Tharamani, Chennai. Featuring talks by Mani Parthasarathy from Cloudbankin, Pravven Krishna Dev from Blackspace, and Sathya Narayanan from BulkPe, the evening brought together early-stage entrepreneurs for founder storytelling, structured networking rounds, and real connections.",
     image: "/optimized/randomatti.webp",
     upcoming: false,
+    mapsLink: "https://www.google.com/maps/search/Yuniq+Tharamani+Chennai",
     gallery: [],
     speakers: [
       {
@@ -314,6 +357,7 @@ export const events = [
       "The February 2025 edition featured insights from legendary founders Arun Prakash M of GUVI, Sankari Sudhar of Overqualified Housewives, and Deepak Subramanian of YourTribe, sharing their journeys of building impactful startups.",
     image: "/optimized/febatti.webp",
     upcoming: false,
+    mapsLink: "https://www.google.com/maps/search/Yuniq+Tharamani+Chennai",
     gallery: [],
     speakers: [
       {

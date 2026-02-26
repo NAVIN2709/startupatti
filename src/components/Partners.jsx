@@ -97,7 +97,7 @@ const Partners = () => {
           className="text-center mb-6 md:mb-12"
         >
           <h2 className="text-xl md:text-3xl font-bold mb-3 text-white/80 tracking-tight">
-            Other Sponsors
+            Other Partners
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-sm md:text-base">
             Grateful for the support of our esteemed partners.

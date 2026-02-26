@@ -15,6 +15,13 @@ const Team = () => {
       linkedin: "https://www.linkedin.com/in/vijay-ramesh-pandiyan-17a503251/",
       image: "/optimized/vijay.webp",
     },
+    {
+      name: "Navin Kumar",
+      role: "Tech Guy",
+      linkedin:
+        "https://www.linkedin.com/in/navin-kumar-nj?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BjB4SthGLSLq%2BgiimnW6Stg%3D%3D",
+      image: "/optimized/navin.webp",
+    },
   ];
 
   return (

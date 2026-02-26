@@ -173,10 +173,27 @@ const EventDetails = () => {
                   <Calendar className="text-yellow-500" size={16} />
                   <span>{event.date}</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <MapPin className="text-yellow-500" size={16} />
-                  <span>{event.location}</span>
-                </div>
+                {event.mapsLink ? (
+                  <a
+                    href={event.mapsLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-gray-300 hover:text-yellow-500 transition-colors group/loc"
+                  >
+                    <MapPin
+                      className="text-yellow-500 group-hover/loc:scale-110 transition-transform"
+                      size={16}
+                    />
+                    <span className="border-b border-transparent group-hover/loc:border-yellow-500/50">
+                      {event.location}
+                    </span>
+                  </a>
+                ) : (
+                  <div className="flex items-center gap-2">
+                    <MapPin className="text-yellow-500" size={16} />
+                    <span>{event.location}</span>
+                  </div>
+                )}
               </div>
 
               {/* Book Tickets Button */}
