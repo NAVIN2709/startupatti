@@ -80,7 +80,7 @@ export const events = [
     title: "February Atti",
     date: "February 28, 2026",
     time: "2:30 PM onwards",
-    location: "Yuniq, Tharamani , Chennai",
+    location: "YuniQ, Tharamani , Chennai",
     description:
       "A casual monthly hangout by Startup Atti for founders, solopreneurs, and aspiring entrepreneurs to connect, share knowledge, and build meaningful offline connections.",
     fullDescription:
@@ -89,7 +89,7 @@ export const events = [
     upcoming: true,
     ticketLink:
       "https://allevents.in/chennai/startup-atti-%7C-february-atti-%7C-a-monthly-hangout-tickets/80001513088601",
-    mapsLink: "https://www.google.com/maps/search/Yuniq+Tharamani+Chennai",
+    mapsLink: "https://maps.app.goo.gl/39eUmmJPmC3eoLZJ7",
     gallery: [],
     speakers: [],
   },
@@ -185,14 +185,14 @@ export const events = [
     title: "August Atti",
     date: "August 23, 2025",
     time: "3:00 PM onwards",
-    location: "Yuniq, Tharamani, Chennai",
+    location: "YuniQ, Tharamani, Chennai",
     description:
       "Monthly startup hangout with networking and entrepreneur talks.",
     fullDescription:
       "Held at Yuniq, the August edition brought early-stage entrepreneurs together for casual networking, founder storytelling, and meaningful offline connections. Featured interactive sessions and structured intro rounds.",
     image: "/optimized/atti.webp",
     upcoming: false,
-    mapsLink: "https://www.google.com/maps/search/Yuniq+Tharamani+Chennai",
+    mapsLink: "https://maps.app.goo.gl/q8s9c5iQK2YAiNeBA",
     gallery: [],
     speakers: [
       {
@@ -222,14 +222,14 @@ export const events = [
     title: "July Atti",
     date: "July 26, 2025",
     time: "2:30 PM – 6:30 PM",
-    location: "Yuniq, Tharamani, Chennai",
+    location: "YuniQ, Tharamani, Chennai",
     description:
       "Monthly startup hangout with networking and entrepreneur talks at Yuniq, Tharamani.",
     fullDescription:
       "The July edition of Startup Atti was held at Yuniq, Tharamani, Chennai. Featuring talks by Karunya Gunavathy, VinothKumar Babu, and Nirmal Raj, the evening brought together early-stage entrepreneurs for founder storytelling, structured networking rounds, and real connections.",
     image: "/optimized/Nov25.webp",
     upcoming: false,
-    mapsLink: "https://www.google.com/maps/search/Yuniq+Tharamani+Chennai",
+    mapsLink: "https://maps.app.goo.gl/q8s9c5iQK2YAiNeBA",
     gallery: [],
     speakers: [
       {
@@ -266,14 +266,14 @@ export const events = [
     title: "June Atti",
     date: "June 28, 2025",
     time: "2:30 PM – 6:30 PM",
-    location: "Yuniq, Tharamani, Chennai",
+    location: "YuniQ, Tharamani, Chennai",
     description:
       "Monthly startup hangout with networking and entrepreneur talks at YNUIQ, Tharamani.",
     fullDescription:
       "The June edition of Startup Atti was held at YNUIQ, Tharamani, Chennai. Featuring talks by Vel Murugan from Taxina Mobility and Moses Dharma Balan from Aladipattiyan Karupatti Coffee, the evening brought together early-stage entrepreneurs for founder storytelling, structured networking rounds, and real connections.",
     image: "/optimized/AUGUST ATTI.webp",
     upcoming: false,
-    mapsLink: "https://www.google.com/maps/search/Yuniq+Tharamani+Chennai",
+    mapsLink: "https://maps.app.goo.gl/q8s9c5iQK2YAiNeBA",
     gallery: [],
     speakers: [
       {
@@ -303,14 +303,14 @@ export const events = [
     title: "April Atti",
     date: "April 26, 2025",
     time: "2:30 PM – 6:30 PM",
-    location: "Yuniq, Tharamani, Chennai",
+    location: "YuniQ, Tharamani, Chennai",
     description:
       "Monthly startup hangout with networking and entrepreneur talks at Yuniq, Tharamani.",
     fullDescription:
       "The April edition of Startup Atti was held at Yuniq, Tharamani, Chennai. Featuring talks by Mani Parthasarathy from Cloudbankin, Pravven Krishna Dev from Blackspace, and Sathya Narayanan from BulkPe, the evening brought together early-stage entrepreneurs for founder storytelling, structured networking rounds, and real connections.",
     image: "/optimized/randomatti.webp",
     upcoming: false,
-    mapsLink: "https://www.google.com/maps/search/Yuniq+Tharamani+Chennai",
+    mapsLink: "https://maps.app.goo.gl/q8s9c5iQK2YAiNeBA",
     gallery: [],
     speakers: [
       {
@@ -350,14 +350,14 @@ export const events = [
     title: "February 2025 Atti",
     date: "February 22, 2025",
     time: "2:30 PM – 6:30 PM",
-    location: "Yuniq, Tharamani, Chennai",
+    location: "YuniQ, Tharamani, Chennai",
     description:
       "The February 2025 edition featuring iconic founders from the ecosystem.",
     fullDescription:
       "The February 2025 edition featured insights from legendary founders Arun Prakash M of GUVI, Sankari Sudhar of Overqualified Housewives, and Deepak Subramanian of YourTribe, sharing their journeys of building impactful startups.",
     image: "/optimized/febatti.webp",
     upcoming: false,
-    mapsLink: "https://www.google.com/maps/search/Yuniq+Tharamani+Chennai",
+    mapsLink: "https://maps.app.goo.gl/q8s9c5iQK2YAiNeBA",
     gallery: [],
     speakers: [
       {
