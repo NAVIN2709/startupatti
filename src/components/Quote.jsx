@@ -37,10 +37,10 @@ const Quote = () => {
                 "
               </span>
               <h2 className="text-xl md:text-5xl font-serif text-white leading-tight italic relative z-10 font-light">
-                Give me 100 energetic young men and I shall transform India.
+                Give me 100 energetic youngsters and I shall transform India.
               </h2>
               <p className="text-yellow-500 font-bold mt-4 md:mt-6 text-lg md:text-2xl tracking-tight">
-                And here we are 10,000
+                Already we are 10,000+
               </p>
             </div>
 

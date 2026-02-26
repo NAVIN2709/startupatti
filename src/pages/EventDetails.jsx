@@ -12,7 +12,6 @@ import {
   Info,
 } from "lucide-react";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
 const EventDetails = () => {
   const { id } = useParams();
@@ -147,7 +146,7 @@ const EventDetails = () => {
     <div className="bg-black min-h-screen text-white">
       <Navbar />
 
-      <div className="pt-24 pb-12">
+      <div className="pt-28 pb-12">
         {/* Hero Image */}
         <div className="relative h-[400px] md:h-[500px] w-full overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10" />

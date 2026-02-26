@@ -16,7 +16,7 @@ const Home = () => {
   const [showAllPast, setShowAllPast] = useState(false);
 
   const upcomingEvents = events.filter((e) => e.upcoming);
-  const pastEvents = events.filter((e) => !e.upcoming);
+  const pastEvents = events.filter((e) => !e.upcoming).reverse();
   const visiblePastEvents = showAllPast ? pastEvents : pastEvents.slice(0, 3);
 
   // Mobile scroll dots state

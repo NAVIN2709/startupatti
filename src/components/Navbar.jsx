@@ -2,6 +2,31 @@ import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Menu, X, ArrowUpRight, Ticket, Coins } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Sparkles } from "lucide-react";
+
+const Sparkle = ({ delay = 0 }) => (
+  <motion.div
+    initial={{ scale: 0, opacity: 0, x: 0, y: 0 }}
+    animate={{
+      scale: [0, 1, 0],
+      opacity: [0, 1, 0],
+      x: [0, (Math.random() - 0.5) * 40],
+      y: [0, (Math.random() - 0.5) * 40],
+    }}
+    transition={{
+      duration: 1.5,
+      repeat: Infinity,
+      delay,
+      ease: "easeOut",
+    }}
+    className="absolute w-1 h-1 bg-yellow-400 rounded-full"
+    style={{
+      left: "50%",
+      top: "50%",
+      filter: "blur(0.5px)",
+    }}
+  />
+);
 
 const Navbar = ({ onOpenPerks }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -153,17 +178,32 @@ const Navbar = ({ onOpenPerks }) => {
             <button
               onClick={onOpenPerks}
               className="
+                    relative overflow-visible group
                     px-5 py-2.5 rounded-full 
-                    border border-white/10
-                    bg-white/5 text-white 
+                    border border-yellow-500/30
+                    bg-yellow-500/10 text-white 
                     text-sm font-bold 
-                    hover:bg-white/10 transition-all duration-300
+                    hover:bg-yellow-500/20 transition-all duration-300
                     flex items-center gap-2
                     cursor-pointer
                 "
             >
-              <Coins size={14} className="text-yellow-500" />
-              <span>Perks</span>
+              <div className="absolute inset-0 pointer-events-none overflow-visible">
+                <Sparkle delay={0} />
+                <Sparkle delay={0.4} />
+                <Sparkle delay={0.8} />
+                <Sparkle delay={1.2} />
+              </div>
+              <Coins
+                size={14}
+                className="text-yellow-500 group-hover:rotate-12 transition-transform"
+              />
+              <span className="relative z-10">Perks</span>
+              <motion.div
+                animate={{ opacity: [0.3, 0.6, 0.3] }}
+                transition={{ duration: 2, repeat: Infinity }}
+                className="absolute inset-0 rounded-full bg-yellow-500/20 blur-md -z-10"
+              />
             </button>
             <a
               href="https://allevents.in/chennai/startup-atti-%7C-february-atti-%7C-a-monthly-hangout-tickets/80001513088601"

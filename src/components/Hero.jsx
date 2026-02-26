@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { events } from "../data/events";
 
 const Hero = () => {
-  const event = events[2];
+  const event = events[13];
 
   return (
     <section className="relative w-full min-h-screen flex items-center pt-20 pb-10 px-4 md:px-6 overflow-hidden bg-black">
