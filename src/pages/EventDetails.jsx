@@ -146,70 +146,78 @@ const EventDetails = () => {
     <div className="bg-black min-h-screen text-white">
       <Navbar />
 
-      <div className="pt-28 pb-12">
+      <div
+        className={
+          event.upcoming
+            ? "pt-24 pb-10 md:pt-28 md:pb-12"
+            : "pt-24 pb-12 md:pt-28 md:pb-12"
+        }
+      >
         {/* Hero Image */}
-        <div className="relative h-[400px] md:h-[500px] w-full overflow-hidden">
+        <div className="relative h-[300px] md:h-[500px] w-full overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10" />
           <img
             src={event.image}
             alt={event.title}
-            className="w-full h-full object-cover"
+            className={`${event.upcoming ? "object-contain object-center" : "object-cover object-center"} w-full h-full`}
           />
-          <div className="absolute bottom-0 left-0 w-full z-20 p-6 md:p-12">
-            <div className="container mx-auto">
-              <Link
-                to="/#events"
-                className="inline-flex items-center gap-2 text-gray-400 hover:text-white mb-6 transition-colors"
-              >
-                <ArrowLeft size={18} />{" "}
-                <span className="text-sm md:text-base">Back to Events</span>
-              </Link>
-              <h1 className="text-3xl md:text-6xl font-bold mb-4">
-                {event.title}
-              </h1>
-              <div className="flex flex-col md:flex-row gap-2 md:gap-8 text-gray-400 md:text-gray-300 text-sm md:text-base">
-                <div className="flex items-center gap-2">
-                  <Calendar className="text-yellow-500" size={16} />
-                  <span>{event.date}</span>
-                </div>
-                {event.mapsLink ? (
-                  <a
-                    href={event.mapsLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-gray-300 hover:text-yellow-500 transition-colors group/loc"
-                  >
-                    <MapPin
-                      className="text-yellow-500 group-hover/loc:scale-110 transition-transform"
-                      size={16}
-                    />
-                    <span className="border-b border-transparent group-hover/loc:border-yellow-500/50">
-                      {event.location}
-                    </span>
-                  </a>
-                ) : (
-                  <div className="flex items-center gap-2">
-                    <MapPin className="text-yellow-500" size={16} />
-                    <span>{event.location}</span>
-                  </div>
-                )}
-              </div>
+        </div>
 
-              {/* Book Tickets Button */}
-              {event.upcoming && event.ticketLink && (
-                <div className="mt-6 md:mt-8">
-                  <a
-                    href={event.ticketLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-yellow-600 hover:bg-yellow-700 text-black font-bold py-2.5 md:py-3 px-6 md:px-8 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-yellow-500/20 text-white text-sm md:text-base"
-                  >
-                    <Ticket size={18} />
-                    Book Tickets
-                  </a>
+        {/* Event Header Info (Formerly overlapping on mobile) */}
+        <div className="relative z-20 pb-4 pt-0 md:pt-0 md:absolute md:bottom-0 md:left-0 md:w-full md:p-12">
+          <div className="container mx-auto px-4 md:px-0">
+            <Link
+              to="/#events"
+              className="inline-flex items-center gap-2 text-gray-400 hover:text-white mb-6 transition-colors"
+            >
+              <ArrowLeft size={18} />{" "}
+              <span className="text-sm md:text-base">Back to Events</span>
+            </Link>
+            <h1 className="text-3xl md:text-6xl font-bold mb-4 tracking-tight">
+              {event.title}
+            </h1>
+            <div className="flex flex-col md:flex-row gap-3 md:gap-8 text-gray-400 md:text-gray-300 text-sm md:text-base">
+              <div className="flex items-center gap-2">
+                <Calendar className="text-yellow-500" size={16} />
+                <span>{event.date}</span>
+              </div>
+              {event.mapsLink ? (
+                <a
+                  href={event.mapsLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-gray-300 hover:text-yellow-500 transition-colors group/loc"
+                >
+                  <MapPin
+                    className="text-yellow-500 group-hover/loc:scale-110 transition-transform"
+                    size={16}
+                  />
+                  <span className="border-b border-transparent group-hover/loc:border-yellow-500/50">
+                    {event.location}
+                  </span>
+                </a>
+              ) : (
+                <div className="flex items-center gap-2">
+                  <MapPin className="text-yellow-500" size={16} />
+                  <span>{event.location}</span>
                 </div>
               )}
             </div>
+
+            {/* Book Tickets Button */}
+            {event.upcoming && event.ticketLink && (
+              <div className="mt-6 md:mt-8">
+                <a
+                  href={event.ticketLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2.5 md:py-3 px-6 md:px-8 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-yellow-500/20 text-sm md:text-base"
+                >
+                  <Ticket size={18} />
+                  Book Tickets
+                </a>
+              </div>
+            )}
           </div>
         </div>
 

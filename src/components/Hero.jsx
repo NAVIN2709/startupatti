@@ -76,7 +76,7 @@ const Hero = () => {
             <div className="relative bg-[#0A0A0A] border border-white/10 rounded-2xl md:rounded-3xl p-4 md:p-8 hover:border-white/30 transition-all group cursor-pointer">
               <div className="mb-4 md:mb-6 overflow-hidden rounded-xl md:rounded-2xl h-44 md:h-64 relative transition-all duration-700">
                 <img
-                  src="/optimized/Feb26atti.webp"
+                  src={event.image}
                   alt={event.title}
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                 />
