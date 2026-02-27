@@ -42,7 +42,7 @@ const EventCard = ({
         </p>
         <Link
           to={`/event/${slug}`}
-          className="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-black hover:bg-white rounded-full px-2.5 py-2 w-fit transition-all"
+          className="inline-flex items-center gap-2 text-sm font-bold  hover:shadow-[0_0_30px_rgba(234,179,8,0.6)] hover:bg-yellow-400 transition-all duration-300 px-5 py-2.5 rounded-full hover:text-black text-white hover:bg-yellow-500 group-hover:bg-yellow-400 w-fit transition-all"
         >
           Read More <ArrowRight size={14} />
         </Link>

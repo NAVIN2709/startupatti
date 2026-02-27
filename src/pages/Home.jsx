@@ -240,7 +240,7 @@ const Home = () => {
               <div className="flex justify-center mt-8">
                 <button
                   onClick={() => setShowAllPast(!showAllPast)}
-                  className="flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 text-white/80 hover:text-white hover:border-white/40 hover:bg-white/5 transition-all text-sm font-medium"
+                  className="flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 text-white/80 hover:text-white hover:border-white/40 hover:bg-white/5 transition-all text-sm font-medium cursor-pointer"
                 >
                   {showAllPast
                     ? "Show Less"

@@ -34,7 +34,13 @@ const Partners = () => {
       name:"YuniQ",
       role :"Venue Partner",
       url :"https://yuniq.co/",
-      image :"/optimized/Yuniq.webp"
+      image :"/optimized/yuniqlogo1.webp"
+    } ,
+    {
+      name:"Branc Media",
+      role :"Media Partner",
+      url :"https://brancmedia.com/",
+      image :"/optimized/brancnobg.webp"
     }
   ];
 
@@ -129,7 +135,7 @@ const Partners = () => {
                 <img
                   src={sponsor.image}
                   alt={sponsor.name}
-                  className="object-contain filter grayscale-0 md:grayscale group-hover:grayscale-0 transition-all duration-500 opacity-100 md:opacity-60 group-hover:opacity-100 max-w-[100px] md:max-w-[140px] max-h-[50px] md:max-h-[60px]"
+                  className="object-contain filter grayscale-0 md:grayscale group-hover:grayscale-0 transition-all duration-500 opacity-100 md:opacity-60 group-hover:opacity-100 max-w-[160px] md:max-w-[220px] max-h-[90px] md:max-h-[120px]"
                 />
               </a>
               <div className="mt-4 text-center">

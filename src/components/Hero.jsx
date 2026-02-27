@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Ticket } from "lucide-react";
 import { Link } from "react-router-dom";
 import { events } from "../data/events";
 
@@ -117,8 +117,9 @@ const Hero = () => {
                   href={event.ticketLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto md:w-60 flex items-center justify-center gap-2 px-5 py-2.5 md:px-6 md:py-3 rounded-full bg-white text-black font-bold text-sm md:text-base hover:bg-gray-200 transition-all group/btn"
+                  className="w-full sm:w-auto md:w-60 flex items-center text-black font-bold justify-center gap-2 px-5 py-2.5 md:px-6 md:py-3 rounded-full shadow-[0_0_20px_rgba(234,179,8,0.4)] hover:shadow-[0_0_30px_rgba(234,179,8,0.6)] hover:bg-yellow-400 transition-all duration-300 bg-yellow-500 group/btn"
                 >
+                  <Ticket size={14} />
                   Book Tickets
                   <ArrowRight
                     size={18}
