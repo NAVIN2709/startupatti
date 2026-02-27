@@ -228,9 +228,9 @@ const Navbar = ({ onOpenPerks }) => {
               rel="noopener noreferrer"
               className="
                     relative overflow-hidden
-                    px-5 py-2 rounded-full 
+                    px-6 py-3 rounded-full 
                     bg-white text-black 
-                    text-sm font-bold 
+                    text-md font-bold 
                     hover:bg-gray-200 transition-colors duration-300
                     flex items-center gap-2
                 "

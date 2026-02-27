@@ -30,6 +30,12 @@ const Partners = () => {
       url: "https://kynhood.com/",
       image: kynLogo,
     },
+        {
+      name:"YuniQ",
+      role :"Venue Partner",
+      url :"https://yuniq.co/",
+      image :"/optimized/Yuniq.webp"
+    }
   ];
 
   return (

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { events } from "../data/events";
 import {
@@ -10,12 +11,104 @@ import {
   Clock,
   Target,
   Info,
+  Share2,
+  Check,
+  CalendarPlus,
 } from "lucide-react";
 import Navbar from "../components/Navbar";
 
 const EventDetails = () => {
-  const { id } = useParams();
-  const event = events.find((e) => e.id === parseInt(id));
+  const { slug } = useParams();
+  const event = events.find((e) => e.slug === slug);
+  const [isCopied, setIsCopied] = useState(false);
+
+  const handleShare = async () => {
+    const shareData = {
+      title: event?.title || "Startup Atti",
+      text: event?.description || "Join us for Startup Atti!",
+      url: window.location.href,
+    };
+
+    if (
+      navigator.share &&
+      navigator.canShare &&
+      navigator.canShare(shareData)
+    ) {
+      try {
+        await navigator.share(shareData);
+      } catch (err) {
+        console.error("Error sharing:", err);
+      }
+    } else {
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        setIsCopied(true);
+        setTimeout(() => setIsCopied(false), 2000);
+      } catch (err) {
+        console.error("Error copying to clipboard:", err);
+      }
+    }
+  };
+
+  const getGoogleCalendarUrl = (event) => {
+    if (!event) return "";
+    const { title, date, time, location, description } = event;
+
+    const parseTime = (timeStr) => {
+      const match = timeStr.match(/(\d+):(\d+)\s*(AM|PM)/i);
+      if (!match) return { hours: 0, mins: 0 };
+      let [_, h, m, p] = match;
+      h = parseInt(h);
+      m = parseInt(m);
+      if (p.toUpperCase() === "PM" && h < 12) h += 12;
+      if (p.toUpperCase() === "AM" && h === 12) h = 0;
+      return { hours: h, mins: m };
+    };
+
+    const months = {
+      January: "01",
+      February: "02",
+      March: "03",
+      April: "04",
+      May: "05",
+      June: "06",
+      July: "07",
+      August: "08",
+      September: "09",
+      October: "10",
+      November: "11",
+      December: "12",
+    };
+
+    const dateParts = date.match(/(\w+)\s+(\d+),\s+(\d+)/);
+    if (!dateParts) return "";
+    const [_, monthName, day, year] = dateParts;
+    const month = months[monthName];
+    const formattedDay = day.padStart(2, "0");
+
+    const startTimeParts = parseTime(time.split(" – ")[0]);
+    const start = `${year}${month}${formattedDay}T${String(startTimeParts.hours).padStart(2, "0")}${String(startTimeParts.mins).padStart(2, "0")}00`;
+
+    let end;
+    if (time.includes(" – ")) {
+      const endTimeParts = parseTime(time.split(" – ")[1]);
+      end = `${year}${month}${formattedDay}T${String(endTimeParts.hours).padStart(2, "0")}${String(endTimeParts.mins).padStart(2, "0")}00`;
+    } else {
+      // Add 3 hours
+      const endHours = (startTimeParts.hours + 3) % 24;
+      end = `${year}${month}${formattedDay}T${String(endHours).padStart(2, "0")}${String(startTimeParts.mins).padStart(2, "0")}00`;
+    }
+
+    const params = new URLSearchParams({
+      action: "TEMPLATE",
+      text: title,
+      dates: `${start}/${end}`,
+      details: description,
+      location: location,
+    });
+
+    return `https://www.google.com/calendar/render?${params.toString()}`;
+  };
 
   if (!event) {
     return (
@@ -167,7 +260,7 @@ const EventDetails = () => {
         <div className="relative z-20 pb-4 pt-0 md:pt-0 md:absolute md:bottom-0 md:left-0 md:w-full md:p-12">
           <div className="container mx-auto px-4 md:px-0">
             <Link
-              to="/#events"
+              to="/"
               className="inline-flex items-center gap-2 text-gray-400 hover:text-white mb-6 transition-colors"
             >
               <ArrowLeft size={18} />{" "}
@@ -204,9 +297,9 @@ const EventDetails = () => {
               )}
             </div>
 
-            {/* Book Tickets Button */}
-            {event.upcoming && event.ticketLink && (
-              <div className="mt-6 md:mt-8">
+            {/* Action Buttons */}
+            <div className="mt-6 md:mt-8 flex flex-wrap gap-4">
+              {event.upcoming && event.ticketLink && (
                 <a
                   href={event.ticketLink}
                   target="_blank"
@@ -216,8 +309,33 @@ const EventDetails = () => {
                   <Ticket size={18} />
                   Book Tickets
                 </a>
-              </div>
-            )}
+              )}
+              <button
+                onClick={handleShare}
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold py-2.5 md:py-3 px-6 md:px-8 rounded-full transition-all transform hover:scale-105 backdrop-blur-sm border border-white/10 text-sm md:text-base"
+              >
+                {isCopied ? (
+                  <>
+                    <Check size={18} className="text-green-500" />
+                    Copied!
+                  </>
+                ) : (
+                  <>
+                    <Share2 size={18} />
+                    Share Event
+                  </>
+                )}
+              </button>
+              <a
+                href={getGoogleCalendarUrl(event)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold py-2.5 md:py-3 px-6 md:px-8 rounded-full transition-all transform hover:scale-105 backdrop-blur-sm border border-white/10 text-sm md:text-base"
+              >
+                <CalendarPlus size={18} />
+                Add to Calendar
+              </a>
+            </div>
           </div>
         </div>
 
@@ -305,7 +423,7 @@ const EventDetails = () => {
                             href={speaker.linkedin}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="mt-4 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0A66C2]/10 border border-[#0A66C2]/20 text-[#70B5F9] text-xs font-semibold hover:bg-[#0A66C2]/25 hover:border-[#0A66C2]/40 transition-all"
+                            className="mt-3 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-500 text-xs font-semibold"
                           >
                             <Linkedin size={13} />
                             LinkedIn

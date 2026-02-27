@@ -51,10 +51,12 @@ import enegma from "../assets/companies/optimized/enegma.webp";
 import navyug from "../assets/companies/optimized/navyug.webp";
 import ssnifound from "../assets/companies/optimized/ssnifound.webp";
 import hubfive from "../assets/companies/optimized/hubfive.webp";
+import { link } from "framer-motion/client";
 
 export const events = [
   {
     id: 0,
+    slug: "january2025atti",
     title: "January 2025 Atti",
     date: "January 18, 2025",
     time: "4:00 PM onwards",
@@ -96,6 +98,7 @@ export const events = [
   },
   {
     id: 1,
+    slug: "february2025atti",
     title: "February 2025 Atti",
     date: "February 22, 2025",
     time: "2:30 PM – 6:30 PM",
@@ -143,6 +146,7 @@ export const events = [
   },
   {
     id: 2,
+    slug: "march2025atti",
     title: "March 2025 Atti",
     date: "March 22, 2025",
     time: "2:30 PM – 6:30 PM",
@@ -184,6 +188,7 @@ export const events = [
   },
   {
     id: 3,
+    slug: "april2025atti",
     title: "April 2025 Atti",
     date: "April 26, 2025",
     time: "2:30 PM – 6:30 PM",
@@ -231,6 +236,7 @@ export const events = [
   },
   {
     id: 4,
+    slug: "may2025atti",
     title: "May 2025 Atti",
     date: "May 24, 2025",
     time: "2:30 PM – 6:30 PM",
@@ -247,6 +253,7 @@ export const events = [
   },
   {
     id: 5,
+    slug: "june2025atti",
     title: "June 2025 Atti",
     date: "June 28, 2025",
     time: "2:30 PM – 6:30 PM",
@@ -284,6 +291,7 @@ export const events = [
   },
   {
     id: 6,
+    slug: "july2025atti",
     title: "July 2025 Atti",
     date: "July 26, 2025",
     time: "2:30 PM – 6:30 PM",
@@ -328,6 +336,7 @@ export const events = [
   },
   {
     id: 7,
+    slug: "august2025atti",
     title: "August 2025 Atti",
     date: "August 23, 2025",
     time: "3:00 PM onwards",
@@ -365,6 +374,7 @@ export const events = [
   },
   {
     id: 8,
+    slug: "september2025atti",
     title: "September 2025 Atti",
     date: "September 20, 2025",
     time: "2:30 PM – 6:30 PM",
@@ -384,6 +394,7 @@ export const events = [
         role: "Business Strategist",
         topic: "Guiding innovative startups across AI, EV Mobility, and SaaS",
         image: devanand,
+        linkedin: "https://www.linkedin.com/in/devanandbalasubramanian/",
         companyLogo: navyug,
       },
       {
@@ -392,12 +403,14 @@ export const events = [
         role: "Head of Incubation Programs",
         topic: "Designing impactful incubation programs and scaling startups",
         image: boni,
+        linkedin: "https://www.linkedin.com/in/bonifacepascalraj/",
         companyLogo: ssnifound,
       },
     ],
   },
   {
     id: 9,
+    slug: "october2025atti",
     title: "October 2025 Atti",
     date: "October 25, 2025",
     time: "2:30 PM – 6:30 PM",
@@ -444,7 +457,7 @@ export const events = [
         name: "Prem",
         company: "a99 VC",
         role: "Venture Capitalist",
-        linkedin: "https://linkedin.com/in/",
+        linkedin: "https://www.linkedin.com/in/prem-shanth-027901105",
         topic:
           "Early-stage investing — what VCs look for in founding teams and how to pitch your startup",
         image: prem,
@@ -454,6 +467,7 @@ export const events = [
   },
   {
     id: 10,
+    slug: "november2025atti",
     title: "November 2025 Atti",
     date: "November 22, 2025",
     time: "2:30 PM – 6:30 PM",
@@ -470,6 +484,7 @@ export const events = [
   },
   {
     id: 11,
+    slug: "december2025atti",
     title: "December 2025 Atti",
     date: "December 20, 2025",
     time: "2:30 PM – 6:30 PM",
@@ -486,6 +501,7 @@ export const events = [
   },
   {
     id: 12,
+    slug: "january2026atti",
     title: "January 2026 Atti",
     date: "January 24, 2026",
     time: "2:30 PM – 6:30 PM",
@@ -501,6 +517,7 @@ export const events = [
   },
   {
     id: 13,
+    slug: "february2026atti",
     title: "February 2026 Atti",
     date: "February 28, 2026",
     time: "2:30 PM onwards",
@@ -519,6 +536,7 @@ export const events = [
   },
   {
     id: 14,
+    slug: "march2026atti",
     title: "March 2026 Atti",
     date: "March 21, 2026",
     time: "2:30 PM onwards",
@@ -536,6 +554,7 @@ export const events = [
   },
   {
     id: 15,
+    slug: "april2026atti",
     title: "April 2026 Atti",
     date: "April 25, 2026",
     time: "2:30 PM onwards",

@@ -67,10 +67,10 @@ const Mission = () => {
               className="p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-center"
             >
               <item.icon className="w-7 h-7 text-yellow-400 mb-3 mx-auto" />
-              <h3 className="text-white font-bold text-sm mb-1">
+              <h3 className="text-white font-bold text-md mb-1">
                 {item.title}
               </h3>
-              <p className="text-gray-400 text-xs leading-relaxed">
+              <p className="text-gray-400 text-sm leading-relaxed">
                 {item.desc}
               </p>
             </motion.div>
@@ -113,10 +113,10 @@ const Mission = () => {
                 transition={{ duration: 0.4, delay: idx * 0.1 }}
                 className="p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
               >
-                <h3 className="text-white font-bold text-sm mb-1">
+                <h3 className="text-white font-bold text-md mb-1">
                   {item.title}
                 </h3>
-                <p className="text-gray-400 text-xs leading-relaxed">
+                <p className="text-gray-400 text-sm leading-relaxed">
                   {item.desc}
                 </p>
               </motion.div>

@@ -104,7 +104,7 @@ const Hero = () => {
 
               <div className="booknow flex w-full items-center gap-3 justify-around flex-col sm:flex-row">
                 <Link
-                  to={`/event/${event.id}`}
+                  to={`/event/${event.slug}`}
                   className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-2.5 md:px-6 md:py-3 rounded-full text-white font-bold text-sm md:text-base transition-all group/read"
                 >
                   Read More

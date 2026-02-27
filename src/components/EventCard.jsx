@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const EventCard = ({
   id,
+  slug,
   title,
   date,
   location,
@@ -40,7 +41,7 @@ const EventCard = ({
           {description}
         </p>
         <Link
-          to={`/event/${id}`}
+          to={`/event/${slug}`}
           className="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-black hover:bg-white rounded-full px-2.5 py-2 w-fit transition-all"
         >
           Read More <ArrowRight size={14} />

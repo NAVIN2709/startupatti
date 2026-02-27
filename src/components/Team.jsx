@@ -70,12 +70,11 @@ const Team = () => {
               <p className="text-sm text-gray-400 mb-6 min-h-[40px] flex items-center justify-center">
                 {member.role}
               </p>
-
               <a
                 href={member.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0A66C2]/10 border border-[#0A66C2]/20 text-[#70B5F9] text-xs font-semibold hover:bg-[#0A66C2]/25 hover:border-[#0A66C2]/40 transition-all"
+                className="mt-3 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-500 text-xs font-semibold"
               >
                 <Linkedin size={13} />
                 LinkedIn
