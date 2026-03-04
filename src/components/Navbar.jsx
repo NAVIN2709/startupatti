@@ -206,7 +206,7 @@ const Navbar = ({ onOpenPerks }) => {
               />
             </button>
             <a
-              href="https://allevents.in/chennai/startup-atti-%7C-february-atti-%7C-a-monthly-hangout-tickets/80001513088601"
+              href="https://tickets.kynhood.com/event/69a13a7c673ad4fe4bb5ea64?utm_source=startupattiwebsite&utm_medium=startupattiwebsite&utm_campaign=marchatti&utm_content=booknow"
               target="_blank"
               rel="noopener noreferrer"
               className="
@@ -284,7 +284,7 @@ const Navbar = ({ onOpenPerks }) => {
               ))}
               <div className="h-px bg-white/10 my-2" />
               <a
-                href="https://allevents.in/chennai/startup-atti-%7C-february-atti-%7C-a-monthly-hangout-tickets/80001513088601"
+                href="https://tickets.kynhood.com/event/69a13a7c673ad4fe4bb5ea64?utm_source=startupattiwebsite&utm_medium=startupattiwebsite&utm_campaign=marchatti&utm_content=booknow"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-3 mt-2 flex items-center justify-center gap-2 rounded-xl bg-yellow-500 text-black font-bold hover:bg-yellow-400 transition-all shadow-[0_0_20px_rgba(234,179,8,0.3)]"

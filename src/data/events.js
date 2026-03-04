@@ -24,6 +24,7 @@ import sriprashanth from "../assets/speakers/optimized/sriprashanth.webp";
 import devanand from "../assets/speakers/optimized/devanand.webp";
 import boni from "../assets/speakers/optimized/boni.webp";
 import thiru from "../assets/speakers/optimized/thiru.webp";
+import anand from "../assets/speakers/optimized/anand.webp";
 
 // Company logos
 import raptee from "../assets/companies/optimized/Raptee.webp";
@@ -52,6 +53,7 @@ import navyug from "../assets/companies/optimized/navyug.webp";
 import ssnifound from "../assets/companies/optimized/ssnifound.webp";
 import hubfive from "../assets/companies/optimized/hubfive.webp";
 import { link } from "framer-motion/client";
+import auragold from "../assets/companies/optimized/auragold.webp";
 
 export const events = [
   {
@@ -545,12 +547,22 @@ export const events = [
       "A casual monthly hangout for founders, solopreneurs, and aspiring entrepreneurs to connect, share knowledge, and build meaningful offline connections.",
     fullDescription:
       'Startup Atti | A Monthly Hangout | www.startupatti.com\n\nStartup Atti is an initiative by Department of Economic and Entrepreneurship Development Unity of Youth Foundation. Designed to bring start-ups and like-minded individuals together for meaningful offline networking.\n\nWhy?\nWhile many connect through WhatsApp groups they rarely get to know each other’s ambitions and passions deeply. Whether you\'re a founder solopreneur aspiring entrepreneur freelancer student enabler or investor this is the perfect space for you! It’s a casual get-together where you can share knowledge gain insights and build valuable connections.\n\nYou will get 1 Atti Token for attending 1 Monthly Event. How you can use it, Visit www.startupatti.com\n\nAgenda (Subject to Change)\n\n2.30 PM - Desk Open\n3.00 PM - Session Starts \n\n3.00 PM to 3.30 PM - Intro & General Session\n(Door Closes - No Admissions after 3.30 PM)\n\n3.30 PM to 4.00 PM - Atti Network Intro - Round 1 (For Atti Networking Tickets) - 1 Minute Pitch (Name, Category, Best 3 He/She can Offer, His/Her Immediate 3 Needs)\n\n4.00 PM to 5.00 PM - Atti Network Linkedin Into - Round 2 (For Atti Networking Tickets) - 2 Minutes Pitch\n\n5.00 PM to 5.20 PM - "Atti Story" by Founder\n5.20 PM to 5.30 PM - Q&A\n\n5.30 PM to 6.00 PM - Open Networking with Refreshment\n6.00 PM - Windup\n\nMake it yours: find a connection land a project or start a new relationship - it’s all in your hands.\n\nImportant details:\nWe’re also open to partnerships for future events.\n\nLet’s Atti and grow together',
-    image: "/optimized/marchbanner.webp",
+    image: "/optimized/March26atti.webp",
     upcoming: true,
     ticketLink: "https://tickets.kynhood.com/event/69a13a7c673ad4fe4bb5ea64?utm_source=startupattiwebsite&utm_medium=startupattiwebsite&utm_campaign=marchatti&utm_content=booknow",
     mapsLink: "https://maps.app.goo.gl/39eUmmJPmC3eoLZJ7",
     gallery: [],
-    speakers: [],
+    speakers: [
+      {
+        name: "Anand",
+        company: "Auragold",
+        role: "Founder & CEO",
+        linkedin: "https://www.linkedin.com/in/n-k-anand/",
+        topic: "Redefining Gold Investment Responsibly",
+        image: anand,
+        companyLogo: auragold,
+      },
+    ],
   },
   {
     id: 15,

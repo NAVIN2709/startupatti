@@ -22,6 +22,7 @@ import vinothImg from "../assets/speakers/optimized/vinoth.webp";
 import velmuruganImg from "../assets/speakers/optimized/velmurugan.webp";
 import maniImg from "../assets/speakers/optimized/mani.webp";
 import praveenImg from "../assets/speakers/optimized/praveen.webp";
+import anand from "../assets/speakers/optimized/anand.webp";
 
 // Company logos
 import badboyLogo from "../assets/companies/optimized/badboy.webp";
@@ -43,6 +44,7 @@ import drawleadLogo from "../assets/companies/optimized/drawlead.webp";
 import taxinaLogoFull from "../assets/companies/optimized/taxina.webp";
 import cloudbankinLogo from "../assets/companies/optimized/cloudbankin.webp";
 import backspaceLogo from "../assets/companies/optimized/backspace.webp";
+import auragoldLogo from "../assets/companies/optimized/auragold.webp";
 
 const PastSpeakers = () => {
   const scrollRef = useRef(null);
@@ -182,6 +184,13 @@ const PastSpeakers = () => {
       logo: backspaceLogo,
       linkedin: "https://www.linkedin.com/in/praveen-krishna-dev/",
     },
+    {
+      name:" N K Anand",
+      company: "Auragold",
+      image: anand,
+      logo: auragoldLogo,
+      linkedin: "https://www.linkedin.com/in/n-k-anand/",
+    }
   ];
 
   const handleScroll = () => {
