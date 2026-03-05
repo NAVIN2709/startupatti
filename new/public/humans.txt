@@ -1,0 +1,19 @@
+/* TEAM */
+Founder: Unity of Youth Foundation (UOY)
+Website: https://uoyfoundation.org
+Twitter: @uoyfoundation
+Location: Chennai, Tamil Nadu, India
+
+/* THANKS */
+The Startup Community
+All Previous Speakers
+Volunteers and Partners
+
+/* TECHNOLOGY COLOPHON */
+HTML5, CSS3
+JavaScript (React, Next.js)
+Tailwind CSS
+Framer Motion
+Lucide React
+Geist Sans & Mono
+Static Site Generation (SSG)
