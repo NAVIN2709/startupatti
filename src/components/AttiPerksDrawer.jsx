@@ -39,7 +39,7 @@ const AttiPerksDrawer = ({ isOpen, onClose }) => {
       description:
         "A curated founder journey to global startup hubs focused on deep bonding, high-level exposure, and international perspective.",
       stats: "60% Adventure | 40% Ecosystem",
-      requirement: "9 Atti Tokens Required",
+      requirement: "6 Atti Tokens Required",
       icon: Globe,
       accent: "rgba(59, 130, 246, 0.5)", // Blue
       frequency: "Annual",
@@ -169,9 +169,9 @@ const AttiPerksDrawer = ({ isOpen, onClose }) => {
                 <p className="text-white/60 text-base leading-relaxed font-light">
                   Growth isn't just about business; it's about the{" "}
                   <span className="text-white font-medium italic">
-                    community
+                    people
                   </span>{" "}
-                  you build. Tokens have lifetime value and are never consumed—just accumulate them to unlock unlimited access to exclusive founder experiences.
+                  you surround with. Tokens have lifetime value and are never consumed—just accumulate them to unlock unlimited access to exclusive founder experiences.
                 </p>
                 <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-yellow-500/0 via-yellow-500/40 to-yellow-500/0" />
               </motion.div>
