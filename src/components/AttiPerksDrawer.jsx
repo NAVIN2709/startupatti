@@ -25,12 +25,12 @@ const AttiPerksDrawer = ({ isOpen, onClose }) => {
       subtitle: "The Elite Reset Experience",
       description:
         "Founders need time to socialize, reset, and take a break. An evening-only experience with curated DJ sets, premium cocktails, and the real Atti vibe.",
-      requirement: "6 Atti Tokens Required",
+      requirement: "3 Atti Tokens Required",
       criteria: "LinkedIn Post + Tag Startup Atti",
       icon: Music,
       accent: "rgba(168, 85, 247, 0.5)", // Purple
       frequency: "Happens twice a year",
-      tokensToEarn: 6,
+      tokensToEarn: 3,
     },
     {
       id: "tour",
@@ -39,7 +39,7 @@ const AttiPerksDrawer = ({ isOpen, onClose }) => {
       description:
         "A curated founder journey to global startup hubs focused on deep bonding, high-level exposure, and international perspective.",
       stats: "60% Adventure | 40% Ecosystem",
-      requirement: "12 Atti Tokens Required",
+      requirement: "9 Atti Tokens Required",
       icon: Globe,
       accent: "rgba(59, 130, 246, 0.5)", // Blue
       frequency: "Annual",
@@ -48,9 +48,9 @@ const AttiPerksDrawer = ({ isOpen, onClose }) => {
   ];
 
   const tokenRules = [
-    { action: "LinkedIn Post (Tag us)", reward: "2 Atti Tokens", icon: Star },
-    { action: "Attend monthly events", reward: "1 Atti Token", icon: Zap },
-    { action: "Direct Purchase", reward: "Available", icon: Coins },
+    { action: "LinkedIn post with connection & group photo + hashtag (#monthatti)", reward: "1 Atti Token", icon: Star },
+    { action: "Attend Atti Party + LinkedIn post tagging us", reward: "3 Atti Tokens", icon: Zap },
+    { action: "Direct Purchase", reward: "Coming Soon", icon: Coins },
   ];
 
   const containerVariants = {
@@ -171,8 +171,7 @@ const AttiPerksDrawer = ({ isOpen, onClose }) => {
                   <span className="text-white font-medium italic">
                     community
                   </span>{" "}
-                  you build. Share your journey on LinkedIn and tag us to earn
-                  Atti Tokens and unlock exclusive founder experiences.
+                  you build. Tokens have lifetime value and are never consumed—just accumulate them to unlock unlimited access to exclusive founder experiences.
                 </p>
                 <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-yellow-500/0 via-yellow-500/40 to-yellow-500/0" />
               </motion.div>
@@ -325,10 +324,9 @@ const AttiPerksDrawer = ({ isOpen, onClose }) => {
                   <Info size={16} className="text-blue-400" />
                   <p className="text-[11px] text-white/40 font-medium leading-tight">
                     <span className="text-white/60 block mb-0.5 uppercase tracking-widest text-[10px]">
-                      Validity
+                      Lifetime Access
                     </span>
-                    Tokens expire 3 years from the date of issue.
-                    Non-transferable. Tokens can be earned or bought directly.
+                    All tokens have lifetime value and are non-redeemable. Once you reach the required tokens, you can attend any number of events. Token buying options in future.
                   </p>
                 </div>
                 <p className="text-[10px] text-white/20 italic text-center leading-relaxed px-6">
