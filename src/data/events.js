@@ -561,7 +561,7 @@ export const events = [
     title: "April 2026 Atti",
     date: "April 25, 2026",
     time: "2:30 PM onwards",
-    location: "Tekclan Software Solutions PVT. LTD., Tharamani, Chennai",
+    location: "TBA",
     description:
       "A casual monthly hangout for founders, solopreneurs, and aspiring entrepreneurs to connect, share knowledge, and build meaningful offline connections.",
     fullDescription:
@@ -570,7 +570,7 @@ export const events = [
     upcoming: true,
     ticketLink:
       "https://tickets.kynhood.com/event/69a13d7e233c4735a4241ce7?utm_source=startupattiwebsite&utm_medium=startupattiwebsite&utm_campaign=aprilatti&utm_content=booknow",
-    mapsLink: "https://maps.app.goo.gl/39eUmmJPmC3eoLZJ7",
+    mapsLink: "TBA",
     gallery: [],
     speakers: [],
   },
