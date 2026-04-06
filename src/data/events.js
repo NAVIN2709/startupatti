@@ -560,16 +560,15 @@ export const events = [
     slug: "april2026atti",
     title: "April 2026 Atti",
     date: "April 25, 2026",
-    time: "2:30 PM onwards",
+    time: "9:00 PM onwards",
     location: "TBA",
     description:
       "A casual monthly hangout for founders, solopreneurs, and aspiring entrepreneurs to connect, share knowledge, and build meaningful offline connections.",
-    fullDescription:
-      'Startup Atti | A Monthly Hangout | www.startupatti.com\n\nStartup Atti is an initiative by Department of Economic and Entrepreneurship Development Unity of Youth Foundation. Designed to bring start-ups and like-minded individuals together for meaningful offline networking.\n\nWhy?\nWhile many connect through WhatsApp groups they rarely get to know each other’s ambitions and passions deeply. Whether you\'re a founder solopreneur aspiring entrepreneur freelancer student enabler or investor this is the perfect space for you! It’s a casual get-together where you can share knowledge gain insights and build valuable connections.\n\nYou will get 1 Atti Token for attending 1 Monthly Event. Higher tokens can be earned via LinkedIn engagement. Visit www.startupatti.com to see how to use them.\n\nAgenda (Subject to Change)\n\n2.30 PM - Desk Open\n3.00 PM - Session Starts \n\n3.00 PM to 3.30 PM - Intro & General Session\n(Door Closes - No Admissions after 3.30 PM)\n\n3.30 PM to 4.00 PM - Atti Network Intro - Round 1 (For Atti Networking Tickets) - 1 Minute Pitch (Name, Category, Best 3 He/She can Offer, His/Her Immediate 3 Needs)\n\n4.00 PM to 5.00 PM - Atti Network Linkedin Into - Round 2 (For Atti Networking Tickets) - 2 Minutes Pitch\n\n5.00 PM to 5.20 PM - "Atti Story" by Founder\n5.20 PM to 5.30 PM - Q&A\n\n5.30 PM to 6.00 PM - Open Networking with Refreshment\n6.00 PM - Windup\n\nMake it yours: find a connection land a project or start a new relationship - it’s all in your hands.\n\nImportant details:\nWe’re also open to partnerships for future events.\n\nLet’s Atti and grow together',
+    fullDescription:'Startup Atti is an initiative by Department of Economic and Entrepreneurship Development Unity of Youth Foundation. It is designed as a casual offline space for founders, solopreneurs, students, and aspiring entrepreneurs to connect and share ideas. \nThe focus is on open conversations, learning from each other’s journeys, and building meaningful relationships beyond online platforms. \nVisit www.startupatti.com to learn more about the community and future events. Let’s connect, build, and grow together.' ,
     image: "/optimized/april2026banner.webp",
     upcoming: true,
     ticketLink:
-      "https://tickets.kynhood.com/event/69a13d7e233c4735a4241ce7?utm_source=startupattiwebsite&utm_medium=startupattiwebsite&utm_campaign=aprilatti&utm_content=booknow",
+      "TBA",
     mapsLink: "TBA",
     gallery: [],
     speakers: [],

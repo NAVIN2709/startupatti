@@ -299,7 +299,14 @@ const EventDetails = () => {
 
             {/* Action Buttons */}
             <div className="mt-6 md:mt-8 flex flex-wrap gap-4">
-              {event.upcoming && event.ticketLink && (
+              {event.ticketLink == "TBA" ? (
+                <p
+                  className="inline-flex items-center gap-2 bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2.5 md:py-3 px-6 md:px-8 rounded-full shadow-lg shadow-yellow-500/20 text-sm md:text-base hover:cursor-not-allowed"
+                >
+                  <Ticket size={18} />
+                  Tickets Soon !
+                </p>
+              ) : event.upcoming && event.ticketLink && (
                 <a
                   href={event.ticketLink}
                   target="_blank"
