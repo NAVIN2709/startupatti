@@ -561,15 +561,15 @@ export const events = [
     title: "April 2026 Atti",
     date: "April 25, 2026",
     time: "9:00 PM onwards",
-    location: "TBA",
+    location: "Third Wave Coffee , Kathipara",
     description:
       "A casual monthly hangout for founders, solopreneurs, and aspiring entrepreneurs to connect, share knowledge, and build meaningful offline connections.",
     fullDescription:'Startup Atti is an initiative by Department of Economic and Entrepreneurship Development Unity of Youth Foundation. It is designed as a casual offline space for founders, solopreneurs, students, and aspiring entrepreneurs to connect and share ideas. \nThe focus is on open conversations, learning from each other’s journeys, and building meaningful relationships beyond online platforms. \nVisit www.startupatti.com to learn more about the community and future events. Let’s connect, build, and grow together.' ,
     image: "/optimized/april2026banner.webp",
     upcoming: true,
     ticketLink:
-      "TBA",
-    mapsLink: "TBA",
+      "https://kynhood.com/event/69cb663731863fb92b25c9cd",
+    mapsLink: "https://maps.app.goo.gl/4RoJiUn1wehDVchRA",
     gallery: [],
     speakers: [],
   },

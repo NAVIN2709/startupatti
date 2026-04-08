@@ -44,13 +44,13 @@ const Mission = () => {
           {[
             {
               icon: Users,
-              title: "Curated Events",
-              desc: "50-seat monthly gatherings with structured intros.",
+              title: "Casual Meetups",
+              desc: "Monthly gatherings with similar mindset.",
             },
             {
               icon: Mic,
               title: "Founder Stories",
-              desc: "Real entrepreneurs share their journey in 20 mins.",
+              desc: "Real entrepreneurs share their story.",
             },
             {
               icon: Handshake,
