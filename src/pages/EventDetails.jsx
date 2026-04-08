@@ -49,6 +49,14 @@ const EventDetails = () => {
       }
     }
   };
+  const trackKyn = () => {
+    if (window.fbq) {
+      window.fbq("track", "Lead" , {
+        event : "Event KynHood page opened",
+      });
+    }
+  };
+
 
   const getGoogleCalendarUrl = (event) => {
     if (!event) return "";
@@ -309,6 +317,7 @@ const EventDetails = () => {
               ) : event.upcoming && event.ticketLink && (
                 <a
                   href={event.ticketLink}
+                  onClick={trackKyn}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2.5 md:py-3 px-6 md:px-8 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-yellow-500/20 text-sm md:text-base"
