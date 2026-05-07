@@ -206,7 +206,7 @@ const Navbar = ({ onOpenPerks }) => {
               />
             </button>
             <a
-              href="https://kynhood.com/event/69cb663731863fb92b25c9cd"
+              href="https://www.kynhood.com/event/69fc367c6b6e6b67980e8096"
               target="_blank"
               rel="noopener noreferrer"
               className="
@@ -221,22 +221,6 @@ const Navbar = ({ onOpenPerks }) => {
             >
               <Ticket size={14} />
               <span>Book Tickets</span>
-            </a>
-            <a
-              href="https://wa.me/919487445528?text=Hi%2C%20I%20strongly%20believe%20in%20empowering%20young%20entrepreneurs%20and%20would%20be%20glad%20to%20contribute%20to%20your%20initiative.%20Kindly%20share%20the%20details%20to%20proceed%20with%20a%20donation."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-                    relative overflow-hidden
-                    px-6 py-3 rounded-full 
-                    bg-white text-black 
-                    text-md font-bold 
-                    hover:bg-gray-200 transition-colors duration-300
-                    flex items-center gap-2
-                "
-            >
-              <span>Donate</span>
-              <ArrowUpRight size={14} />
             </a>
           </div>
 
@@ -284,7 +268,7 @@ const Navbar = ({ onOpenPerks }) => {
               ))}
               <div className="h-px bg-white/10 my-2" />
               <a
-                href="https://kynhood.com/event/69cb663731863fb92b25c9cd"
+                href="https://www.kynhood.com/event/69fc367c6b6e6b67980e8096"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-3 mt-2 flex items-center justify-center gap-2 rounded-xl bg-yellow-500 text-black font-bold hover:bg-yellow-400 transition-all shadow-[0_0_20px_rgba(234,179,8,0.3)]"
@@ -292,16 +276,6 @@ const Navbar = ({ onOpenPerks }) => {
               >
                 <Ticket size={16} />
                 Book Tickets
-              </a>
-              <a
-                href="https://wa.me/919487445528?text=Hi%2C%20I%20strongly%20believe%20in%20empowering%20young%20entrepreneurs%20and%20would%20be%20glad%20to%20contribute%20to%20your%20initiative.%20Kindly%20share%20the%20details%20to%20proceed%20with%20a%20donation."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-3 mt-2 flex items-center justify-center gap-2 rounded-xl bg-white text-black font-bold hover:bg-gray-200 transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Donate
-                <ArrowUpRight size={16} />
               </a>
             </div>
           </motion.div>

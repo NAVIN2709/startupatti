@@ -37,15 +37,6 @@ const Initiative = () => {
             <h4 className="text-lg md:text-3xl text-gray-200 mb-6 md:mb-8 font-light tracking-wide">
               Unity of Youth Foundation
             </h4>
-
-            <a
-              href="https://wa.me/919487445528?text=Hi%2C%20I%20strongly%20believe%20in%20empowering%20young%20entrepreneurs%20and%20would%20be%20glad%20to%20contribute%20to%20your%20initiative.%20Kindly%20share%20the%20details%20to%20proceed%20with%20a%20donation."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-2.5 md:px-8 md:py-3 rounded-full bg-white text-black font-bold text-sm md:text-base hover:bg-gray-200 transition-colors"
-            >
-              Donate to Support
-            </a>
           </motion.div>
         </div>
       </div>

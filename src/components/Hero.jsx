@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { events } from "../data/events";
 
 const Hero = () => {
-  const event = events[15];
+  const event = events[16];
   const trackClick = () => {
   if (window.fbq) {
     window.fbq("track", "Lead" , {
