@@ -5,7 +5,7 @@ const Team = () => {
   const team = [
     {
       name: "Venkateshwaran Vanniyarajan",
-      role: "Head , Department of Economic & Entrepreneurship Development , UOY",
+      role: "Founder at SaltCookies & Madras Marketers Community",
       linkedin: "https://www.linkedin.com/in/venkateshwaranvanniyarajan/",
       image: "/optimized/venkat.webp",
     },

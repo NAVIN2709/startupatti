@@ -25,6 +25,7 @@ import devanand from "../assets/speakers/optimized/devanand.webp";
 import boni from "../assets/speakers/optimized/boni.webp";
 import thiru from "../assets/speakers/optimized/thiru.webp";
 import anand from "../assets/speakers/optimized/anand.webp";
+import gokulraj from "../assets/speakers/optimized/gokulraj.webp";
 
 // Company logos
 import raptee from "../assets/companies/optimized/Raptee.webp";
@@ -577,9 +578,9 @@ export const events = [
     id: 16,
     slug: "may2026atti",
     title: "May 2026 Atti",
-    date: "TBA",
-    time: "TBA",
-    location: "TBA",
+    date: "23rd May 2026",
+    time: "3:45pm",
+    location: "KynHood , Teynampet , Chennai",
     description:
       "A casual monthly hangout for founders, solopreneurs, and aspiring entrepreneurs to connect, share knowledge, and build meaningful offline connections.",
     fullDescription:
@@ -587,9 +588,17 @@ export const events = [
     image: "/optimized/May2026banner.webp",
     upcoming: true,
     ticketLink: "https://www.kynhood.com/event/69fc367c6b6e6b67980e8096",
-    mapsLink: "TBA",
+    mapsLink: "https://maps.app.goo.gl/np1igDaVrdiEzsWV8",
     gallery: [],
-    speakers: [],
+    speakers: [
+      {
+        name: "Gokulraj G.K",
+        role: "Marketing Consultant",
+        topic: "Marketing strategies for startups and solopreneurs — insights from the trenches",
+        image: gokulraj,
+        linkedin: "https://www.linkedin.com/in/gokulrajgk/",
+      }
+    ],
   },
   {
     id: 18,

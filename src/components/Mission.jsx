@@ -19,23 +19,24 @@ const Mission = () => {
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
             What is Startup Atti?
           </h2>
+
           <div className="w-16 h-1 bg-yellow-500 mx-auto rounded-full mb-8"></div>
 
-          <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-4">
-            A{" "}
+          <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-5">
+            Startup Atti is a{" "}
             <span className="text-white font-semibold">
-              monthly offline event
+              monthly offline meetup
             </span>{" "}
-            by{" "}
+            that brings together{" "}
             <span className="text-white font-semibold">
-              Unity of Youth Foundation (UOY)
+              brand owners and ecosystem players
             </span>{" "}
-            to educate entrepreneurship through events & videos.
+            to educate, network, and empower one another for a better tomorrow.
           </p>
 
-          <p className="text-sm md:text-base text-gray-500">
-            Not a club. Not mentorship. Just real founders, real stories, real
-            connections.
+          <p className="text-sm md:text-base text-gray-500 leading-relaxed">
+            Real people. Real conversations. Real opportunities to connect,
+            collaborate, and grow together.
           </p>
         </motion.div>
 
@@ -49,8 +50,8 @@ const Mission = () => {
             },
             {
               icon: Mic,
-              title: "Founder Stories",
-              desc: "Real entrepreneurs share their story.",
+              title: "Expert Sessions",
+              desc: "Experts share real stories, not just theories.",
             },
             {
               icon: Handshake,
