@@ -206,7 +206,7 @@ const Navbar = ({ onOpenPerks }) => {
               />
             </button>
             <a
-              href="https://www.kynhood.com/event/69fc367c6b6e6b67980e8096"
+              href="https://kynhood.com/event/69fc367c6b6e6b67980e8096?utm_source=Startup_atti&utm_medium=Website"
               target="_blank"
               rel="noopener noreferrer"
               className="
@@ -268,7 +268,7 @@ const Navbar = ({ onOpenPerks }) => {
               ))}
               <div className="h-px bg-white/10 my-2" />
               <a
-                href="https://www.kynhood.com/event/69fc367c6b6e6b67980e8096"
+                href="https://kynhood.com/event/69fc367c6b6e6b67980e8096?utm_source=Startup_atti&utm_medium=Website"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-3 mt-2 flex items-center justify-center gap-2 rounded-xl bg-yellow-500 text-black font-bold hover:bg-yellow-400 transition-all shadow-[0_0_20px_rgba(234,179,8,0.3)]"
