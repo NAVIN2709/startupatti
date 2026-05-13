@@ -412,10 +412,10 @@ const EventDetails = () => {
                             <img
                               src={speaker.companyLogo}
                               alt={speaker.company}
-                              className="h-4 w-auto object-contain opacity-60"
+                              className="h-10 w-auto object-contain opacity-60"
                             />
                           )}
-                          <p className="text-xs text-gray-500">
+                          <p className="text-sm text-gray-500">
                             {speaker.company}
                           </p>
                         </div>

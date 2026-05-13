@@ -8,7 +8,7 @@ const Hero = () => {
   const trackClick = () => {
   if (window.fbq) {
     window.fbq("track", "Lead" , {
-      event : "April 2026 Attic Event Ticket Clicked",
+      event : "May 2026 Attic Event Ticket Clicked",
     }); // event name
   }
 };
@@ -66,6 +66,20 @@ const Hero = () => {
                 className="transition-transform group-hover:translate-x-1"
               />
             </a>
+            <a
+                  href={event.ticketLink}
+                  onClick={trackClick}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto md:w-60 flex items-center text-black font-bold justify-center gap-2 px-5 py-2.5 md:px-6 md:py-3 rounded-full shadow-[0_0_20px_rgba(234,179,8,0.4)] hover:shadow-[0_0_30px_rgba(234,179,8,0.6)] hover:bg-yellow-400 transition-all duration-300 bg-yellow-500 group/btn"
+                >
+                  <Ticket size={14} />
+                  Book Tickets
+                  <ArrowRight
+                    size={18}
+                    className="transition-transform group-hover/btn:translate-x-1"
+                  />
+                </a>
           </motion.div>
         </div>
 

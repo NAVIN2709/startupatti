@@ -55,6 +55,7 @@ import ssnifound from "../assets/companies/optimized/ssnifound.webp";
 import hubfive from "../assets/companies/optimized/hubfive.webp";
 import { link } from "framer-motion/client";
 import auragold from "../assets/companies/optimized/auragold.webp";
+import gofix from "../assets/companies/optimized/gofix.webp";
 
 export const events = [
   {
@@ -592,10 +593,12 @@ export const events = [
     speakers: [
       {
         name: "Gokulraj G.K",
-        role: "Marketing Consultant",
+        role: "Growth Marketer & CMO",
         topic: "Marketing strategies for startups and solopreneurs — insights from the trenches",
         image: gokulraj,
         linkedin: "https://www.linkedin.com/in/gokulrajgk/",
+        companyLogo: gofix,
+        company: "Gofix",
       }
     ],
   },
