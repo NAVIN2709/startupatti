@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://startupatti.com"),
   title: "Startup Atti | The Gateway to the Real Startup Ecosystem",
   description:
     "Startup Atti is a monthly offline event by UOY Foundation to educate entrepreneurship through real founder stories and networking in Chennai.",

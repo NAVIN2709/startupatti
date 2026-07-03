@@ -38,5 +38,67 @@ export default async function EventPage({ params }) {
     );
   }
 
-  return <EventDetailsClient event={event} />;
+  // Format ISO date format for JSON-LD schema
+  const parseDateToISO = (dateStr) => {
+    try {
+      const cleaned = dateStr.replace(/st|nd|rd|th/g, "").trim();
+      const d = new Date(cleaned);
+      if (!isNaN(d.getTime())) {
+        return d.toISOString().split('T')[0];
+      }
+    } catch (e) {}
+    return dateStr;
+  };
+
+  const isoDate = parseDateToISO(event.date);
+
+  const eventLd = {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": event.title,
+    "description": event.description,
+    "image": event.image?.src || event.image,
+    "startDate": isoDate,
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": event.location,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Chennai",
+        "addressRegion": "Tamil Nadu",
+        "addressCountry": "IN"
+      }
+    },
+    ...(event.ticketLink && event.ticketLink !== "TBA" && {
+      "offers": {
+        "@type": "Offer",
+        "url": event.ticketLink,
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock"
+      }
+    }),
+    ...(event.speakers && event.speakers.length > 0 && {
+      "performer": event.speakers.map(s => ({
+        "@type": "Person",
+        "name": s.name,
+        "jobTitle": s.role,
+        "worksFor": {
+          "@type": "Organization",
+          "name": s.company
+        }
+      }))
+    })
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(eventLd) }}
+      />
+      <EventDetailsClient event={event} />
+    </>
+  );
 }

@@ -123,13 +123,7 @@ const Navbar = ({ onOpenPerks }) => {
         className={`fixed top-3 md:top-4 left-0 right-0 z-50 transition-all duration-300 px-3 md:px-0 flex justify-center`}
       >
         <div
-          className={`
-            w-full md:w-auto md:min-w-[900px] max-w-6xl
-            backdrop-blur-md border border-white/10 rounded-full
-            flex justify-between items-center px-4 py-2.5 md:px-6 md:py-3
-            transition-all duration-500
-            ${isScrolled ? "bg-black/80 shadow-lg shadow-yellow-500/10" : "bg-black/50"}
-          `}
+          className={`w-full md:w-auto md:min-w-[900px] max-w-6xl backdrop-blur-md border border-white/10 rounded-full flex justify-between items-center px-4 py-2.5 md:px-6 md:py-3 transition-all duration-500 ${isScrolled ? "bg-black/80 shadow-lg shadow-yellow-500/10" : "bg-black/50"}`}
         >
           {/* Logo */}
           <Link
@@ -179,16 +173,7 @@ const Navbar = ({ onOpenPerks }) => {
           <div className="hidden md:flex items-center ml-8 gap-3">
             <button
               onClick={onOpenPerks}
-              className="
-                    relative overflow-visible group
-                    px-5 py-2.5 rounded-full 
-                    border border-yellow-500/30
-                    bg-yellow-500/10 text-white 
-                    text-sm font-bold 
-                    hover:bg-yellow-500/20 transition-all duration-300
-                    flex items-center gap-2
-                    cursor-pointer
-                "
+              className="relative overflow-visible group px-5 py-2.5 rounded-full border border-yellow-500/30 bg-yellow-500/10 text-white text-sm font-bold hover:bg-yellow-500/20 transition-all duration-300 flex items-center gap-2 cursor-pointer"
             >
               <div className="absolute inset-0 pointer-events-none overflow-visible">
                 <Sparkle delay={0} />
@@ -211,34 +196,10 @@ const Navbar = ({ onOpenPerks }) => {
               href="https://allevents.in/chennai/startup-atti-%7C-february-atti-%7C-a-monthly-hangout-tickets/80001513088601"
               target="_blank"
               rel="noopener noreferrer"
-              className="
-                    relative overflow-hidden text-black
-                    px-5 py-2.5 rounded-full 
-                    bg-yellow-500 
-                    text-sm font-bold 
-                    hover:bg-yellow-400 transition-all duration-300
-                    flex items-center gap-2
-                    shadow-[0_0_20px_rgba(234,179,8,0.4)] hover:shadow-[0_0_30px_rgba(234,179,8,0.6)]
-                "
+              className="relative overflow-hidden text-black px-5 py-2.5 rounded-full bg-yellow-500 text-sm font-bold hover:bg-yellow-400 transition-all duration-300 flex items-center gap-2 shadow-[0_0_20px_rgba(234,179,8,0.4)] hover:shadow-[0_0_30px_rgba(234,179,8,0.6)]"
             >
               <Ticket size={14} />
               <span>Book Tickets</span>
-            </a>
-            <a
-              href="https://wa.me/919487445528?text=Hi%2C%20I%20strongly%20believe%20in%20empowering%20young%20entrepreneurs%20and%20would%20be%20glad%20to%20contribute%20to%20your%20initiative.%20Kindly%20share%20the%20details%20to%20proceed%20with%20a%20donation."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-                    relative overflow-hidden
-                    px-6 py-3 rounded-full 
-                    bg-white text-black 
-                    text-md font-bold 
-                    hover:bg-gray-200 transition-colors duration-300
-                    flex items-center gap-2
-                "
-            >
-              <span>Donate</span>
-              <ArrowUpRight size={14} />
             </a>
           </div>
 
@@ -294,16 +255,6 @@ const Navbar = ({ onOpenPerks }) => {
               >
                 <Ticket size={16} />
                 Book Tickets
-              </a>
-              <a
-                href="https://wa.me/919487445528?text=Hi%2C%20I%20strongly%20believe%20in%20empowering%20young%20entrepreneurs%20and%20would%20be%20glad%20to%20contribute%20to%20your%20initiative.%20Kindly%20share%20the%20details%20to%20proceed%20with%20a%20donation."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-3 mt-2 flex items-center justify-center gap-2 rounded-xl bg-white text-black font-bold hover:bg-gray-200 transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Donate
-                <ArrowUpRight size={16} />
               </a>
             </div>
           </motion.div>

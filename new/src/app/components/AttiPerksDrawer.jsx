@@ -27,11 +27,12 @@ const AttiPerksDrawer = ({ isOpen, onClose }) => {
       subtitle: "The Elite Reset Experience",
       description:
         "Founders need time to socialize, reset, and take a break. An evening-only experience with curated DJ sets, premium cocktails, and the real Atti vibe.",
-      requirement: "Redeem 3 Atti Tokens or Invite link from Atti Patrons",
+      requirement: "3 Atti Tokens Required",
+      criteria: "LinkedIn Post + Tag Startup Atti",
       icon: Music,
       accent: "rgba(168, 85, 247, 0.5)", // Purple
       frequency: "Happens twice a year",
-      tokensToEarn: 6,
+      tokensToEarn: 3,
     },
     {
       id: "tour",
@@ -40,7 +41,7 @@ const AttiPerksDrawer = ({ isOpen, onClose }) => {
       description:
         "A curated founder journey to global startup hubs focused on deep bonding, high-level exposure, and international perspective.",
       stats: "60% Adventure | 40% Ecosystem",
-      requirement: "Redeem 9 Atti Tokens or Invite link from Atti Patrons",
+      requirement: "9 Atti Tokens Required",
       icon: Globe,
       accent: "rgba(59, 130, 246, 0.5)", // Blue
       frequency: "Annual",
@@ -49,9 +50,9 @@ const AttiPerksDrawer = ({ isOpen, onClose }) => {
   ];
 
   const tokenRules = [
-    { action: "Attend monthly events", reward: "1 Atti Token", icon: Zap },
-    { action: "Attend Atti Party", reward: "6 Atti Tokens", icon: Star },
-    { action: "Token Donation", reward: "Coming Soon", icon: Coins },
+    { action: "LinkedIn post with connection & group photo + hashtag (#monthatti)", reward: "1 Atti Token", icon: Star },
+    { action: "Attend Atti Party + LinkedIn post tagging us", reward: "3 Atti Tokens", icon: Zap },
+    { action: "Direct Purchase", reward: "Coming Soon", icon: Coins },
   ];
 
   const containerVariants = {
@@ -84,11 +85,12 @@ const AttiPerksDrawer = ({ isOpen, onClose }) => {
   };
 
   return (
-    <AnimatePresence>
+    <AnimatePresence mode="wait">
       {isOpen && (
-        <>
+        <div key="perks-drawer-wrapper">
           {/* High-end Backdrop */}
           <motion.div
+            key="drawer-backdrop"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -98,6 +100,7 @@ const AttiPerksDrawer = ({ isOpen, onClose }) => {
 
           {/* Premium Drawer Container */}
           <motion.div
+            key="drawer-container"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -168,10 +171,9 @@ const AttiPerksDrawer = ({ isOpen, onClose }) => {
                 <p className="text-white/60 text-base leading-relaxed font-light">
                   Growth isn't just about business; it's about the{" "}
                   <span className="text-white font-medium italic">
-                    perspective
+                    community
                   </span>{" "}
-                  you gain. Attending monthly Atti events unlocks a new
-                  dimension of our ecosystem.
+                  you build. Tokens have lifetime value and are never consumed—just accumulate them to unlock unlimited access to exclusive founder experiences.
                 </p>
                 <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-yellow-500/0 via-yellow-500/40 to-yellow-500/0" />
               </motion.div>
@@ -234,23 +236,34 @@ const AttiPerksDrawer = ({ isOpen, onClose }) => {
                         )}
                       </p>
 
-                      <div className="flex items-center gap-4 pt-6 border-t border-white/5">
-                        <div className="flex -space-x-2">
-                          {[1, 2, 3].map((i) => (
-                            <div
-                              key={i}
-                              className="w-6 h-6 rounded-full border border-black bg-white/5 flex items-center justify-center"
-                            >
-                              <LockOpen size={10} className="text-white/40" />
-                            </div>
-                          ))}
+                      <div className="flex flex-col gap-4 pt-6 border-t border-white/5">
+                        <div className="flex items-center gap-4">
+                          <div className="flex -space-x-2">
+                            {[1, 2, 3].map((i) => (
+                              <div
+                                key={i}
+                                className="w-6 h-6 rounded-full border border-black bg-white/5 flex items-center justify-center"
+                              >
+                                <LockOpen size={10} className="text-white/40" />
+                              </div>
+                            ))}
+                          </div>
+                          <div className="text-[11px] text-white/40 font-medium">
+                            <span className="text-white">
+                              {perk.requirement.split(" ")[0]} Tokens
+                            </span>{" "}
+                            required for access
+                          </div>
                         </div>
-                        <div className="text-[11px] text-white/40 font-medium">
-                          <span className="text-white">
-                            {perk.requirement.split("Token")[0]}Tokens
-                          </span>{" "}
-                          required for access
-                        </div>
+
+                        {perk.criteria && (
+                          <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-purple-500/10 border border-purple-500/20">
+                            <Sparkles size={12} className="text-purple-400" />
+                            <span className="text-[10px] text-purple-200 font-bold uppercase tracking-wider">
+                              Criteria: {perk.criteria}
+                            </span>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </motion.div>
@@ -291,7 +304,7 @@ const AttiPerksDrawer = ({ isOpen, onClose }) => {
                           </span>
                         </div>
                         <div className="flex items-center gap-2">
-                          {rule.reward !== "Coming Soon" && (
+                          {rule.reward !== "Available" && rule.reward !== "Coming Soon" && (
                             <div className="h-1 w-4 bg-yellow-400/20 rounded-full" />
                           )}
                           <span
@@ -312,10 +325,9 @@ const AttiPerksDrawer = ({ isOpen, onClose }) => {
                   <Info size={16} className="text-blue-400" />
                   <p className="text-[11px] text-white/40 font-medium leading-tight">
                     <span className="text-white/60 block mb-0.5 uppercase tracking-widest text-[10px]">
-                      Validity
+                      Lifetime Access
                     </span>
-                    Tokens expire 3 years from the date of issue.
-                    Non-transferable.
+                    All tokens have lifetime value and are non-redeemable. Once you reach the required tokens, you can attend any number of events. Token buying options in future.
                   </p>
                 </div>
                 <p className="text-[10px] text-white/20 italic text-center leading-relaxed px-6">
@@ -336,7 +348,7 @@ const AttiPerksDrawer = ({ isOpen, onClose }) => {
               </button>
             </div>
           </motion.div>
-        </>
+        </div>
       )}
     </AnimatePresence>
   );
