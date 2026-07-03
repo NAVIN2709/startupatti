@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 import { events } from "../data/events";
 
 const Hero = () => {
-  const event = events[16];
+  const event = events[18];
   const trackClick = () => {
-  if (window.fbq) {
-    window.fbq("track", "Lead" , {
-      event : "May 2026 Attic Event Ticket Clicked",
-    }); // event name
-  }
-};
+    if (window.fbq) {
+      window.fbq("track", "Lead", {
+        event: "May 2026 Attic Event Ticket Clicked",
+      }); // event name
+    }
+  };
 
   return (
     <section className="relative w-full min-h-screen flex items-center pt-20 pb-10 px-4 md:px-6 overflow-hidden bg-black">
@@ -49,7 +49,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex gap-4"
+            className="flex flex-col md:flex-row gap-4"
           >
             <a
               href="#roots"
@@ -58,28 +58,28 @@ const Hero = () => {
                 const el = document.getElementById("roots");
                 if (el) el.scrollIntoView({ behavior: "smooth" });
               }}
-              className="px-6 py-3 md:px-8 md:py-4 rounded-full bg-white text-black font-bold hover:bg-gray-200 transition-all flex items-center gap-2 group text-sm md:text-base"
+              className="w-full sm:w-auto md:w-60 flex items-center justify-center gap-2 px-5 py-2.5 md:px-6 md:py-3 rounded-full bg-white text-black font-bold hover:bg-gray-200 transition-all duration-300 group"
             >
-              <span>Discover more</span>
+              Discover more
               <ArrowRight
                 size={18}
                 className="transition-transform group-hover:translate-x-1"
               />
             </a>
             <a
-                  href={event.ticketLink}
-                  onClick={trackClick}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-auto md:w-60 flex items-center text-black font-bold justify-center gap-2 px-5 py-2.5 md:px-6 md:py-3 rounded-full shadow-[0_0_20px_rgba(234,179,8,0.4)] hover:shadow-[0_0_30px_rgba(234,179,8,0.6)] hover:bg-yellow-400 transition-all duration-300 bg-yellow-500 group/btn"
-                >
-                  <Ticket size={14} />
-                  Book Tickets
-                  <ArrowRight
-                    size={18}
-                    className="transition-transform group-hover/btn:translate-x-1"
-                  />
-                </a>
+              href={event.ticketLink}
+              onClick={trackClick}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto md:w-60 flex items-center text-black font-bold justify-center gap-2 px-5 py-2.5 md:px-6 md:py-3 rounded-full shadow-[0_0_20px_rgba(234,179,8,0.4)] hover:shadow-[0_0_30px_rgba(234,179,8,0.6)] hover:bg-yellow-400 transition-all duration-300 bg-yellow-500 group/btn"
+            >
+              <Ticket size={14} />
+              Book Tickets
+              <ArrowRight
+                size={18}
+                className="transition-transform group-hover/btn:translate-x-1"
+              />
+            </a>
           </motion.div>
         </div>
 
@@ -94,8 +94,8 @@ const Hero = () => {
             {/* Subtle gray glow behind */}
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-[60px] opacity-40"></div>
 
-            <div className="relative bg-[#0A0A0A] border border-white/10 rounded-2xl md:rounded-3xl p-4 md:p-8 hover:border-white/30 transition-all group cursor-pointer">
-              <div className="mb-4 md:mb-6 overflow-hidden rounded-xl md:rounded-2xl h-44 md:h-64 relative transition-all duration-700">
+            <div className="relative bg-[#0A0A0A] border border-white/10 rounded-2xl md:rounded-3xl p-4 md:p-6 hover:border-white/30 transition-all group cursor-pointer">
+              <div className="mb-4 md:mb-6 overflow-hidden rounded-xl md:rounded-2xl h-44 md:h-70 relative transition-all duration-700">
                 <img
                   src={event.image}
                   alt={event.title}

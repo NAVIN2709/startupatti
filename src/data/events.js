@@ -26,6 +26,7 @@ import boni from "../assets/speakers/optimized/boni.webp";
 import thiru from "../assets/speakers/optimized/thiru.webp";
 import anand from "../assets/speakers/optimized/anand.webp";
 import gokulraj from "../assets/speakers/optimized/gokulraj.webp";
+import abraham from "../assets/speakers/optimized/abraham.webp";
 
 // Company logos
 import raptee from "../assets/companies/optimized/Raptee.webp";
@@ -56,6 +57,7 @@ import hubfive from "../assets/companies/optimized/hubfive.webp";
 import { link } from "framer-motion/client";
 import auragold from "../assets/companies/optimized/auragold.webp";
 import gofix from "../assets/companies/optimized/gofix.webp";
+import sonofthanjai from "../assets/companies/optimized/sonofthanjai.webp";
 
 export const events = [
   {
@@ -586,7 +588,7 @@ export const events = [
       "A casual monthly hangout for founders, solopreneurs, and aspiring entrepreneurs to connect, share knowledge, and build meaningful offline connections.",
     fullDescription: `Startup Atti x Madras Marketers\n\nJoin Startup Atti x Madras Marketers for an insightful session on how brands are leveraging social media to drive growth, build communities, and create long-term brand value.\n\nThis event brings together founders, marketers, creators, and growth enthusiasts to discuss content strategy, brand storytelling, performance marketing, creator collaborations, and community-led growth in today’s digital-first world.\n\nWhether you're a founder, solopreneur, aspiring entrepreneur, freelancer, student, enabler, investor, or someone exploring modern marketing trends — this is the perfect space to connect, learn, and grow.\n\nHosted by Startup Atti, an initiative by Department of Economic and Entrepreneurship Development, Unity of Youth Foundation, designed to bring startups and like-minded individuals together for meaningful offline networking.\n\nFeatured Session\nSocial Media Led Brand Growth by Gokulraj G.K\n\nAgenda\n\n4.00 PM to 4.45 PM - Our Exclusive Atti Network - Get what you need\n4.45 PM to 5.00 PM - Refreshment\n5.00 PM to 6.15 PM - Social Media Led Brand Growth by Gokulraj G.K\n6.15 PM to 6.45 PM - Q&A\n6.45 PM to 7.00 PM - Honouring Session\n7.00 PM - Windup\n\nWhy Attend?\n\n• Meet founders, marketers, and creators\n• Build valuable offline connections\n• Learn practical growth and branding strategies\n• Explore collaborations, projects, and partnerships\n• Become part of the growing Atti community\n\nYou will get 1 Atti Token for attending the monthly event. Additional tokens can be earned via LinkedIn engagement.`,
     image: "/optimized/May2026banner.webp",
-    upcoming: true,
+    upcoming: false,
     ticketLink: "https://kynhood.com/event/69fc367c6b6e6b67980e8096?utm_source=Startup_atti&utm_medium=Website",
     mapsLink: "https://maps.app.goo.gl/np1igDaVrdiEzsWV8",
     gallery: [],
@@ -608,34 +610,43 @@ export const events = [
     title: "June 2026 Atti",
     date: "TBA",
     time: "TBA",
-    location: "TBA",
+    location: "KynHood , Teynampet , Chennai",
     description:
       "A casual monthly hangout for founders, solopreneurs, and aspiring entrepreneurs to connect, share knowledge, and build meaningful offline connections.",
     fullDescription:
       'Startup Atti | A Monthly Hangout | www.startupatti.com\n\nStartup Atti is an initiative by Department of Economic and Entrepreneurship Development Unity of Youth Foundation. Designed to bring start-ups and like-minded individuals together for meaningful offline networking.\n\nWhy?\nWhile many connect through WhatsApp groups they rarely get to know each other’s ambitions and passions deeply. Whether you\'re a founder solopreneur aspiring entrepreneur freelancer student enabler or investor this is the perfect space for you! It’s a casual get-together where you can share knowledge gain insights and build valuable connections.\n\nYou will get 1 Atti Token for attending 1 Monthly Event. Higher tokens can be earned via LinkedIn engagement. Visit www.startupatti.com to see how to use them.\n\nAgenda (Subject to Change)\n\n2.30 PM - Desk Open\n3.00 PM - Session Starts \n\n3.00 PM to 3.30 PM - Intro & General Session\n(Door Closes - No Admissions after 3.30 PM)\n\n3.30 PM to 4.00 PM - Atti Network Intro - Round 1 (For Atti Networking Tickets) - 1 Minute Pitch (Name, Category, Best 3 He/She can Offer, His/Her Immediate 3 Needs)\n\n4.00 PM to 5.00 PM - Atti Network Linkedin Into - Round 2 (For Atti Networking Tickets) - 2 Minutes Pitch\n\n5.00 PM to 5.20 PM - "Atti Story" by Founder\n5.20 PM to 5.30 PM - Q&A\n\n5.30 PM to 6.00 PM - Open Networking with Refreshment\n6.00 PM - Windup\n\nMake it yours: find a connection land a project or start a new relationship - it’s all in your hands.\n\nImportant details:\nWe’re also open to partnerships for future events.\n\nLet’s Atti and grow together',
     image: "/optimized/juneatti2026banner.webp",
-    upcoming: true,
+    upcoming: false,
     ticketLink: "TBA",
     mapsLink: "TBA",
     gallery: [],
     speakers: [],
   },
   {
-    id: 19,
-    slug: "july2026atti",
-    title: "July 2026 Atti",
-    date: "TBA",
-    time: "TBA",
-    location: "TBA",
-    description:
-      "A casual monthly hangout for founders, solopreneurs, and aspiring entrepreneurs to connect, share knowledge, and build meaningful offline connections.",
-    fullDescription:
-      'Startup Atti | A Monthly Hangout | www.startupatti.com\n\nStartup Atti is an initiative by Department of Economic and Entrepreneurship Development Unity of Youth Foundation. Designed to bring start-ups and like-minded individuals together for meaningful offline networking.\n\nWhy?\nWhile many connect through WhatsApp groups they rarely get to know each other’s ambitions and passions deeply. Whether you\'re a founder solopreneur aspiring entrepreneur freelancer student enabler or investor this is the perfect space for you! It’s a casual get-together where you can share knowledge gain insights and build valuable connections.\n\nYou will get 1 Atti Token for attending 1 Monthly Event. Higher tokens can be earned via LinkedIn engagement. Visit www.startupatti.com to see how to use them.\n\nAgenda (Subject to Change)\n\n2.30 PM - Desk Open\n3.00 PM - Session Starts \n\n3.00 PM to 3.30 PM - Intro & General Session\n(Door Closes - No Admissions after 3.30 PM)\n\n3.30 PM to 4.00 PM - Atti Network Intro - Round 1 (For Atti Networking Tickets) - 1 Minute Pitch (Name, Category, Best 3 He/She can Offer, His/Her Immediate 3 Needs)\n\n4.00 PM to 5.00 PM - Atti Network Linkedin Into - Round 2 (For Atti Networking Tickets) - 2 Minutes Pitch\n\n5.00 PM to 5.20 PM - "Atti Story" by Founder\n5.20 PM to 5.30 PM - Q&A\n\n5.30 PM to 6.00 PM - Open Networking with Refreshment\n6.00 PM - Windup\n\nMake it yours: find a connection land a project or start a new relationship - it’s all in your hands.\n\nImportant details:\nWe’re also open to partnerships for future events.\n\nLet’s Atti and grow together',
-    image: "/optimized/julyatti2026banner.webp",
-    upcoming: true,
-    ticketLink: "TBA",
-    mapsLink: "TBA",
-    gallery: [],
-    speakers: [],
-  },
+  id: 19,
+  slug: "july2026atti",
+  title: "July 2026 Atti",
+  date: "12th July 2026",
+  time: "4:00 PM",
+  location: "Perungudi, Chennai",
+  description:
+    "An exclusive invite-only Startup Atti meetup featuring Abraham, the creator behind Son of Thanjai, discussing game marketing, GTM, PMF, and startup growth strategies.",
+  fullDescription: `Join Startup Atti for an exclusive invite-only networking session featuring Abraham, the visionary behind Son of Thanjai, one of the most anticipated Tamil Chola-inspired AAA games from Madras.\n\nDiscover how a world-class game is being built from Chennai while learning about the marketing strategy, Go-To-Market (GTM), Product-Market Fit (PMF), branding, and growth strategies behind bringing an ambitious entertainment product to life.\n\nIndustry\nEntertainment\n\nSub-Industry\nInteractive Home Entertainment (Gaming)\n\nWhether you're a founder, solopreneur, entrepreneur, marketer, creator, student, investor, or gaming enthusiast, this event offers an opportunity to learn, connect, and build meaningful relationships with like-minded individuals.\n\nHosted by Startup Atti, an initiative by the Department of Economic and Entrepreneurship Development, Unity of Youth Foundation, designed to bring startups and professionals together through meaningful offline networking.\n\nFeatured Session\nRising Brand Show by Madras Marketers featuring Abraham\nCreator of Son of Thanjai\n\nEvent Highlights\n\n• Exclusive invite-only gathering\n• Limited to 20 participants\n• Closed peer networking\n• Learn GTM, PMF, branding, and marketing strategies\n• Meet founders, creators, and startup enthusiasts\n• Build meaningful offline connections\n\nAgenda (Subject to Change)\n\n4.00 PM to 4.15 PM - Gathering (Sharp)\n\n4.15 PM to 4.45 PM - Atti Network Intro - Round 1\n1 Minute Pitch (Name, Category, Best 3 You Can Offer, Immediate 3 Needs)\n\n4.45 PM to 5.45 PM - Atti Network LinkedIn Intro - Round 2\n2 Minute Pitch (For Atti Networking Participants)\n\n5.45 PM to 6.00 PM - Break\n\n6.00 PM to 7.45 PM - Rising Brand Show by Madras Marketers Podcast featuring Abraham\n\n7.45 PM to 8.00 PM - Open Networking\n\n8.00 PM - Windup\n\nLimited to only 20 seats. The first 10 registrations receive a flat 50% discount on the ticket price.\n\nMake it yours: learn from industry leaders, build valuable connections, discover new opportunities, and grow alongside Chennai's startup and creator ecosystem.\n\nImportant details:\nThis is an invite-only event with limited seating. Registration is mandatory.\n\nWe're also open to partnerships for future Startup Atti events.\n\nLet's Atti and grow together.`,
+  image: "/optimized/july2026banner.webp",
+  upcoming: true,
+  ticketLink: "https://www.kynhood.com/event/6a462a055a4cbbe93b536d85",
+  mapsLink: "https://maps.app.goo.gl/np1igDaVrdiEzsWV8",
+  gallery: [],
+  speakers: [
+    {
+      name: "Abraham",
+      role: "Studio Head & Creative Director",
+      topic: "Marketing Strategy, GTM, PMF & Building a Tamil AAA Game",
+      image: abraham,
+      linkedin: "https://www.linkedin.com/in/abrahamrkj/",
+      companyLogo: sonofthanjai,
+      company: "Son of Thanjai",
+    }
+  ],
+},
 ];
