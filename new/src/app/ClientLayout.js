@@ -12,7 +12,9 @@ export default function ClientLayout({ children }) {
   return (
     <>
       <Navbar onOpenPerks={() => setIsPerksOpen(true)} />
-      {children}
+      <main>
+        {children}
+      </main>
       <Footer />
 
       {/* Perks System */}

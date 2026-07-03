@@ -100,15 +100,15 @@ const Hero = () => {
                 </div>
               </div>
 
-              <h3 className="text-xl md:text-3xl font-bold mb-2 md:mb-3 text-white group-hover:text-gray-200 transition-colors">
+              <h2 className="text-xl md:text-3xl font-bold mb-2 md:mb-3 text-white group-hover:text-gray-200 transition-colors">
                 {event.title}
-              </h3>
+              </h2>
 
               <div className="space-y-1 mb-4 md:mb-6">
                 <p className="text-sm font-bold text-white/80 uppercase tracking-wide">
                   {event.date}
                 </p>
-                <p className="text-sm text-gray-500">{event.location}</p>
+                <p className="text-sm text-gray-400">{event.location}</p>
               </div>
 
               <div className="h-px w-full bg-white/10 mb-4 md:mb-6"></div>
@@ -122,7 +122,7 @@ const Hero = () => {
                   href={`/events/${event.slug}`}
                   className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-2.5 md:px-6 md:py-3 rounded-full text-white font-bold text-sm md:text-base transition-all group/read"
                 >
-                  Read More
+                  Read More <span className="sr-only">about {event.title}</span>
                   <ArrowRight
                     size={18}
                     className="transition-transform group-hover/read:translate-x-1"

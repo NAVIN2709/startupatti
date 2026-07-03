@@ -110,7 +110,7 @@ const Partners = () => {
           <h2 className="text-xl md:text-3xl font-bold mb-3 text-white/80 tracking-tight">
             Other Partners
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto text-sm md:text-base">
+          <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base">
             Grateful for the support of our esteemed partners.
           </p>
         </motion.div>
@@ -145,7 +145,7 @@ const Partners = () => {
                 <h3 className="text-lg font-bold text-white/90 mb-0.5">
                   {sponsor.name}
                 </h3>
-                <p className="text-[10px] text-gray-500 uppercase tracking-widest font-bold">
+                <p className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">
                   {sponsor.role}
                 </p>
               </div>

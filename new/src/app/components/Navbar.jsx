@@ -207,6 +207,7 @@ const Navbar = ({ onOpenPerks }) => {
           <button
             className="md:hidden text-white focus:outline-none p-2 bg-white/10 rounded-full"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle navigation menu"
           >
             {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>

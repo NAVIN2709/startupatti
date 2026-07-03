@@ -49,7 +49,7 @@ const StatsSection = () => {
                   <h3 className="text-3xl font-bold text-white mb-1">
                     {stat.value}
                   </h3>
-                  <p className="text-xs text-gray-500 leading-tight uppercase tracking-wider">
+                  <p className="text-xs text-gray-400 leading-tight uppercase tracking-wider">
                     {stat.label}
                   </p>
                   {index !== stats.length - 1 && (

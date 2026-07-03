@@ -122,6 +122,7 @@ const HomeClient = () => {
                     }
                     className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white border border-white/10"
                     disabled={upcomingDot === 0}
+                    aria-label="Previous upcoming events"
                   >
                     <ChevronLeft size={16} />
                   </button>
@@ -135,6 +136,7 @@ const HomeClient = () => {
                     }
                     className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white border border-white/10"
                     disabled={upcomingDot >= upcomingEvents.length - 1}
+                    aria-label="Next upcoming events"
                   >
                     <ChevronRight size={16} />
                   </button>
@@ -191,6 +193,7 @@ const HomeClient = () => {
                   }
                   className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white border border-white/10"
                   disabled={pastDot === 0}
+                  aria-label="Previous past events"
                 >
                   <ChevronLeft size={16} />
                 </button>
@@ -204,6 +207,7 @@ const HomeClient = () => {
                   }
                   className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white border border-white/10"
                   disabled={pastDot >= visiblePastEvents.length - 1}
+                  aria-label="Next past events"
                 >
                   <ChevronRight size={16} />
                 </button>

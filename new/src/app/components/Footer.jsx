@@ -57,7 +57,7 @@ const Footer = () => {
                 <p className="text-gray-400 text-md leading-relaxed">
                   Unity of Youth Foundation
                 </p>
-                <p className="text-gray-500 text-md">
+                <p className="text-gray-400 text-md">
                   Darpan ID: TN/2024/0425767
                 </p>
               </div>
@@ -135,7 +135,7 @@ const Footer = () => {
                 </a>
               ))}
             </div>
-            <p className="mt-6 text-sm text-gray-500">
+            <p className="mt-6 text-sm text-gray-400">
               Chennai, Tamil Nadu, India <br />
               startupatti@startupatti.com <br />
             </p>
@@ -143,7 +143,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
           <p>© {new Date().getFullYear()} Startup Atti. All Rights Reserved.</p>
           <div className="flex gap-6">
             <Link

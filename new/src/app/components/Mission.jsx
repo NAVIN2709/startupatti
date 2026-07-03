@@ -33,7 +33,7 @@ const Mission = () => {
             to educate entrepreneurship through events & videos.
           </p>
 
-          <p className="text-sm md:text-base text-gray-500">
+          <p className="text-sm md:text-base text-gray-400">
             Not a club. Not mentorship. Just real founders, real stories, real
             connections.
           </p>
@@ -138,7 +138,7 @@ const Mission = () => {
             </span>
             <div className="absolute -inset-3 bg-white/5 rounded-xl -z-0 blur-sm transform -rotate-1"></div>
           </div>
-          <p className="text-gray-500 text-xs mt-3">— UOY Foundation</p>
+          <p className="text-gray-400 text-xs mt-3">— UOY Foundation</p>
         </motion.div>
       </div>
     </section>

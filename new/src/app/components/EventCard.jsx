@@ -37,7 +37,7 @@ const EventCard = ({
         <h3 className="text-lg md:text-xl font-bold text-white mb-2">
           {title}
         </h3>
-        <div className="flex items-center gap-1 text-gray-500 text-[10px] md:text-xs mb-3 md:mb-4">
+        <div className="flex items-center gap-1 text-gray-400 text-[10px] md:text-xs mb-3 md:mb-4">
           <MapPin size={12} />
           <span>{location}</span>
         </div>
@@ -48,7 +48,7 @@ const EventCard = ({
           href={`/events/${slug}`}
           className="inline-flex items-center gap-2 text-sm font-bold  hover:shadow-[0_0_30px_rgba(234,179,8,0.6)] hover:bg-yellow-400 transition-all duration-300 px-5 py-2.5 rounded-full hover:text-black text-white hover:bg-yellow-500 group-hover:bg-yellow-400 w-fit transition-all"
         >
-          Read More <ArrowRight size={14} />
+          Read More <span className="sr-only">about {title}</span> <ArrowRight size={14} />
         </Link>
       </div>
     </div>
