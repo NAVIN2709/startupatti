@@ -632,8 +632,8 @@ export const events = [
   description:
     "An exclusive invite-only Startup Atti meetup featuring Abraham, the creator behind Son of Thanjai, discussing game marketing, GTM, PMF, and startup growth strategies.",
   fullDescription: `Join Startup Atti for an exclusive invite-only networking session featuring Abraham, the visionary behind Son of Thanjai, one of the most anticipated Tamil Chola-inspired AAA games from Madras.\n\nDiscover how a world-class game is being built from Chennai while learning about the marketing strategy, Go-To-Market (GTM), Product-Market Fit (PMF), branding, and growth strategies behind bringing an ambitious entertainment product to life.\n\nIndustry\nEntertainment\n\nSub-Industry\nInteractive Home Entertainment (Gaming)\n\nWhether you're a founder, solopreneur, entrepreneur, marketer, creator, student, investor, or gaming enthusiast, this event offers an opportunity to learn, connect, and build meaningful relationships with like-minded individuals.\n\nHosted by Startup Atti, an initiative by the Department of Economic and Entrepreneurship Development, Unity of Youth Foundation, designed to bring startups and professionals together through meaningful offline networking.\n\nFeatured Session\nRising Brand Show by Madras Marketers featuring Abraham\nCreator of Son of Thanjai\n\nEvent Highlights\n\n• Exclusive invite-only gathering\n• Limited to 20 participants\n• Closed peer networking\n• Learn GTM, PMF, branding, and marketing strategies\n• Meet founders, creators, and startup enthusiasts\n• Build meaningful offline connections\n\nAgenda (Subject to Change)\n\n4.00 PM to 4.15 PM - Gathering (Sharp)\n\n4.15 PM to 4.45 PM - Atti Network Intro - Round 1\n1 Minute Pitch (Name, Category, Best 3 You Can Offer, Immediate 3 Needs)\n\n4.45 PM to 5.45 PM - Atti Network LinkedIn Intro - Round 2\n2 Minute Pitch (For Atti Networking Participants)\n\n5.45 PM to 6.00 PM - Break\n\n6.00 PM to 7.45 PM - Rising Brand Show by Madras Marketers Podcast featuring Abraham\n\n7.45 PM to 8.00 PM - Open Networking\n\n8.00 PM - Windup\n\nLimited to only 20 seats. The first 10 registrations receive a flat 50% discount on the ticket price.\n\nMake it yours: learn from industry leaders, build valuable connections, discover new opportunities, and grow alongside Chennai's startup and creator ecosystem.\n\nImportant details:\nThis is an invite-only event with limited seating. Registration is mandatory.\n\nWe're also open to partnerships for future Startup Atti events.\n\nLet's Atti and grow together.`,
-  image: "/optimized/july2026banner.webp",
-  upcoming: true,
+  image: "/optimized/july-2026-atti.webp",
+  upcoming: false,
   ticketLink: "https://www.kynhood.com/event/6a462a055a4cbbe93b536d85",
   mapsLink: "https://maps.app.goo.gl/np1igDaVrdiEzsWV8",
   gallery: [],
@@ -649,4 +649,21 @@ export const events = [
     }
   ],
 },
+  {
+    id: 20,
+    slug: "august2026atti",
+    title: "August 2026 Atti",
+    date: "TBA",
+    time: "TBA",
+    location: "TBA",
+    description:
+      "A casual monthly hangout for founders, solopreneurs, and aspiring entrepreneurs to connect, share knowledge, and build meaningful offline connections.",
+    fullDescription: `Join Startup Atti for a monthly offline hangout and networking session by Madras Marketers. Designed to bring start-ups and like-minded individuals together for meaningful offline networking.`,
+    image: "/attiog.png",
+    upcoming: true,
+    ticketLink: "TBA",
+    mapsLink: "TBA",
+    gallery: [],
+    speakers: [],
+  },
 ];

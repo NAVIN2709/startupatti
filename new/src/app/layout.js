@@ -17,20 +17,20 @@ export const metadata = {
   metadataBase: new URL("https://startupatti.com"),
   title: "Startup Atti | The Gateway to the Real Startup Ecosystem",
   description:
-    "Startup Atti is a monthly offline event by UOY Foundation to educate entrepreneurship through real founder stories and networking in Chennai.",
+    "Startup Atti is an offline event initiative by Madras Marketers to educate entrepreneurship through real founder stories and networking in Chennai.",
   keywords: [
     "Startup Atti",
-    "UOY Foundation",
+    "Madras Marketers",
     "Chennai Startups",
     "Entrepreneurship",
     "Networking",
     "Founder Stories",
   ],
-  authors: [{ name: "UOY Foundation" }],
+  authors: [{ name: "Madras Marketers" }],
   openGraph: {
-    title: "Startup Atti | Real Startup Ecosystem",
+    title: "Startup Atti | Real Startup Ecosystem by Madras Marketers",
     description:
-      "Join us for a monthly hangout of founders, creators, and builders.",
+      "Join us for a monthly offline event initiative by Madras Marketers.",
     url: "https://startupatti.com",
     siteName: "Startup Atti",
     images: [
@@ -38,7 +38,7 @@ export const metadata = {
         url: "/optimized/attiog.png",
         width: 1200,
         height: 630,
-        alt: "Startup Atti - The Gateway to the Real Startup Ecosystem",
+        alt: "Startup Atti - An initiative by Madras Marketers",
       },
     ],
     locale: "en_US",
@@ -46,8 +46,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Startup Atti | Real Startup Ecosystem",
-    description: "The monthly hangout for the real startup community.",
+    title: "Startup Atti | Real Startup Ecosystem by Madras Marketers",
+    description: "An offline event initiative by Madras Marketers.",
     images: ["/optimized/attiog.png"],
   },
   manifest: "/site.webmanifest",

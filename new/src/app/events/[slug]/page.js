@@ -7,12 +7,20 @@ export async function generateMetadata({ params }) {
 
   if (!event) return { title: "Event Not Found | Startup Atti" };
 
+  const seoDescription = `Startup Atti by Madras Marketers - An offline event. ${event.description}`;
+
   return {
     title: `${event.title} | Startup Atti`,
-    description: event.description,
+    description: seoDescription,
     openGraph: {
-      title: `${event.title} | Startup Atti`,
-      description: event.description,
+      title: `${event.title} | Startup Atti by Madras Marketers`,
+      description: seoDescription,
+      images: [event.image?.src || event.image],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${event.title} | Startup Atti by Madras Marketers`,
+      description: seoDescription,
       images: [event.image?.src || event.image],
     },
   };

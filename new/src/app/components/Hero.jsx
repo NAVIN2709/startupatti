@@ -6,16 +6,17 @@ import Link from "next/link";
 import { events } from "../data/events";
 
 const Hero = () => {
-  const event = events[18];
+  const upcomingEvent = events.find((e) => e.upcoming);
+  const event = upcomingEvent || events[events.length - 1];
 
   return (
-    <section className="relative w-full min-h-screen flex items-center pt-20 pb-10 px-4 md:px-6 overflow-hidden bg-black">
+    <section className="relative w-full min-h-fit lg:min-h-screen flex items-center pt-28 pb-12 lg:pt-20 lg:pb-10 px-4 md:px-6 overflow-hidden bg-black">
       {/* Rainbow Beam Background */}
 
       {/* Background Ambience - Subtle White/Gray Glow instead of colors */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-white/5 rounded-full blur-[120px] pointer-events-none z-0" />
 
-      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10 mt-10">
+      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10 mt-6 lg:mt-10">
         {/* Left Column: Text Content */}
         <div className="text-left space-y-5 md:space-y-8">
           <motion.h1

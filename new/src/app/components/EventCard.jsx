@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Calendar, MapPin, ArrowRight } from "lucide-react";
+import { Calendar, MapPin, ArrowRight, Ticket } from "lucide-react";
 import Link from "next/link";
 
 const EventCard = ({
@@ -11,6 +11,8 @@ const EventCard = ({
   description,
   image,
   isFeatured,
+  ticketLink,
+  upcoming,
 }) => {
   return (
     <div
@@ -44,12 +46,27 @@ const EventCard = ({
         <p className="text-gray-400 text-xs md:text-sm leading-relaxed mb-4 md:mb-6 flex-grow border-b border-white/5 pb-4">
           {description}
         </p>
-        <Link
-          href={`/events/${slug}`}
-          className="inline-flex items-center gap-2 text-sm font-bold  hover:shadow-[0_0_30px_rgba(234,179,8,0.6)] hover:bg-yellow-400 transition-all duration-300 px-5 py-2.5 rounded-full hover:text-black text-white hover:bg-yellow-500 group-hover:bg-yellow-400 w-fit transition-all"
-        >
-          Read More <span className="sr-only">about {title}</span> <ArrowRight size={14} />
-        </Link>
+        
+        <div className="flex flex-wrap items-center gap-3 mt-auto">
+          <Link
+            href={`/events/${slug}`}
+            className="inline-flex items-center gap-1.5 text-xs md:text-sm font-bold border border-white/20 hover:border-white/40 transition-all duration-300 px-4 py-2 rounded-full text-white hover:bg-white/5"
+          >
+            Read More <ArrowRight size={14} />
+          </Link>
+          
+          {upcoming && ticketLink && ticketLink !== "TBA" && (
+            <a
+              href={ticketLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs md:text-sm font-bold bg-yellow-500 text-black hover:bg-yellow-400 transition-all duration-300 px-4 py-2 rounded-full shadow-[0_0_15px_rgba(234,179,8,0.3)]"
+            >
+              <Ticket size={14} />
+              Book Tickets
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );
