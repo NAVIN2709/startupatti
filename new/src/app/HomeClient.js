@@ -90,6 +90,7 @@ const HomeClient = () => {
   return (
     <>
       <Hero />
+      <PastSpeakers />
 
       {/* New Mission/Values Section */}
       <Mission />
@@ -268,7 +269,6 @@ const HomeClient = () => {
       <StatsSection />
 
       {/* Past Speakers */}
-      <PastSpeakers />
 
       {/* 2. Mission Statement */}
       <section>

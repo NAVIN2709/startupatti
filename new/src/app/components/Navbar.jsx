@@ -128,16 +128,21 @@ const Navbar = ({ onOpenPerks }) => {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-2 group relative z-10 md:mr-8"
+            className="flex items-center gap-2.5 group relative z-10 md:mr-8"
           >
             <img
               src="/logo.svg"
               alt="logo"
-              className="w-14 h-14 md:w-16 md:h-16 object-contain group-hover:scale-110 transition-transform duration-300"
+              className="w-12 h-12 md:w-14 md:h-14 object-contain group-hover:scale-110 transition-transform duration-300"
             />
-            <span className="font-bold text-white tracking-tight hidden sm:block">
-              Startup Atti
-            </span>
+            <div className="flex flex-col">
+              <span className="font-bold text-white tracking-tight text-sm md:text-base leading-tight">
+                Startup Atti
+              </span>
+              <span className="text-[9px] md:text-[10px] text-gray-400 font-medium tracking-wide">
+                by Madras Marketers
+              </span>
+            </div>
           </Link>
 
           <div className="hidden md:flex items-center gap-1 bg-white/5 rounded-full p-1 border border-white/5 relative">

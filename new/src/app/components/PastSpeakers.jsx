@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Linkedin } from "lucide-react";
 
 // Speaker images
@@ -186,6 +186,64 @@ const PastSpeakers = () => {
     },
   ];
 
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    let animationFrameId;
+    let isHovered = false;
+
+    // Set initial scroll position to the middle (start of second copy)
+    const initTimer = setTimeout(() => {
+      if (el.scrollWidth > 0) {
+        el.scrollLeft = el.scrollWidth / 2;
+      }
+    }, 100);
+
+    const scroll = () => {
+      if (!isHovered) {
+        el.scrollLeft -= 0.6; // Smooth auto-scroll speed moving left to right
+      }
+
+      const halfWidth = el.scrollWidth / 2;
+      if (halfWidth > 0) {
+        if (el.scrollLeft <= 0) {
+          el.scrollLeft += halfWidth;
+        } else if (el.scrollLeft >= halfWidth) {
+          el.scrollLeft -= halfWidth;
+        }
+      }
+
+      animationFrameId = requestAnimationFrame(scroll);
+    };
+
+    const handleMouseEnter = () => { isHovered = true; };
+    const handleMouseLeave = () => { isHovered = false; };
+    const handleTouchStart = () => { isHovered = true; };
+    const handleTouchEnd = () => { isHovered = false; };
+
+    el.addEventListener("mouseenter", handleMouseEnter);
+    el.addEventListener("mouseleave", handleMouseLeave);
+    el.addEventListener("touchstart", handleTouchStart, { passive: true });
+    el.addEventListener("touchend", handleTouchEnd, { passive: true });
+
+    const startTimer = setTimeout(() => {
+      animationFrameId = requestAnimationFrame(scroll);
+    }, 200);
+
+    return () => {
+      clearTimeout(initTimer);
+      clearTimeout(startTimer);
+      cancelAnimationFrame(animationFrameId);
+      if (el) {
+        el.removeEventListener("mouseenter", handleMouseEnter);
+        el.removeEventListener("mouseleave", handleMouseLeave);
+        el.removeEventListener("touchstart", handleTouchStart);
+        el.removeEventListener("touchend", handleTouchEnd);
+      }
+    };
+  }, [speakers.length]);
+
   const handleScroll = () => {
     const el = scrollRef.current;
     if (!el) return;
@@ -196,8 +254,9 @@ const PastSpeakers = () => {
     const style = window.getComputedStyle(el);
     const gapWidth = parseInt(style.gap) || 0;
 
-    const index = Math.round(el.scrollLeft / (itemWidth + gapWidth));
-    setCurrentIndex(Math.min(index, speakers.length - 1));
+    const rawIndex = Math.round(el.scrollLeft / (itemWidth + gapWidth));
+    const index = Math.max(0, rawIndex) % speakers.length;
+    setCurrentIndex(index);
   };
 
   const scrollTo = (direction) => {
@@ -238,15 +297,13 @@ const PastSpeakers = () => {
           <div className="flex items-center gap-2">
             <button
               onClick={() => scrollTo("prev")}
-              className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors disabled:opacity-20 disabled:cursor-not-allowed"
-              disabled={currentIndex === 0}
+              className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
             >
               <ChevronLeft size={18} />
             </button>
             <button
               onClick={() => scrollTo("next")}
-              className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors disabled:opacity-20 disabled:cursor-not-allowed"
-              disabled={currentIndex >= speakers.length - 1}
+              className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
             >
               <ChevronRight size={20} />
             </button>
@@ -257,16 +314,16 @@ const PastSpeakers = () => {
         <div
           ref={scrollRef}
           onScroll={handleScroll}
-          className="flex gap-6 md:gap-8 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide"
+          className="flex gap-6 md:gap-8 overflow-x-auto pb-4 scrollbar-hide"
           style={{ WebkitOverflowScrolling: "touch" }}
         >
-          {speakers.map((speaker, index) => (
+          {[...speakers, ...speakers].map((speaker, index) => (
             <a
               key={index}
               href={speaker.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="min-w-[240px] md:min-w-[280px] bg-[#111] border border-white/10 rounded-2xl p-5 md:p-6 flex flex-col items-center text-center hover:border-white/30 hover:bg-white/5 transition-all duration-300 snap-start"
+              className="min-w-[240px] md:min-w-[280px] bg-[#111] border border-white/10 rounded-2xl p-5 md:p-6 flex flex-col items-center text-center hover:border-white/30 hover:bg-white/5 transition-all duration-300"
             >
               <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-4 border-4 border-white/5">
                 <img

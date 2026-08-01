@@ -4,19 +4,19 @@ const Partners = () => {
   const foundingPartners = [
     {
       name: "Madras Marketers",
-      role: "Founding Partner",
+      role: "Supporting Partner",
       url: "https://madrasmarketers.com",
       image: "/optimized/Madras marketers.webp",
     },
     {
       name: "Fellow Founders",
-      role: "Founding Partner",
+      role: "Supporting Partner",
       url: "https://fellowfounder.ai",
       image: "/optimized/fellow founders.webp",
     },
     {
       name: "Refreshment Company",
-      role: "Founding Partner",
+      role: "Supporting Partner",
       url: "#",
       image: "/optimized/refreshment.webp",
     },
@@ -54,7 +54,7 @@ const Partners = () => {
           className="text-center mb-6 md:mb-16"
         >
           <h2 className="text-2xl md:text-5xl font-bold mb-4 md:mb-6 text-white tracking-tight">
-            Founding Partners
+            Supporting Partners
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             Powered by visionaries. United by a shared passion for innovation
