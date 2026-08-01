@@ -90,17 +90,12 @@ const HomeClient = () => {
   return (
     <>
       <Hero />
-      <PastSpeakers />
 
-      {/* New Mission/Values Section */}
-      <Mission />
-
-      {/* Events Section */}
-      <section id="events" className="py-12 md:py-24 relative">
-        <div className="container mx-auto px-4 md:px-6">
-          {/* ===== UPCOMING EVENTS ===== */}
-          {upcomingEvents.length > 0 && (
-            <div className="mb-8 md:mb-20">
+      {/* ===== UPCOMING EVENTS ===== */}
+      {upcomingEvents.length > 0 && (
+        <section id="events" className="py-12 md:py-24 relative border-b border-white/10 bg-black">
+          <div className="container mx-auto px-4 md:px-6">
+            <div>
               {/* Header */}
               <div className="flex flex-row justify-between items-end mb-6 md:mb-12 border-b border-white/10 pb-4 md:pb-6">
                 <div className="max-w-xl">
@@ -168,9 +163,18 @@ const HomeClient = () => {
               </div>
               <ScrollDots total={upcomingEvents.length} active={upcomingDot} />
             </div>
-          )}
+          </div>
+        </section>
+      )}
 
-          {/* ===== PAST EVENTS ===== */}
+      <PastSpeakers />
+
+      {/* New Mission/Values Section */}
+      <Mission />
+
+      {/* ===== PAST EVENTS ===== */}
+      <section id={upcomingEvents.length > 0 ? "past-events" : "events"} className="py-12 md:py-24 relative">
+        <div className="container mx-auto px-4 md:px-6">
           <div>
             {/* Header */}
             <div className="flex flex-row justify-between items-end mb-6 md:mb-12 border-b border-white/10 pb-4 md:pb-6">
@@ -274,9 +278,6 @@ const HomeClient = () => {
       <section>
         <Quote />
       </section>
-
-      {/* 3. Authority & Backing (Moved here) */}
-      <Initiative />
 
       {/* 7. Ecosystem Partners */}
       <Partners />

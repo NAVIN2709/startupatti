@@ -1,5 +1,6 @@
 import { Linkedin, Instagram, Youtube, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   const links = [
@@ -42,23 +43,18 @@ const Footer = () => {
           <div className="md:col-span-5 space-y-6">
             <div className="flex flex-col gap-4">
               <Link href="/" className="flex items-center gap-2">
-                <img
+                <Image
                   src="/logo.svg"
                   alt="Startup Atti"
+                  width={64}
+                  height={64}
                   className="h-16 w-auto object-contain"
                 />
                 <p className="text-white text-lg font-bold">Startup Atti</p>
               </Link>
               <div className="flex flex-col gap-1">
                 <p className="text-gray-400 text-md leading-relaxed mt-1">
-                  An Initiative by Department of Economic &amp; Entrepreneurship
-                  Development
-                </p>
-                <p className="text-gray-400 text-md leading-relaxed">
-                  Unity of Youth Foundation
-                </p>
-                <p className="text-gray-400 text-md">
-                  Darpan ID: TN/2024/0425767
+                  An initiative by Madras Marketers
                 </p>
               </div>
             </div>
@@ -68,10 +64,12 @@ const Footer = () => {
               together.
             </p>
             <div className="flex items-center gap-3">
-              <img
-                src="/optimized/UOY.webp"
-                alt="Unity of Youth Foundation"
-                className="h-12 w-auto object-contain bg-white/10 rounded-lg p-1"
+              <Image
+                src="/optimized/mm-logo.png"
+                alt="Madras Marketers"
+                width={180}
+                height={80}
+                className="h-20 w-auto object-contain bg-white/10 rounded-lg p-2"
               />
             </div>
             <div className="pt-4 flex flex-col sm:flex-row gap-4">

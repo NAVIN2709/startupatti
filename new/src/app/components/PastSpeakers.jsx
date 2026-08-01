@@ -275,6 +275,9 @@ const PastSpeakers = () => {
     el.scrollTo({ left: newScroll, behavior: "smooth" });
   };
 
+  const row1 = speakers.filter((_, idx) => idx % 2 === 0);
+  const row2 = speakers.filter((_, idx) => idx % 2 !== 0);
+
   return (
     <section className="py-10 md:py-24 bg-black overflow-hidden">
       <div className="container mx-auto px-6">
@@ -294,7 +297,7 @@ const PastSpeakers = () => {
           </motion.div>
 
           {/* Arrows + Indicator */}
-          <div className="flex items-center gap-2">
+          <div className="hidden md:flex items-center gap-2">
             <button
               onClick={() => scrollTo("prev")}
               className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
@@ -310,11 +313,11 @@ const PastSpeakers = () => {
           </div>
         </div>
 
-        {/* Carousel */}
+        {/* Desktop Carousel */}
         <div
           ref={scrollRef}
           onScroll={handleScroll}
-          className="flex gap-6 md:gap-8 overflow-x-auto pb-4 scrollbar-hide"
+          className="hidden md:flex gap-6 md:gap-8 overflow-x-auto pb-4 scrollbar-hide"
           style={{ WebkitOverflowScrolling: "touch" }}
         >
           {[...speakers, ...speakers].map((speaker, index) => (
@@ -353,16 +356,117 @@ const PastSpeakers = () => {
           ))}
         </div>
 
-        {/* Mobile dots */}
-        <div className="flex justify-center gap-1.5 mt-4 md:hidden">
-          {speakers.map((_, i) => (
-            <span
-              key={i}
-              className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-                i === currentIndex ? "bg-white w-4" : "bg-white/20"
-              }`}
-            />
-          ))}
+        {/* Mobile View: 2 Auto-sliding Rows in opposite directions */}
+        <div className="md:hidden flex flex-col gap-4">
+          {/* Row 1: Left to Right */}
+          <div className="flex overflow-hidden w-full py-1">
+            <motion.div
+              animate={{ x: ["-50%", "0%"] }}
+              transition={{
+                ease: "linear",
+                duration: 40,
+                repeat: Infinity,
+              }}
+              className="flex gap-4 shrink-0"
+            >
+              {[...row1, ...row1].map((speaker, index) => (
+                <a
+                  key={index}
+                  href={speaker.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 bg-[#111]/80 border border-white/10 rounded-2xl p-4 w-[310px] flex-shrink-0 hover:border-white/20 transition-all"
+                >
+                  {/* Speaker Photo */}
+                  <div className="w-16 h-16 rounded-full overflow-hidden border border-white/10 flex-shrink-0">
+                    <img
+                      src={speaker.image.src || speaker.image}
+                      alt={speaker.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+
+                  {/* Text Content */}
+                  <div className="flex-grow min-w-0">
+                    <div className="flex items-center gap-2">
+                      <h3 className="text-sm font-bold text-white truncate max-w-[150px]">
+                        {speaker.name}
+                      </h3>
+                      <div className="w-7 h-7 rounded-md bg-white/5 flex items-center justify-center p-0.5 flex-shrink-0 border border-white/10">
+                        <img
+                          src={speaker.logo.src || speaker.logo}
+                          alt={speaker.company}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                    </div>
+                    <p className="text-gray-400 text-xs truncate mt-0.5">
+                      {speaker.company}
+                    </p>
+                    <div className="mt-1.5 flex items-center gap-1.5 text-[11px] font-semibold text-yellow-500">
+                      <Linkedin size={11} className="text-yellow-500" />
+                      <span>LinkedIn</span>
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Row 2: Right to Left */}
+          <div className="flex overflow-hidden w-full py-1">
+            <motion.div
+              animate={{ x: ["0%", "-50%"] }}
+              transition={{
+                ease: "linear",
+                duration: 40,
+                repeat: Infinity,
+              }}
+              className="flex gap-4 shrink-0"
+            >
+              {[...row2, ...row2].map((speaker, index) => (
+                <a
+                  key={index}
+                  href={speaker.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 bg-[#111]/80 border border-white/10 rounded-2xl p-4 w-[310px] flex-shrink-0 hover:border-white/20 transition-all"
+                >
+                  {/* Speaker Photo */}
+                  <div className="w-16 h-16 rounded-full overflow-hidden border border-white/10 flex-shrink-0">
+                    <img
+                      src={speaker.image.src || speaker.image}
+                      alt={speaker.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+
+                  {/* Text Content */}
+                  <div className="flex-grow min-w-0">
+                    <div className="flex items-center gap-2">
+                      <h3 className="text-sm font-bold text-white truncate max-w-[150px]">
+                        {speaker.name}
+                      </h3>
+                      <div className="w-7 h-7 rounded-md bg-white/5 flex items-center justify-center p-0.5 flex-shrink-0 border border-white/10">
+                        <img
+                          src={speaker.logo.src || speaker.logo}
+                          alt={speaker.company}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                    </div>
+                    <p className="text-gray-400 text-xs truncate mt-0.5">
+                      {speaker.company}
+                    </p>
+                    <div className="mt-1.5 flex items-center gap-1.5 text-[11px] font-semibold text-yellow-500">
+                      <Linkedin size={11} className="text-yellow-500" />
+                      <span>LinkedIn</span>
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>
