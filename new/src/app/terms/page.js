@@ -15,11 +15,9 @@ const TermsOfService = () => {
               1. About Startup Atti
             </h2>
             <p>
-              Startup Atti is a monthly offline event initiative operated by the
-              Department of Economic & Entrepreneurship Development, Unity of
-              Youth Foundation (Darpan ID: TN/2024/0425767), based in Chennai,
-              Tamil Nadu. By using our website or attending our events, you
-              agree to these Terms of Service.
+              Startup Atti is an invite-only networking session initiative operated by
+              Madras Marketers, based in Chennai, Tamil Nadu. By using our website or
+              attending our events, you agree to these Terms of Service.
             </p>
           </div>
 
@@ -98,7 +96,7 @@ const TermsOfService = () => {
             <p>
               All Startup Atti events may be photographed and recorded for
               promotional purposes. By attending, you grant Startup Atti and
-              Unity of Youth Foundation a non-exclusive, royalty-free license to
+              Madras Marketers a non-exclusive, royalty-free license to
               use your likeness in photos and videos across our website, social
               media, and marketing materials.
             </p>
@@ -110,8 +108,8 @@ const TermsOfService = () => {
             </h2>
             <p>
               All content on the Startup Atti website — including text,
-              graphics, logos, images, and design — is the property of Unity of
-              Youth Foundation or its content partners and is protected by
+              graphics, logos, images, and design — is the property of Startup Atti or
+              Madras Marketers or its content partners and is protected by
               applicable intellectual property laws. You may not use, reproduce,
               or distribute this content without express written permission.
             </p>
@@ -120,11 +118,9 @@ const TermsOfService = () => {
           <div>
             <h2 className="text-xl font-bold text-white mb-3">7. Donations</h2>
             <p>
-              Donations made to support Startup Atti through our website or
-              WhatsApp are voluntary contributions to Unity of Youth Foundation.
-              All donations are non-refundable unless otherwise communicated.
-              Donation receipts and tax benefits, if applicable, will be
-              provided as per the foundation's policies.
+              Donations or sponsorships made to support Startup Atti through our website or
+              WhatsApp are voluntary contributions to Madras Marketers.
+              All contributions are non-refundable unless otherwise communicated.
             </p>
           </div>
 
@@ -146,7 +142,7 @@ const TermsOfService = () => {
               9. Limitation of Liability
             </h2>
             <p>
-              Startup Atti and Unity of Youth Foundation shall not be liable for
+              Startup Atti and Madras Marketers shall not be liable for
               any direct, indirect, incidental, or consequential damages arising
               from your use of our website or attendance at our events. We
               provide the website and events on an "as is" basis without any
@@ -188,10 +184,7 @@ const TermsOfService = () => {
             </p>
             <div className="mt-3 p-4 rounded-xl bg-white/5 border border-white/10">
               <p className="text-white font-medium">Startup Atti</p>
-              <p className="text-gray-400">
-                Department of Economic & Entrepreneurship Development
-              </p>
-              <p className="text-gray-400">Unity of Youth Foundation</p>
+              <p className="text-gray-400">An initiative by Madras Marketers</p>
               <p className="text-gray-400 mt-2">Chennai, Tamil Nadu, India</p>
               <p className="text-gray-400">
                 Email:{" "}

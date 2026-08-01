@@ -15,9 +15,7 @@ const PrivacyPolicy = () => {
               1. Introduction
             </h2>
             <p>
-              Startup Atti ("we", "our", or "us") is an initiative by the
-              Department of Economic & Entrepreneurship Development, Unity of
-              Youth Foundation (Darpan ID: TN/2024/0425767). This Privacy Policy
+              Startup Atti ("we", "our", or "us") is an initiative by Madras Marketers. This Privacy Policy
               explains how we collect, use, and protect your personal
               information when you use our website and attend our events.
             </p>
@@ -167,10 +165,7 @@ const PrivacyPolicy = () => {
             </p>
             <div className="mt-3 p-4 rounded-xl bg-white/5 border border-white/10">
               <p className="text-white font-medium">Startup Atti</p>
-              <p className="text-gray-400">
-                Department of Economic & Entrepreneurship Development
-              </p>
-              <p className="text-gray-400">Unity of Youth Foundation</p>
+              <p className="text-gray-400">An initiative by Madras Marketers</p>
               <p className="text-gray-400 mt-2">Chennai, Tamil Nadu, India</p>
               <p className="text-gray-400">
                 Email:{" "}

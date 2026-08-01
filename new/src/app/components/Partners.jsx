@@ -27,7 +27,7 @@ const Partners = () => {
       name: "KYN",
       role: "Discovery & Connectivity Partner",
       url: "https://kynhood.com/",
-      image: "/optimized/kynlogo.svg",
+      image: "/optimized/kynLogo.svg",
     },
     {
       name: "YuniQ",

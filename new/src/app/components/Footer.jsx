@@ -74,18 +74,6 @@ const Footer = () => {
             </div>
             <div className="pt-4 flex flex-col sm:flex-row gap-4">
               <a
-                href="https://wa.me/919487445528?text=Hi%2C%20I%20strongly%20believe%20in%20empowering%20young%20entrepreneurs%20and%20would%20be%20glad%20to%20contribute%20to%20your%20initiative.%20Kindly%20share%20the%20details%20to%20proceed%20with%20a%20donation."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-white text-black font-bold text-sm hover:bg-gray-200 transition-all group"
-              >
-                Support Our Mission
-                <ArrowUpRight
-                  size={18}
-                  className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
-                />
-              </a>
-              <a
                 href="https://tally.so/r/Xxeo1O"
                 target="_blank"
                 rel="noopener noreferrer"

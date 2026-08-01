@@ -45,7 +45,7 @@ const Mission = () => {
             {
               icon: Users,
               title: "Curated Events",
-              desc: "50-seat monthly gatherings with structured intros.",
+              desc: "Handpicked monthly gatherings bringing together select founders & marketing leaders.",
             },
             {
               icon: Mic,
